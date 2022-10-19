@@ -1,0 +1,220 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+     <!-- <mat-drawer mode="side" opened="true"> -->
+     <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+     <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+     <div class="container-fluid">
+        <div class="page box p-3 mt-2">Visitor's List</div>
+        <div class="page content shadow p-3 position-relative">
+           <div class="content panel panel-flat">
+              <div class="row">
+                 <div class="col-sm-3">
+                    <h5>Visitor's List</h5>
+                 </div>
+                 <div class="col-sm-3"> 
+                 </div>
+                 <div class="col-sm-3"> 
+                 </div>
+                 <div class="col-sm-3"> 
+                 </div>
+                 <br>
+                 <br>
+                 <br>
+              </div>
+              <div class="row">
+                 <div class="col-lg-12">
+                    <div class="">
+                       <div id="overlaygif" style="display:none;"></div>
+                       <div id="visitorlist_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                          <div class="datatable-header datatable-header-accent">
+                             <div id="visitorlist_filter" class="dataTables_filter"><label><span>Search people:</span> <input type="search" class="form-control input-sm" placeholder="Type to filter..." aria-controls="visitorlist"></label></div>
+                             <div class="dt-buttons btn-group"> <br><br><button class="btn btn-default buttons-excel buttons-html5 bg-teal" tabindex="0" aria-controls="visitorlist" type="button"><span>Export<i class="icon-file-excel ml-2"></i></span></button> <button class="btn btn-default buttons-print bg-danger" tabindex="0" aria-controls="visitorlist" type="button"><span>Print<i class="icon-printer ml-2"></i></span></button> </div>
+                             <div class="dataTables_length" id="visitorlist_length">
+                                <label>
+                                   <span>Show:</span> 
+                                   <select name="visitorlist_length" aria-controls="visitorlist" class="form-control input-sm">
+                                      <option value="25">25</option>
+                                      <option value="50">50</option>
+                                      <option value="75">75</option>
+                                      <option value="100">100</option>
+                                   </select>
+                                </label>
+                             </div>
+                          </div>
+                          <div class="datatable-scroll-wrap">
+                             <table class="table responsive table-bordered table-striped datatable-basic dataTable no-footer dtr-inline collapsed" id="visitorlist" role="grid" aria-describedby="visitorlist_info">
+                                <thead>
+                                   <tr role="row">
+                                      <th data-hide="phone,tablet" width="5%" style="" class="sorting_asc" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-sort="ascending" aria-label="SI:No.: activate to sort column descending">SI:No.</th>
+                                      <th data-hide="phone,tablet" width="5%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="SI:No.: activate to sort column ascending">SI:No.</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Token No.: activate to sort column ascending">Token No.</th>
+                                      <th data-hide="phone,tablet" width="10%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Visitor Category: activate to sort column ascending">Visitor Category</th>
+                                      <th data-hide="phone,tablet" width="10%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Visitor: activate to sort column ascending" style="display: none;">Visitor</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending" style="display: none;">Student Name</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Contact: activate to sort column ascending" style="display: none;">Contact</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Whom to Visit: activate to sort column ascending" style="display: none;">Whom to Visit</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="display: none;">Date</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Purpose: activate to sort column ascending" style="display: none;">Purpose</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Status / Manage: activate to sort column ascending" style="display: none;">Status / Manage</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Exit Time: activate to sort column ascending" style="display: none;">Exit Time</th>
+                                      <th data-hide="phone,tablet" width="15%" class="sorting" tabindex="0" aria-controls="visitorlist" rowspan="1" colspan="1" aria-label="Gate Exit Time: activate to sort column ascending" style="display: none;">Gate Exit Time</th>
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                   <tr class="odd">
+                                      <td valign="top" colspan="4" class="dataTables_empty">No data available in table</td>
+                                   </tr>
+                                </tbody>
+                             </table>
+                          </div>
+                          <div class="datatable-footer">
+                             <div class="dataTables_info" id="visitorlist_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div>
+                             <div class="dataTables_paginate paging_simple_numbers" id="visitorlist_paginate">
+                                <ul class="pagination">
+                                   <li class="paginate_button previous disabled" id="visitorlist_previous"><a href="#" aria-controls="visitorlist" data-dt-idx="0" tabindex="0">←</a></li>
+                                   <li class="paginate_button next disabled" id="visitorlist_next"><a href="#" aria-controls="visitorlist" data-dt-idx="1" tabindex="0">→</a></li>
+                                </ul>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <script>
+                 $(document).ready(function () {
+                   
+                   $('#visitorlist tbody').empty();
+                   $.ajax({
+                     type: "POST",
+                     
+                     url: "/index.php/core/visitors/viewvisitors1",   
+                     
+                     data:{},
+                     dataType: "html",
+                     success: function (data) {                        
+                       $('#visitorlist tbody').append(data);                             // for listing table when derived class is choose
+                       
+                       $('.datatable-basic').DataTable({
+                         autoWidth: false,
+                         responsive: true,
+                         
+                         order: [[ 0, 'asc' ]],
+                         dom: '<"datatable-header datatable-header-accent"fBl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
+                         language: {
+                           search: '<span>Search people:</span> _INPUT_',
+                           searchPlaceholder: 'Type to filter...',
+                           lengthMenu: '<span>Show:</span> _MENU_',
+                           paginate: { 'first': 'First', 'last': 'Last', 'next': $('html').attr('dir') == 'rtl' ? '&larr;' : '&rarr;', 'previous': $('html').attr('dir') == 'rtl' ? '&rarr;' : '&larr;' }
+                         },
+                         lengthMenu: [ 25, 50, 75, 100 ],
+                         displayLength: 25,
+                         responsive: {
+                           details: false
+                         },
+                         buttons: [
+                         {
+                           extend: 'excelHtml5',
+                           text: 'Export<i class="icon-file-excel ml-2"></i>',
+                           className: 'btn bg-teal',
+                           messageTop: 'Student details report ',
+                           orientation: 'landscape',
+                         }, {
+                           extend: 'print',
+                           text: 'Print<i class="icon-printer ml-2"></i>',
+                           className: 'btn bg-danger',
+                           messageTop: 'Student details report',
+                         }
+                         ],
+                         responsive: {
+                           breakpoints: [
+                           {name: 'bigdesktop', width: Infinity},
+                           {name: 'meddesktop', width: 1480},
+                           {name: 'smalldesktop', width: 1280},
+                           {name: 'medium', width: 1188},
+                           {name: 'tabletl', width: 1024},
+                           {name: 'btwtabllandp', width: 848},
+                           {name: 'tabletp', width: 768},
+                           {name: 'mobilel', width: 480},
+                           {name: 'mobilep', width: 320}
+                           ]
+                         },
+                         
+                       });
+                       
+                       
+                       
+                     } 
+                   });
+                   
+                 });
+                 
+                 function approval(){
+                   var assessment = [];
+                   
+                   $("tr").click(function (){
+                     var index1 = $("tr").index(this);
+                     
+                     $.ajax({
+                       type: "POST",
+                       
+                       url: "/index.php/core/visitors/approval",   
+                       
+                       data:{index1:index1},
+                       dataType: "html",
+                       success: function (data) {      
+                         
+                         //  $('#studentattendence tbody').append(data);                             // for listing table when derived class is choose
+                         location.reload();
+                       } 
+                     });
+                   }); 
+                 }
+                 function reject(){
+                   var assessment = [];
+                   
+                   $("tr").click(function (){
+                     var rejectid = $("tr").index(this);
+                     
+                     $.ajax({
+                       type: "POST",
+                       
+                       url: "/index.php/core/visitors/reject",   
+                       
+                       data:{rejectid:rejectid},
+                       dataType: "html",
+                       success: function (data) {                        
+                         //  $('#studentattendence tbody').append(data);                             // for listing table when derived class is choose
+                         location.reload();
+                       } 
+                     });
+                   }); 
+                 }
+                 $(document).ready(function(){
+                   // Search all columns
+                   $('#txt_searchall').keyup(function(){
+                     // Search Text
+                     var search = $(this).val();
+                     // Hide all table tbody rows
+                     $('table tbody tr').hide();
+                     // Count total search result
+                     var len = $('table tbody tr:not(.notfound) td:contains("'+search+'")').length;
+                     if(len > 0){
+                       // Searching text in columns and show match row
+                       $('table tbody tr:not(.notfound) td:contains("'+search+'")').each(function(){
+                         $(this).closest('tr').show();
+                       });
+                     }else{
+                       $('.notfound').show();
+                     }
+                     
+                   });
+                 });
+                 
+              </script>
+           </div>
+        </div>
+     </div>
+  </mat-drawer-content>
+</mat-drawer-container>

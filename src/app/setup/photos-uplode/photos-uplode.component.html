@@ -1,0 +1,95 @@
+
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+            
+            
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Photos Uplode</div>
+                <div class="page content shadow p-3 position-relative">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Photos Upload</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="avatar-upload">
+                                <div class="avatar-edit">
+                                    <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="avatar-preview">
+                                    <div id="imagePreview" style="background-image: url('../../assets/images/user.png');"></div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!--------Extension-->
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Select</mat-label>
+                                        <mat-select>
+                                            <mat-option value="one">First option</mat-option>
+                                            <mat-option value="two">Second option</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Select</mat-label>
+                                        <mat-select>
+                                            <mat-option value="one">First option</mat-option>
+                                            <mat-option value="two">Second option</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Select</mat-label>
+                                        <mat-select>
+                                            <mat-option value="one">First option</mat-option>
+                                            <mat-option value="two">Second option</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                
+                                <p>Note: If Download is for Individual Class then Select 'Class' Otherwise Select 'All'</p>
+                                
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                        Uplode
+                                    </button>
+                                    <button type="reset" class="btn btn-secondary waves-effect">
+                                        Cancel
+                                    </button>
+                                </div>
+                                
+                                
+                                <!---End--------->
+                            </div>
+                            
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </mat-drawer-content>
+    </mat-drawer-container>
+    
+    

@@ -1,0 +1,137 @@
+
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">User Roles</div>
+                
+                <div class="page content shadow p-3 position-relative">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">User Roles</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="col-xl-12">
+                                        <!-- <div class="card-body"> -->
+                                            <form>
+                                                <mat-form-field appearance="fill" class="example-full-width example-form tt">
+                                                    <mat-label>ORG Name</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                    </mat-select>
+                                                    <mat-icon matPrefix  >verified_user</mat-icon>
+                                                </mat-form-field>
+                                                <mat-form-field appearance="fill" class="example-full-width example-form tt">
+                                                    <mat-label>Branch Name</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                                
+                                                
+                                                <mat-form-field appearance="fill" class="example-full-width example-form tt">
+                                                    <mat-label>User</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                    </mat-select>
+                                                    <mat-icon matPrefix  >supervised_user_circle</mat-icon>
+                                                </mat-form-field>
+                                                
+                                                
+                                                
+                                                <!-- checkbox -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        
+                                                        <h4 class="card-title">Roles</h4>
+                                                        <div class="row">
+                                                            <div class="col-xl-6 col-sm-6" id="dispalygrid">
+                                                                <div class="mt-4">
+                                                                    <div class="form-check mb-3">
+                                                                        <mat-checkbox >admin</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >Mpin</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >att</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >accoutant</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >ACCOUTANTAS</mat-checkbox>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 col-sm-6" id="dispalygrid">
+                                                                <div class="mt-4">
+                                                                    <div class="form-check mb-3">
+                                                                        <mat-checkbox >anandtest</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >PRAKASH SIR</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >TEAM MANAGER</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >CEO</mat-checkbox>
+                                                                    </div>
+                                                                    <div class="form-check  mb-3">
+                                                                        <mat-checkbox >Hide required marker</mat-checkbox>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                                <!-- checkbox -->
+                                                
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                                        Submit
+                                                    </button>
+                                                    <button type="reset" class="btn btn-secondary waves-effect">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            
+                                            <!-- end card body -->
+                                            <!-- </div> -->
+                                            <!-- end card -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </mat-drawer-content>
+        </mat-drawer-container>

@@ -1,0 +1,1148 @@
+
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2"> Student Admission</div>
+                <div class="ico-card">
+                    <i class="fas fa-address-card"></i>
+                </div>
+                <div class="page content shadow p-3 position-relative" style="margin-top: -68px;">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18"> Student Admission</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <form >
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">OFFICIAL DETAILS</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">PERSONAL DETAILS</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">CONTACT DETAILS</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="FATHER-tab" data-bs-toggle="tab" data-bs-target="#FATHER" type="button" role="tab" aria-controls="FATHER" aria-selected="false">FATHER'S DETAILS</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="GUARDIAN-tab" data-bs-toggle="tab" data-bs-target="#GUARDIAN" type="button" role="tab" aria-controls="GUARDIAN" aria-selected="false">GUARDIAN DETAILS</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="HEALTH-tab" data-bs-toggle="tab" data-bs-target="#HEALTH" type="button" role="tab" aria-controls="HEALTH" aria-selected="false">STUDENT HEALTH RECORD</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="EMERGENCY-tab" data-bs-toggle="tab" data-bs-target="#EMERGENCY" type="button" role="tab" aria-controls="EMERGENCY" aria-selected="false">EMERGENCY CONTACT</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="PREVIOUS-tab" data-bs-toggle="tab" data-bs-target="#PREVIOUS" type="button" role="tab" aria-controls="PREVIOUS" aria-selected="false">PREVIOUS QUALIFICATION DETAILS</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="DOCUMENT-tab" data-bs-toggle="tab" data-bs-target="#DOCUMENT" type="button" role="tab" aria-controls="DOCUMENT" aria-selected="false">DOCUMENT TO BE SUBMITTED</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="OTHERS-tab" data-bs-toggle="tab" data-bs-target="#OTHERS" type="button" role="tab" aria-controls="OTHERS" aria-selected="false">OTHERS</button>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>OFFICIAL DETAILS</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-3">
+                                                            <label for="reg_input" class="req">Academic Year</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select Academic Year</option>
+                                                                <option value="1">2021 - 2022</option>
+                                                                <option value="2">2020 - 2020</option>
+                                                                <option value="3">2016 - 2027</option>
+                                                                <option value="4">2020 - 2021</option>
+                                                                <option value="5">2021 - 2022</option>
+                                                                <option value="6">2019 - 2024</option>
+                                                                <option value="7">2012 - 2016</option>
+                                                                <option value="8">2030 - 2031</option>
+                                                                <option value="9">2022 - 2023</option>
+                                                                <option value="10">2031 - 2032</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_academicid_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-3">
+                                                            <label for="reg_input_name" class="req">Unique ID</label>
+                                                            <input class="form-control" readonly="readonly" name="Student[student_admissionno]" id="Student_student_admissionno" type="text" maxlength="45" />                                
+                                                            <div class="school_val_error" id="Student_student_admissionno_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-3">
+                                                            <label for="reg_input_name" class="">Admission Number</label>
+                                                            <input class="form-control" name="Student[student_regno]" id="Student_student_regno" type="text" />                                
+                                                            <div class="school_val_error" id="Student_student_regno_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-3">
+                                                            <label for="reg_input_name" class="req">Joining Date</label>
+                                                            <div data-date-format="yyyy-M-d" class="input-group date">
+                                                                <input placeholder="Joining Date" class="form-control pickadate" value="2022-04-12" name="Student[student_admissiondate]" id="Student_student_admissiondate" type="text" />
+                                                                <div class="school_val_error" id="Student_student_admissiondate_em_" style="display:none"></div>
+                                                                <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input" class="req">Course</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select Course</option>
+                                                                <option value="1">UKG</option>
+                                                                <option value="2">LKG</option>
+                                                                <option value="3">GRADE I</option>
+                                                                <option value="4">GRADE II</option>
+                                                                <option value="5">GRADE III</option>
+                                                                <option value="6">GRADE IV</option>
+                                                                <option value="7">GRADE V</option>
+                                                                <option value="8">GRADE VI</option>
+                                                                <option value="9">GRADE VII</option>
+                                                                <option value="10">GRADE VIII</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_courseid_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input" class="req">Batch</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select Batch</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_batchid_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name">Roll No.</label>
+                                                            <input class="form-control" name="Student[student_rollno]" id="Student_student_rollno" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Student_student_rollno_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <!-- 2 -->
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>PERSONAL DETAILS</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" class="req">First Name </label>
+                                                            <input class="form-control" name="Student[student_firstname]" id="Student_student_firstname" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Student_student_firstname_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" >Middle Name </label>
+                                                            <input class="form-control" name="Student[student_middlename]" id="Student_student_middlename" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Student_student_middlename_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name">Last Name</label>
+                                                            <input class="form-control" name="Student[student_lastname]" id="Student_student_lastname" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Student_student_lastname_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" class="req">Date of Birth</label>
+                                                            <div data-date-format="yyyy-M-d" class="input-group date">
+                                                                <input class="form-control pickadate" name="Student[student_dob]" id="Student_student_dob" type="text" maxlength="45" />
+                                                                <div class="school_val_error" id="Student_student_dob_em_" style="display:none"></div>
+                                                                <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Gender">Gender</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="prompt">Please Select</option>
+                                                                <option value="1">Male</option>
+                                                                <option value="2">Female</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_student_gender_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Blood_Group" >Blood Group</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="prompt">Please Select</option>
+                                                                <option value="1">A+</option>
+                                                                <option value="2">A-</option>
+                                                                <option value="3">B+</option>
+                                                                <option value="4">B-</option>
+                                                                <option value="5">O+</option>
+                                                                <option value="6">O-</option>
+                                                                <option value="7">AB+</option>
+                                                                <option value="8">AB-</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_student_bloodgroup_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" >Birth Place</label>
+                                                            <input maxlength="45" class="form-control" name="Student[student_birthplace]" id="Student_student_birthplace" type="text" />
+                                                            <div class="school_val_error" id="Student_student_birthplace_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Country">Nationality</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="prompt">Please Select</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_student_nationality_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" >Mother Tongue</label>
+                                                            <input maxlength="45" class="form-control" name="Student[student_mothertoung]" id="Student_student_mothertoung" type="text" />
+                                                            <div class="school_val_error" id="Student_student_mothertoung_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input" class="req">Category</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select Category</option>
+                                                                <option value="16">gfgf</option>
+                                                                <option value="17">fghh</option>
+                                                                <option value="18">fghhiu</option>
+                                                                <option value="19">India</option>
+                                                                <option value="20">ghjjkhjkjk</option>
+                                                                <option value="21">russiat</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_studentcategoryid_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input">Religion</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select Religion</option>
+                                                                <option value="Christianghret">Christianghret</option>
+                                                                <option value="Hindu">Hindu</option>
+                                                                <option value="Muslim">Muslim</option>
+                                                                <option value="www">www</option>
+                                                                <option value="test1">test1</option>
+                                                                <option value="Sikh">Sikh</option>
+                                                                <option value="test123">test123</option>
+                                                                <option value="sds">sds</option>
+                                                                <option value="huh">huh</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_student_religion_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input">Caste</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select Caste</option>
+                                                                <option value="C">C</option>
+                                                                <option value="Christan">Christan</option>
+                                                                <option value="Muslim">Muslim</option>
+                                                                <option value="New casremm">New casremm</option>
+                                                                <option value="obc">obc</option>
+                                                                <option value="hjj">hjj</option>
+                                                                <option value="kjghhj">kjghhj</option>
+                                                                <option value="test1">test1</option>
+                                                                <option value="szsdA">szsdA</option>
+                                                                <option value="AAAAAAAAAA">AAAAAAAAAA</option>
+                                                                <option value="hggh">hggh</option>
+                                                                <option value="chiller muslim">chiller muslim</option>
+                                                                <option value="Cast Category">Cast Category</option>
+                                                                <option value="Religion View">Religion View</option>
+                                                                <option value="jutt">jutt</option>
+                                                                <option value="z">z</option>
+                                                                <option value="Singh">Singh</option>
+                                                                <option value="hindu">hindu</option>
+                                                                <option value="jaininsm">jaininsm</option>
+                                                                <option value="christian">christian</option>
+                                                                <option value="Brahmin">Brahmin</option>
+                                                                <option value="gh">gh</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_student_caste_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name">Aadhar Number</label>
+                                                            <input class="form-control" name="Student[student_aadhar]" id="Student_student_aadhar" type="text" maxlength="12" />
+                                                            <div class="school_val_error" id="Student_student_aadhar_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input">Student House</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select House</option>
+                                                                <option value="10">kamburu</option>
+                                                                <option value="11">green house </option>
+                                                                <option value="12"></option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_studenthouseid_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- 2 -->
+                            <!-- 3 -->
+                            
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>CONTACT DETAILS</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-6">
+                                                            <label for="reg_input_name">Permanent Address</label>
+                                                            <textarea class="form-control" name="Student[student_address2]" id="Student_student_address2"></textarea>
+                                                            <div class="school_val_error" id="Student_student_address2_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form_group col-sm-6">
+                                                            <label for="reg_input_name" class="req">Present Address</label>
+                                                            <textarea class="form-control" name="Student[student_address1]" id="Student_student_address1"></textarea>
+                                                            <div class="school_val_error" id="Student_student_address1_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency" >City</label>
+                                                            <input class="form-control" name="Student[student_city]" id="Student_student_city" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Student_student_city_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency">Pin</label>
+                                                            <input class="form-control" name="Student[student_pincode]" id="Student_student_pincode" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Student_student_pincode_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Country">Country</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="" selected="selected">Please Select</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_student_country_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Country">State</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="" selected="selected">Please Select</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_student_state_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency">Phone</label>
+                                                            <input class="form-control" name="Student[student_phone]" id="Student_student_phone" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Student_student_phone_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency">Mobile</label>
+                                                            <input class="form-control" name="Student[student_mobile]" id="Student_student_mobile" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Student_student_mobile_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-6">
+                                                            <label for="reg_input_currency">Email</label>
+                                                            <input class="form-control" name="Student[student_email]" id="Student_student_email" type="text" maxlength="256" />
+                                                            <div class="school_val_error" id="Student_student_email_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6" style="padding-top: 30px;">
+                                                            <label for="reg_input_logo" >Upload Photo</label>
+                                                            <input id="ytStudent_student_photo" type="hidden" value="" name="Student[student_photo]" /><input name="Student[student_photo]" id="Student_student_photo" type="file" />
+                                                            <div class="school_val_error" id="Student_student_photo_em_" style="display:none"></div><br>
+                                                            <span style="font-size:10.5px;">(Max 25Kb)</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            <!-- 3 -->
+                            <!-- 4 -->
+                            
+                            <div class="tab-pane fade" id="FATHER" role="tabpanel" aria-labelledby="FATHER-tab">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>FATHER'S DETAILS</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Name  </label>
+                                                            <input class="form-control" name="Parentdetails[father_name]" id="Parentdetails_father_name" type="text" maxlength="60" />
+                                                            <div class="errorMessage" id="Parentdetails_father_name_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label >Mobile</label>
+                                                            <input class="form-control" name="Parentdetails[father_mobile]" id="Parentdetails_father_mobile" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Parentdetails_father_mobile_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Job</label>
+                                                            <input class="form-control" name="Parentdetails[father_job]" id="Parentdetails_father_job" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Parentdetails_father_job_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Aaadhar number</label>
+                                                            <input class="form-control" name="Parentdetails[faadharno]" id="Parentdetails_faadharno" type="text" />
+                                                            <div class="school_val_error" id="Parentdetails_faadharno_em_" style="display:none"></div>
+                                                        </div><br>
+                                                        <p><b>MOTHER'S DETAILS</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Name</label>
+                                                            <input class="form-control" name="Parentdetails[mother_name]" id="Parentdetails_mother_name" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Parentdetails_mother_name_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label for="reg_input_name">Mobile</label>
+                                                            <input class="form-control" name="Parentdetails[mother_mobile]" id="Parentdetails_mother_mobile" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Parentdetails_mother_mobile_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label for="reg_input_name">Job</label>
+                                                            <input class="form-control" name="Parentdetails[mother_job]" id="Parentdetails_mother_job" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Parentdetails_mother_job_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Aaadhar number</label>
+                                                            <input class="form-control" name="Parentdetails[maadharno]" id="Parentdetails_maadharno" type="text" />
+                                                            <div class="school_val_error" id="Parentdetails_maadharno_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            <!-- 4 -->
+                            <!-- 5 -->
+                            <div class="tab-pane fade" id="GUARDIAN" role="tabpanel" aria-labelledby="GUARDIAN-tab">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>GUARDIAN DETAILS</b></p>
+                                                        <hr>
+                                                        <div class="form_group">
+                                                            <label for="reg_input_name" class="">Parent Available</label>
+                                                            <input  name="guardianavailable" id="checkbox1" type="checkbox">
+                                                        </div>
+                                                        <div class="form-group col-sm-4" id="guardianname">
+                                                            <label for="reg_input_name" class="req">Name  </label>
+                                                            <input class="form-control" data-required="true" name="Guardian[guardian_name]" id="Guardian_guardian_name" type="text" maxlength="256" />
+                                                            <div class="errorMessage" id="Guardian_guardian_name_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4" id="guardianrelation">
+                                                            <label for="reg_input_name" class="req">Relation</label>
+                                                            <input class="form-control" data-required="true" name="Guardian[guardian_relation]" id="Guardian_guardian_relation" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Guardian_guardian_relation_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4" id="education">
+                                                            <label for="reg_input_name" >Education</label>
+                                                            <input class="form-control" data-required="true" name="Guardian[guardian_education]" id="Guardian_guardian_education" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Guardian_guardian_education_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-6" id="occupation">
+                                                            <label for="reg_input_name" >Occupation</label>
+                                                            <input class="form-control" data-required="true" name="Guardian[guardian_occupation]" id="Guardian_guardian_occupation" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Guardian_guardian_occupation_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6" id="income">
+                                                            <label for="reg_input_name" >Income</label>
+                                                            <input class="form-control" data-required="true" name="Guardian[guardian_income]" id="Guardian_guardian_income" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Guardian_guardian_income_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form_group" id="sameaddress">
+                                                            <label for="reg_input_name" class="">Check if Parent Address same as Student Address</label>
+                                                            <input  name="preaddr" id="checkbox" type="checkbox">
+                                                        </div>
+                                                        <div class="form-group col-sm-6" id='guardianaddress'>
+                                                            <label for="reg_input_name"> Address</label>
+                                                            <textarea class="form-control" name="Guardian[guardian_address]" id="Guardian_guardian_address"></textarea>
+                                                            <div class="school_val_error" id="Guardian_guardian_address_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6" id='guardiancity'>
+                                                            <label for="reg_input_currency">City</label>
+                                                            <input class="form-control" name="Guardian[guardian_city]" id="Guardian_guardian_city" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Guardian_guardian_city_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-6" id='guardiancountry'>
+                                                            <label for="Country">Country</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="prompt">Please Select</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Guardian_guardian_country_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-6" id='guardianstate'>
+                                                            <label for="Country">State</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="prompt">Please Select</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Guardian_guardian_state_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p><b>PARENT</b></p><hr>
+                                                        <div class="form-group col-sm-4" id="phone">
+                                                            <label for="reg_input_currency">Phone</label>
+                                                            <input class="form-control" name="Guardian[guardian_phone]" id="Guardian_guardian_phone" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Guardian_guardian_phone_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4" id="mobile">
+                                                            <label for="reg_input_currency" class="req">Mobile</label>
+                                                            <input class="form-control" data-required="true" name="Guardian[guardian_mobile]" id="Guardian_guardian_mobile" type="text" maxlength="45" />
+                                                            <div class="school_val_error" id="Guardian_guardian_mobile_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4" id="email">
+                                                            <label for="reg_input_currency" class="req">Email</label>
+                                                            <input class="form-control" data-required="true" name="Guardian[guardian_email]" id="Guardian_guardian_email" type="text" maxlength="60" />
+                                                            <div class="school_val_error" id="Guardian_guardian_email_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group" style="display:none" id="registeredemail">
+                                                            <label for="reg_input_currency" class="req">Registered Parent Email</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option value="">Select email</option>
+                                                                <option value="1">WEB33g@gmail.com(  Subcsh )</option>
+                                                                <option value="2">WEB34g@gmail.com(  Ikrcm J )</option>
+                                                                <option value="3">WEB35g@gmail.com(  Dcmodcrcn )</option>
+                                                                <option value="4">WEB36g@gmail.com(  RcMESH S )</option>
+                                                                <option value="5">WEB37g@gmail.com(  Mcnikcndcn B )</option>
+                                                                <option value="6">WEB39g@gmail.com(  Senthilkumcr S )</option>
+                                                                <option value="7">WEB40g@gmail.com(  Rcvikumcr V )</option>
+                                                                <option value="8">WEB41g@gmail.com(  UTHcYcKUMcR B )</option>
+                                                                <option value="9">WEB42g@gmail.com(  Thcngcrcj C )</option>
+                                                                <option value="10">WEB43g@gmail.com(  Roopesh F )</option>
+                                                                <option value="11">WEB44g@gmail.com(  Krishnckumcr V )</option>
+                                                                <option value="12">WEB45g@gmail.com(  Fcizcl Hcq S )</option>
+                                                                <option value="13">WEB46g@gmail.com(  Scdiq cli c )</option>
+                                                                <option value="14">WEB47g@gmail.com(  Pericscmy M )</option>
+                                                                <option value="15">WEB48g@gmail.com(  Mohcncncndh M )</option>
+                                                                <option value="16">WEB49g@gmail.com(  Gcnescn P )</option>
+                                                                <option value="17">WEB50g@gmail.com(  Selvc Kumcr M )</option>
+                                                                <option value="18">WEB51g@gmail.com(  Syed Sircjudeen S )</option>
+                                                                <option value="19">WEB52g@gmail.com(  MURUGcNcNDcN M )</option>
+                                                                <option value="20">WEB53g@gmail.com(  Dhcncsekcrcn  )</option>
+                                                                <option value="21">WEB54g@gmail.com(  Niscr chcmed )</option>
+                                                                <option value="22">WEB55g@gmail.com(  cbdul Mclik B c )</option>
+                                                                <option value="23">WEB56g@gmail.com(  RcMPRcScD C )</option>
+                                                                <option value="24">WEB57g@gmail.com(  cnilkumcr V S )</option>
+                                                                <option value="25">WEB58g@gmail.com(  kccnchithurci )</option>
+                                                                <option value="26">WEB59g@gmail.com(  JcWcHcR D )</option>
+                                                                <option value="27">WEB60g@gmail.com(  Gopincth R )</option>
+                                                                <option value="28">WEB61g@gmail.com(  Rcjendren S )</option>
+                                                                <option value="29">WEB62g@gmail.com(  Prcbhu M )</option>
+                                                                <option value="30">WEB63g@gmail.com(  Kcncgcrcj M )</option>
+                                                                <option value="31">WEB64g@gmail.com(  Scthish Bcbu )</option>
+                                                                <option value="32">WEB65g@gmail.com(  Ikrcm J )</option>
+                                                                <option value="33">WEB66g@gmail.com(  cmcnullch M )</option>
+                                                                <option value="34">WEB70g@gmail.com(  Mctheen M )</option>
+                                                                <option value="35">WEB71g@gmail.com(  KcMcRcJ R )</option>
+                                                                <option value="36">WEB72g@gmail.com(  Mchesh kumcr N )</option>
+                                                                <option value="37">WEB73g@gmail.com(  Kcruppuscmy M )</option>
+                                                                <option value="38">WEB74g@gmail.com(  Subcsh )</option>
+                                                                <option value="39">WEB75g@gmail.com(  J VIJcYc KUMcR )</option>
+                                                                <option value="40">WEB76g@gmail.com(  Mctheen M )</option>
+                                                                <option value="41">WEB77g@gmail.com(  Pcrcmcsivcm )</option>
+                                                                <option value="42">WEB78g@gmail.com(  KcNcGcRcJ V )</option>
+                                                                <option value="43">WEB79g@gmail.com(  IBRcHIM KHcN M G )</option>
+                                                                <option value="44">WEB80g@gmail.com(  DHcWOOTH KHcN K )</option>
+                                                                <option value="45">WEB81g@gmail.com(  cBDULLc S )</option>
+                                                                <option value="46">WEB82g@gmail.com(  R BcLcMURUGcN )</option>
+                                                                <option value="47">WEB83g@gmail.com(  TcMILcRcScN  )</option>
+                                                                <option value="48">WEB84g@gmail.com(  KULOTHUNGcN )</option>
+                                                                <option value="49">WEB85g@gmail.com(  JUBER cLI )</option>
+                                                                <option value="50">WEB86g@gmail.com(  NcZEER M )</option>
+                                                                <option value="51">WEB87g@gmail.com(  MOHcMMED ISHTHYcQ M J )</option>
+                                                                <option value="52">WEB88g@gmail.com(  cBDUL KcDcR )</option>
+                                                                <option value="53">WEB89g@gmail.com(  MURUGcPPcN )</option>
+                                                                <option value="54">WEB90g@gmail.com(  PRcScTH I )</option>
+                                                                <option value="55">WEB91g@gmail.com(  THcNGcRcJ )</option>
+                                                                <option value="56">WEB92g@gmail.com(  SELVcKUMcR K )</option>
+                                                                <option value="57">WEB94g@gmail.com(  Rcdhckrishncn D )</option>
+                                                                <option value="58">WEB95g@gmail.com(  BcLcMURUGcN P )</option>
+                                                                <option value="59">WEB96g@gmail.com(  KcNcGcRcJ V )</option>
+                                                                <option value="60">WEB97g@gmail.com(  Pclcniscmy S )</option>
+                                                                <option value="61">WEB98g@gmail.com(  Dhcmothcrcscmy )</option>
+                                                                <option value="62">WEB99g@gmail.com(  Roopesh F )</option>
+                                                                <option value="63">danielokewole31@gmail.com(  MR &amp; MRS OKEWOLE )</option>
+                                                                <option value="64">WEB101g@gmail.com(  Guncsekcrcn P )</option>
+                                                                <option value="65">WEB102g@gmail.com(  Rcvikumcr M )</option>
+                                                                <option value="66">WEB103g@gmail.com(  RcM PRcScTH C )</option>
+                                                                <option value="67">WEB104g@gmail.com(  Senthilkumcr S )</option>
+                                                                <option value="68">WEB105g@gmail.com(  KUMcRcVcDIVEL  )</option>
+                                                                <option value="69">WEB106g@gmail.com(  cbdullc S )</option>
+                                                                <option value="70">WEB107g@gmail.com(  BcLcN T )</option>
+                                                                <option value="71">WEB108g@gmail.com(  Prcbhu  )</option>
+                                                                <option value="72">WEB109g@gmail.com(  VISWcNcTHcN S )</option>
+                                                                <option value="73">WEB110g@gmail.com(  Senthil Prcbhu S )</option>
+                                                                <option value="74">WEB111g@gmail.com(  RcMU R )</option>
+                                                                <option value="75">siddhesh@gmail.com(  siddhesh )</option>
+                                                                <option value="76">dgdfhfz@fbgfdg.fgdd(  sdfdsf )</option>
+                                                                <option value="77">hhkjhjh@hjhjh.hjgjhgh(  jkjhh )</option>
+                                                                <option value="78">xyz@gmail.com(  Harsh )</option>
+                                                                <option value="79">sdhsjds@hotmail.co(  dsadjwa )</option>
+                                                                <option value="80">ss@gmail.com(  A )</option>
+                                                                <option value="81">sdsfdgdfdss@dsadsff.fs(  dsfcsdf )</option>
+                                                                <option value="82">abugucollins90@gmail.com(  Mr Mrs Abugu )</option>
+                                                                <option value="83">muzahna@hmail.com(  mustaffa )</option>
+                                                                <option value="84">ggg@ggg.com(  Jada Chan )</option>
+                                                                <option value="85">gfhfgh@awdea.com(  vbgh )</option>
+                                                                <option value="86">test@mail.com(  test )</option>
+                                                                <option value="87">GUARDEINtEST@MAIL.COM(  RANI )</option>
+                                                                <option value="88">sunkara.kv@gmail.com(  kasiviswanadham )</option>
+                                                                <option value="89">DWARAPUREDDIGANESH19999@GMAIL.COM(  D KANNAYYA )</option>
+                                                                <option value="90">ahmadamirin5881@gmail.com(  SSSSSS )</option>
+                                                                <option value="91">kspra@gmail.com(  sdfds )</option>
+                                                                <option value="92">Oke10292@yahoo.org(  Mr and Mrs OKE )</option>
+                                                                <option value="93">hh@gmail.com(  ada )</option>
+                                                                <option value="94">ganeshtechnologys@gmail.com(  D KANNAYYA )</option>
+                                                                <option value="95">girish@gmail.com(  Girish )</option>
+                                                                <option value="96">sadg@gmail.com(  vinay )</option>
+                                                                <option value="97">IMDASD@GMAIL.COM(  KJHAJKLKLJ )</option>
+                                                                <option value="98">a@yopmail.com(  t )</option>
+                                                                <option value="99">ranjitkapar77@gmail.com(  Ranjit Kapar )</option>
+                                                                <option value="100">342@dsf.com(  test )</option>
+                                                                <option value="101">abc@gmail.com(  MK )</option>
+                                                                <option value="102">test@gmail.com(  test )</option>
+                                                                <option value="103">zohramanagementteam@gmail.com(  Mohammad Quresh )</option>
+                                                                <option value="104">sumanchoudhary527@gmail.com(  Vijay )</option>
+                                                                <option value="105">prasnth@gmail.com(  dsfssgsd )</option>
+                                                                <option value="106">ganeshdwarapureddi1999@gmail.com(  D KANNAYYA )</option>
+                                                                <option value="107">s@p.com(  anup )</option>
+                                                                <option value="108">sdfsdfd2fdf@dfdsf.com(  test )</option>
+                                                                <option value="109">srr@sddf.dfdf(  dsfsdf )</option>
+                                                                <option value="110">gg@g.com(  gff )</option>
+                                                                <option value="111">gg@g.com(  gff )</option>
+                                                                <option value="112">Aahosny1@gmail.com(  ahmed )</option>
+                                                            </select>
+                                                            <div class="school_val_error" id="Student_guardian_email1_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="col-md-12" style="display:none" id="parentdetails">
+                                                            <div class="row">
+                                                                <div class="panel panel-white border-left-xlg  border-left-danger" id="class1" style="display:none">
+                                                                    <div class="panel-heading">									
+                                                                        <span class="icon-info22" style="color:orange"></span>
+                                                                        <label for="reg_input_name">Use this feature only to add sibling students. Please select the existing student details. </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-md-4" id="class" style="display:none">
+                                                                    <label for="reg_input_name" class="req">Class </label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">SelectCourse</option>
+                                                                        <option value="1">UKG</option>
+                                                                        <option value="2">LKG</option>
+                                                                        <option value="3">GRADE I</option>
+                                                                        <option value="4">GRADE II</option>
+                                                                        <option value="5">GRADE III</option>
+                                                                        <option value="6">GRADE IV</option>
+                                                                        <option value="7">GRADE V</option>
+                                                                        <option value="8">GRADE VI</option>
+                                                                        <option value="9">GRADE VII</option>
+                                                                        <option value="10">GRADE VIII</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-sm-4" style="display:none" id="batchids">
+                                                                    <label for="reg_input" class="req">Batch</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Select Batch</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-sm-4" style="display:none" id="student">
+                                                                    <label for="reg_input" class="req">Student</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Select Student</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group  col-sm-4"  id="search" style="display:none">
+                                                                    <label for="reg_input" class="">&nbsp;</label>
+                                                                    <label for="reg_input" class="">&nbsp;</label>
+                                                                    <input placeholder="Search By Student" class="form-control" id="applicants" type="text" value="" name="applicants" /><input id="hidden-field" name="output" type="hidden" value="" />
+                                                                </div>
+                                                                <br>   <a href="javascript:autocomplete();" class="btn btn-default" align="right" style="display:none" title='Addition'id="searchicon"><span class='icon-search4' ></span></a>
+                                                            </div>
+                                                            <div class="panel panel-default" id="siblingdetails" style="display:none">
+                                                                <div class="panel-body">
+                                                                    <div class="panel-body">
+                                                                        <div class="row" id="siblings">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- 5 -->
+                            <!-- 6 -->
+                            <div class="tab-pane fade" id="HEALTH" role="tabpanel" aria-labelledby="HEALTH-tab">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>STUDENT HEALTH RECORD</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" class="">Complexion</label>
+                                                            <input class="form-control" name="Studenthealthdetails[complexion]" id="Studenthealthdetails_complexion" type="text" maxlength="255" />
+                                                            <div class="school_val_error" id="Studenthealthdetails_complexion_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency" class="">Weight (in kg)</label>
+                                                            <input class="form-control" name="Studenthealthdetails[weight]" id="Studenthealthdetails_weight" type="text" />
+                                                            <div class="school_val_error" id="Studenthealthdetails_weight_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Country">Height (in cm)</label>
+                                                            <input class="form-control" name="Studenthealthdetails[height]" id="Studenthealthdetails_height" type="text" />
+                                                            <div class="school_val_error" id="Studenthealthdetails_height_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency" class="">Mark for Identity</label>
+                                                            <textarea class="form-control" name="Studenthealthdetails[identity]" id="Studenthealthdetails_identity"></textarea>
+                                                            <div class="school_val_error" id="Studenthealthdetails_identity_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Country">Clinical History</label>
+                                                            <textarea class="form-control" name="Studenthealthdetails[clinical_history]" id="Studenthealthdetails_clinical_history"></textarea>
+                                                            <div class="school_val_error" id="Studenthealthdetails_clinical_history_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" class="">Allergic History</label>
+                                                            <textarea class="form-control" name="Studenthealthdetails[allergic_history]" id="Studenthealthdetails_allergic_history"></textarea>
+                                                            <div class="school_val_error" id="Studenthealthdetails_allergic_history_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div><br>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            <!-- 6 -->
+                            <!-- 7 -->
+                            <div class="tab-pane fade" id="EMERGENCY" role="tabpanel" aria-labelledby="EMERGENCY-tab">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>EMERGENCY CONTACT</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" class="">Contact Name</label>
+                                                            <input class="form-control" name="Studenthealthdetails[person_name]" id="Studenthealthdetails_person_name" type="text" maxlength="50" />
+                                                            <div class="school_val_error" id="Studenthealthdetails_person_name_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency" class="">Contact Number</label>
+                                                            <input class="form-control" name="Studenthealthdetails[contact_no]" id="Studenthealthdetails_contact_no" type="text" />
+                                                            <div class="school_val_error" id="Studenthealthdetails_contact_no_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            <!-- 7 -->
+                            <!-- 8 -->
+                            <div class="tab-pane fade" id="PREVIOUS" role="tabpanel" aria-labelledby="PREVIOUS-tab">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <div class="row">
+                                                        <p><b>PREVIOUS QUALIFICATION DETAILS</b></p>
+                                                        <hr>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_name" class="">School Name</label>
+                                                            <input class="form-control" name="Previousqualification[previousqualification_schoolname]" id="Previousqualification_previousqualification_schoolname" type="text" maxlength="256" />
+                                                            <div class="school_val_error" id="Previousqualification_previousqualification_schoolname_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="reg_input_currency" class="">School Address</label>
+                                                            <textarea class="form-control" name="Previousqualification[previousqualification_address]" id="Previousqualification_previousqualification_address"></textarea>
+                                                            <div class="school_val_error" id="Previousqualification_previousqualification_address_em_" style="display:none"></div>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="Country">Qualification</label>
+                                                            <input class="form-control" name="Previousqualification[qualification]" id="Previousqualification_qualification" type="text" />
+                                                            <div class="school_val_error" id="Previousqualification_qualification_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="mark_sheet">
+                                                        <div class="form-group col-sm-3">
+                                                            <input id="ytStudentdocuments_mark_sheet" type="hidden" value="0" name="Studentdocuments[mark_sheet]" /><input value="Mark List" name="Studentdocuments[mark_sheet]" id="Studentdocuments_mark_sheet" type="checkbox" />                                <label>Mark List</label>
+                                                        </div>
+                                                        <div class="form-group col-sm-5" id="image1"  style="display:none">
+                                                            <input id="ytimage7" type="hidden" value="" name="Studentdocuments[image1]" /><input id="image7" name="Studentdocuments[image1]" type="file" />                                
+                                                            <div class="school_val_error" id="Studentdocuments_image1_em_" style="display:none"></div>
+                                                            <label>Upload certificate </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="birth_certificate">
+                                                        <div class="form-group col-sm-3">
+                                                            <input id="ytStudentdocuments_birth_certificate" type="hidden" value="0" name="Studentdocuments[birth_certificate]" /><input value="Birth Certificate" name="Studentdocuments[birth_certificate]" id="Studentdocuments_birth_certificate" type="checkbox" />                                <label>Birth Certificate</label>
+                                                        </div>
+                                                        <div class="form-group col-sm-5" id="image2" style="display:none">
+                                                            <input id="ytimage8" type="hidden" value="" name="Studentdocuments[image2]" /><input id="image8" name="Studentdocuments[image2]" type="file" />                                
+                                                            <div class="school_val_error" id="Studentdocuments_image2_em_" style="display:none"></div>
+                                                            <label>Upload certificate </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="tc">
+                                                        <div class="form-group col-sm-3">
+                                                            <input id="ytStudentdocuments_tc" type="hidden" value="0" name="Studentdocuments[tc]" /><input value="Transfer Certificate" name="Studentdocuments[tc]" id="Studentdocuments_tc" type="checkbox" />                                <label>Transfer Certificate</label>
+                                                        </div>
+                                                        <div class="form-group col-sm-5" id="image3" style="display:none">
+                                                            <input id="ytimage9" type="hidden" value="" name="Studentdocuments[image3]" /><input id="image9" name="Studentdocuments[image3]" type="file" />                                
+                                                            <div class="school_val_error" id="Studentdocuments_image3_em_" style="display:none"></div>
+                                                            <label>Upload certificate </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="cc">
+                                                        <div class="form-group col-sm-3">
+                                                            <input id="ytStudentdocuments_cc" type="hidden" value="0" name="Studentdocuments[cc]" /><input value="Caste Certificate" name="Studentdocuments[cc]" id="Studentdocuments_cc" type="checkbox" />                                <label>Caste Certificate</label>
+                                                        </div>
+                                                        <div class="form-group col-sm-5" id="image4" style="display:none">
+                                                            <input id="ytimage10" type="hidden" value="" name="Studentdocuments[image4]" /><input id="image10" name="Studentdocuments[image4]" type="file" />                                
+                                                            <div class="school_val_error" id="Studentdocuments_image4_em_" style="display:none"></div>
+                                                            <label>Upload certificate </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="omc">
+                                                        <div class="form-group col-sm-3">
+                                                            <input id="ytStudentdocuments_omc" type="hidden" value="0" name="Studentdocuments[omc]" /><input value="Migration Certificate" name="Studentdocuments[omc]" id="Studentdocuments_omc" type="checkbox" />                                <label>Migration Certificate</label>
+                                                        </div>
+                                                        <div class="form-group col-sm-5" id="image5" style="display:none">
+                                                            <input id="ytimage11" type="hidden" value="" name="Studentdocuments[image5]" /><input id="image11" name="Studentdocuments[image5]" type="file" />                                
+                                                            <div class="school_val_error" id="Studentdocuments_image5_em_" style="display:none"></div>
+                                                            <label>Upload certificate </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="affidavit">
+                                                        <div class="form-group col-sm-3">
+                                                            <input id="ytStudentdocuments_affidavit" type="hidden" value="0" name="Studentdocuments[affidavit]" /><input value="Affidavit" name="Studentdocuments[affidavit]" id="Studentdocuments_affidavit" type="checkbox" />                                <label>Affidavit</label>
+                                                        </div>
+                                                        <div class="form-group col-sm-5" id="image6"  style="display:none">
+                                                            <input id="ytimage12" type="hidden" value="" name="Studentdocuments[image6]" /><input id="image12" name="Studentdocuments[image6]" type="file" />                                
+                                                            <div class="school_val_error" id="Studentdocuments_image6_em_" style="display:none"></div>
+                                                            <label>Upload certificate </label>
+                                                        </div>
+                                                        <div class="form-group col-sm-5" id="text"  style="display:none">
+                                                            <label>Certificate Name</label>
+                                                            <input class="form-control" name="Student[other_details]" id="Student_other_details" type="text" />
+                                                            <div class="school_val_error" id="Student_other_details_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <!-- 8 -->
+                            
+                            <!-- 9 -->
+                            <div class="tab-pane fade" id="DOCUMENT" role="tabpanel" aria-labelledby="DOCUMENT-tab">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <p><b>DOCUMENT TO BE SUBMITTED</b></p>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-12">
+                                                            <input id="ytStudent_documenttypeid" type="hidden" value="" name="Student[documenttypeid]" /><span id="Student_documenttypeid"><input id="Student_documenttypeid_0" value="1" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_0">Birth Certificate</label>    <input id="Student_documenttypeid_1" value="2" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_1">National ID Card</label>    <input id="Student_documenttypeid_2" value="3" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_2">PSC Certificate1</label>    <input id="Student_documenttypeid_3" value="4" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_3">JSC Certificate</label>    <input id="Student_documenttypeid_4" value="5" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_4">SSC Certificate</label>    <input id="Student_documenttypeid_5" value="6" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_5">Adhar card</label>    <input id="Student_documenttypeid_6" value="7" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_6">nje</label>    <input id="Student_documenttypeid_7" value="8" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_7">vsdfvf</label>    <input id="Student_documenttypeid_8" value="9" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_8">vsvfv</label>    <input id="Student_documenttypeid_9" value="10" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_9">fvfvsd</label>    <input id="Student_documenttypeid_10" value="11" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_10">sdcsdc</label>    <input id="Student_documenttypeid_11" value="12" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_11">hgnh</label>    <input id="Student_documenttypeid_12" value="13" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_12">gbfgb</label>    <input id="Student_documenttypeid_13" value="14" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_13">fgbfgb</label>    <input id="Student_documenttypeid_14" value="15" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_14">bbbb</label>    <input id="Student_documenttypeid_15" value="16" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_15">Birth cert</label>    <input id="Student_documenttypeid_16" value="17" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_16">ewqe</label>    <input id="Student_documenttypeid_17" value="18" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_17">Marksheet 10th</label>    <input id="Student_documenttypeid_18" value="19" type="checkbox" name="Student[documenttypeid][]" /> <label for="Student_documenttypeid_18">sdfsfsdf</label></span>
+                                                            <div class="school_val_error" id="Student_documenttypeid_em_" style="display:none"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <!-- 9 -->
+                            
+                            <!-- 10 -->
+                            <div class="tab-pane fade" id="OTHERS" role="tabpanel" aria-labelledby="OTHERS-tab">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    <p><b>OTHERS</b></p>
+                                                    <hr>
+                                                    
+                                                    <div class="row" id="subcategorydetails">
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-2">
+                                                            <label> 
+                                                                <label for="reg_input_name" class="">Transport </label>
+                                                                <input  name="transport" id="checkbox4" type="checkbox">
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group col-sm-2">
+                                                            <label> 
+                                                                <label for="reg_input_name" class="">Hostel </label>
+                                                                <input  name="hostel" id="checkbox5" type="checkbox">
+                                                            </label>
+                                                        </div>
+                                                        <div class="row" id="transportdetails" style="display:none">
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group col-sm-3">
+                                                                    <label class="req">Route</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Select Route Code</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Student_routemasterid_em_" style="display:none"></div>
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label class="req">Destination</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Select Destination</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Student_routedetailsid_em_" style="display:none"></div>
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="reg_input_name" class="req">Start Date</label>
+                                                                    <div data-date-format="yyyy-M-d" class="input-group date">
+                                                                        <input class="form-control pickadate" name="Student[transport_startdate]" id="Student_transport_startdate" type="text" />
+                                                                        <div class="school_val_error" id="Student_transport_startdate_em_" style="display:none"></div>
+                                                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="reg_input_name" class="req">End Date</label>
+                                                                    <div data-date-format="yyyy-M-d" class="input-group date">
+                                                                        <input class="form-control pickadate" name="Student[transport_enddate]" id="Student_transport_enddate" type="text" />
+                                                                        <div class="school_val_error" id="Student_transport_enddate_em_" style="display:none"></div>
+                                                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row" id="hosteldetails" style="display:none">
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group col-sm-3">
+                                                                    <label class="req">Hostel Name</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Select Hostel</option>
+                                                                        <option value="1">€£€=€=£=*××÷</option>
+                                                                        <option value="3">MG HOSTEL (NAME)</option>
+                                                                        <option value="4">yash 123</option>
+                                                                        <option value="6">happy</option>
+                                                                        <option value="7">aha</option>
+                                                                        <option value="8">123</option>
+                                                                        <option value="9">elizebeth12!@</option>
+                                                                        <option value="10">carla</option>
+                                                                        <option value="11">chilli</option>
+                                                                        <option value="12">ram12</option>
+                                                                        <option value="14">Nisar Hostel</option>
+                                                                        <option value="15">nisarga Hostel</option>
+                                                                        <option value="16">Nisar Hostel</option>
+                                                                        <option value="17">sdcsz</option>
+                                                                        <option value="18">prem </option>
+                                                                        <option value="19">prem </option>
+                                                                        <option value="20">prem1 </option>
+                                                                        <option value="21">Anna Hostel</option>
+                                                                        <option value="22">Anna Hostel</option>
+                                                                        <option value="28">Terra</option>
+                                                                        <option value="30">yogesh </option>
+                                                                        <option value="31">€£€=€=£=*××÷</option>
+                                                                        <option value="32">abc</option>
+                                                                        <option value="33">SG hostel</option>
+                                                                        <option value="36">Onyx hostel</option>
+                                                                        <option value="37">good</option>
+                                                                        <option value="38">Cool</option>
+                                                                        <option value="39">Cool</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Student_hosteldetailsid_em_" style="display:none"></div>
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label class="req">Hostel Room</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Select Room</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Student_hostelroomid_em_" style="display:none"></div>
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="reg_input_name" class="req">Registration Date</label>
+                                                                    <div data-date-format="yyyy-M-d" class="input-group date">
+                                                                        <input class="form-control pickadate" name="Student[hostel_startdate]" id="Student_hostel_startdate" type="text" />
+                                                                        <div class="school_val_error" id="Student_hostel_startdate_em_" style="display:none"></div>
+                                                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="reg_input_name" class="req">Vacating Date</label>
+                                                                    <div data-date-format="yyyy-M-d" class="input-group date">
+                                                                        <input class="form-control pickadate" name="Student[hostel_enddate]" id="Student_hostel_enddate" type="text" />
+                                                                        <div class="school_val_error" id="Student_hostel_enddate_em_" style="display:none"></div>
+                                                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <!-- 10 -->
+                            <!-- 11 -->
+                            <!-- <div class="tab-pane fade" id="DOCUMENT " role="tabpanel" aria-labelledby="DOCUMENT-tab">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default">
+                                            
+                                            <div class="panel-body">
+                                                <div class="col-sm-12">
+                                                    
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div> -->
+                            
+                            <!-- 11 -->
+                            
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                    </form>
+                </div>
+            </div>
+            
+            
+            
+        </mat-drawer-content>
+    </mat-drawer-container>
+    

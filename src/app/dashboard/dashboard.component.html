@@ -1,0 +1,162 @@
+<mat-drawer-container   >
+   <mat-drawer mode="side" [opened]="sideBarOpen"  >
+      <!-- <mat-drawer mode="side" opened="true"> -->
+         <app-sidenav></app-sidenav>
+      </mat-drawer>
+      <mat-drawer-content>
+         <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+         
+         
+         
+         
+         <div class="mainbox">
+            <div class="page box">
+               <h5>Dashboard</h5>
+            </div>
+            <div class="flex items-center dashboard">
+               <mat-icon aria-hidden="false" aria-label="Example home icon"
+               >home</mat-icon
+               >
+               <span>Dashboard</span>
+               <span class="forDot">
+                  <mat-icon>radio_button_checked</mat-icon>
+               </span>
+               <h6>Analytics</h6>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="page content shadow p-3 position-relative">
+               <div class="row">
+                  <div class="page content data" id="toggleTop">
+                     <!-- <div class="col-sm-12 display-flex"> -->
+                        <div class="container ">
+                           <div class="row align-middle">
+                              <div class="col-sm-6  column">
+                                 <div class="card gr-5  ">
+                                    <div class="txt">
+                                       <div class="forOrganization">
+                                          <img
+                                          src="assets/images/checklist.png"
+                                          class="card-img-top"
+                                          alt=""
+                                          />
+                                       </div>
+                                       <h1>Welcome Back<br>Admin</h1>
+                                       <!-- <p>You'r last logged session was <br> {{ currentDate | date: "dd - MM - yyyy hh:mm a" }}</p> -->
+                                    </div>
+                                    <a>You'r last logged session was <br> {{ currentDate | date: "dd - MM - yyyy hh:mm a" }}</a>
+                                    <div class="ico-card">
+                                       <i class="fab fa-rebel"></i>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- new -->
+                              <div class="col-sm-6  column ">
+                                 <div class="card gr-4  crd">
+                                    <div class="txt">
+                                       <div class="forOrganization">
+                                          <img
+                                          src="assets/images/checklist.png"
+                                          class="card-img-top"
+                                          alt=""
+                                          />
+                                       </div>
+                                       <h1>Organisation<br> Details</h1>
+                                       <!-- <p>Visual communication and problem-solving</p> -->
+                                    </div>
+                                    <a routerLink="/org">View</a>
+                                    <div class="ico-card">
+                                       <i class="fa fa-sitemap"></i>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- <div class="col-3 forToggleGap">
+                           <div class="card">
+                              <div class="card-body forContent">
+                                 <div class="cardgrid">
+                                    <h6>Total Staff - 48</h6>
+                                    
+                                    <div class="forRounding">
+                                       <mat-icon>book</mat-icon>
+                                    </div>
+                                 </div>
+                                 <p>
+                                    Organization Have <br />
+                                    48 Staff
+                                 </p>
+                              </div>
+                           </div>
+                        </div> -->
+                        <!-- <div class="col-3 forToggleGap">
+                           <div class="card">
+                              <div class="card-body forContent">
+                                 <div class="cardgrid students">
+                                    <h6>Total Students - 300</h6>
+                                    <div class="forRounding">
+                                       <mat-icon> person_pin</mat-icon>
+                                    </div>
+                                 </div>
+                                 <p class="card-text">
+                                    Organization Have <br />
+                                    300 students
+                                 </p>
+                              </div>
+                           </div>
+                        </div> -->
+                        <!-- </div> -->
+                     </div>
+                     <!-- new cards -->
+                     <div class="container ">
+                        <div class="row align-middle">
+                           <div class="col-md-6 col-lg-4 column">
+                              <div class="card  gr-1">
+                                 <div class="txt">
+                                    <h1>Branch <br>Details</h1>
+                                    <!-- <p>User Interface and User Experience Design.</p> -->
+                                 </div>
+                                 <a routerLink="/branch">View</a>
+                                 <div class="ico-card">
+                                    <i class="fab fa-empire"></i>
+                                 </div>
+                              </div>
+                           </div>
+                       
+                           <div class="col-md-6 col-lg-4 column">
+                              <div class="card gr-2">
+                                 <div class="txt">
+                                    <h1>Staff <br> Details</h1>
+                                    <!-- <p>How design is implemented on the web.</p> -->
+                                 </div>
+                                 <a routerLink="/staff">View</a>
+                                 <div class="ico-card">
+                                    <i class="fa fa-users"></i>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-lg-4 column">
+                              <div class="card gr-1">
+                                 <div class="txt">
+                                    <h1>Students  <br> Details</h1>
+                                    <!-- <p>Visual communication and problem-solving</p> -->
+                                 </div>
+                                 <a  routerLink="/studentdash">View</a>
+                                 <div class="ico-card">
+                                    <i class="fa fa-graduation-cap"></i>
+                                 </div>
+                              </div>
+                           </div>
+                         
+
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+            
+            
+            
+         </mat-drawer-content>
+      </mat-drawer-container>

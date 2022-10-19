@@ -1,0 +1,543 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Add Assignment  </div>
+                <div class="ico-card">
+                    <i class="fas fa-address-book"></i>
+                 </div>
+                <div class="page content shadow p-3 position-relative" style="margin-top: -68px;">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Add Assignment</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="Assignment-tab" data-bs-toggle="tab" data-bs-target="#Assignment" type="button" role="tab" aria-controls="Assignment" aria-selected="true"> Add Assignment</button>
+                                  </li>
+                                
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="Report-tab" data-bs-toggle="tab" data-bs-target="#Report" type="button" role="tab" aria-controls="Report" aria-selected="false">Report </button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="Assignment" role="tabpanel" aria-labelledby="Assignment-tab">
+                                    <form >
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="panel panel-default col">
+                                                    
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">Add Assignment</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div id="overlaygif"  ></div>
+                                                        <div class="col-lg-12">
+                                                            
+                                                            <div class="panel-body">
+                                                                <div data-date-format="dd-mm-yyyy" class="input-group ">
+                                                                    <input type="text" class="form-control pickadate" id="dates" value=2022-04-27 >
+                                                                    <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <div class="form-group col-6">
+                                                                        <label for="reg_input" class="req">Course</label>
+                                                                        <select class="form-select" aria-label="Default select example">
+                                                                            <option value="">Please Select</option>
+                                                                            <option value="1">UKG</option>
+                                                                            <option value="2">LKG</option>
+                                                                            <option value="3">GRADE I</option>
+                                                                            <option value="4">GRADE II</option>
+                                                                            <option value="5">GRADE III</option>
+                                                                            <option value="6">GRADE IV</option>
+                                                                            <option value="7">GRADE V</option>
+                                                                            <option value="8">GRADE VI</option>
+                                                                            <option value="9">GRADE VII</option>
+                                                                            <option value="10">GRADE VIII</option>
+                                                                        </select>
+                                                                        <div class="school_val_error" id="Assignment_courseid_em_" style="display:none"></div>
+                                                                    </div>
+                                                                    
+                                                                <!-- </div> -->
+                                                                
+                                                                <div class="form-group col-6">
+                                                                    <label for="reg_input" class="req">batch</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Please Select</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Assignment_batchid_em_" style="display:none"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-6">
+                                                                    <label for="reg_input" class="req">Subject</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Select Option</option>
+                                                                        <option value="65">A123</option>
+                                                                        <option value="84">aa</option>
+                                                                        <option value="31">abc</option>
+                                                                        <option value="60">abc</option>
+                                                                        <option value="74">abc</option>
+                                                                        <option value="76">abcde</option>
+                                                                        <option value="63">abcde</option>
+                                                                        <option value="75">abcdef</option>
+                                                                        <option value="55">Ansh</option>
+                                                                        <option value="37">Ansh</option>
+                                                                        <option value="64">asd</option>
+                                                                        <option value="7">BASIC TECH</option>
+                                                                        <option value="10">BASIC TECHNOLOGY</option>
+                                                                        <option value="27">bda</option>
+                                                                        <option value="48">Brijesh</option>
+                                                                        <option value="32">C Sharp</option>
+                                                                        <option value="9">C. R. S </option>
+                                                                        <option value="8">C. R. S NOTE</option>
+                                                                        <option value="6">CIVIC EDUCATION</option>
+                                                                        <option value="45">Dermatology</option>
+                                                                        <option value="62">dfdfa</option>
+                                                                        <option value="39">dfs</option>
+                                                                        <option value="22">dsfsdq</option>
+                                                                        <option value="77">dvxdvx</option>
+                                                                        <option value="38">english</option>
+                                                                        <option value="53">English</option>
+                                                                        <option value="29">English</option>
+                                                                        <option value="70">english</option>
+                                                                        <option value="28">English</option>
+                                                                        <option value="85">English</option>
+                                                                        <option value="79">english</option>
+                                                                        <option value="18">ENGLISH</option>
+                                                                        <option value="16">ENGLISH LANGUAGE</option>
+                                                                        <option value="56">ergew343</option>
+                                                                        <option value="47">ffdgf</option>
+                                                                        <option value="41">FFFF</option>
+                                                                        <option value="15">FRENCH LANG.</option>
+                                                                        <option value="42">fvjd</option>
+                                                                        <option value="52">GHGF</option>
+                                                                        <option value="19">GK</option>
+                                                                        <option value="43">history</option>
+                                                                        <option value="46">History</option>
+                                                                        <option value="14">Igbo</option>
+                                                                        <option value="72">Manual Testing</option>
+                                                                        <option value="50">marathi</option>
+                                                                        <option value="86">math</option>
+                                                                        <option value="83">math</option>
+                                                                        <option value="82">math</option>
+                                                                        <option value="73">math</option>
+                                                                        <option value="66">math</option>
+                                                                        <option value="68">math</option>
+                                                                        <option value="88">math</option>
+                                                                        <option value="24">maths</option>
+                                                                        <option value="1">Maths</option>
+                                                                        <option value="11">maths</option>
+                                                                        <option value="17">MATHS</option>
+                                                                        <option value="34">maths  </option>
+                                                                        <option value="35">maths  </option>
+                                                                        <option value="36">maths  </option>
+                                                                        <option value="61">maths</option>
+                                                                        <option value="49">maths</option>
+                                                                        <option value="21">MIS</option>
+                                                                        <option value="12">P.H.E</option>
+                                                                        <option value="2">Physic</option>
+                                                                        <option value="4">PTTest</option>
+                                                                        <option value="33">rrr</option>
+                                                                        <option value="87">S122</option>
+                                                                        <option value="78">Science</option>
+                                                                        <option value="3">Science</option>
+                                                                        <option value="71">Science</option>
+                                                                        <option value="44">Science Apothecary</option>
+                                                                        <option value="81">SDG5</option>
+                                                                        <option value="51">sfdfsdfs</option>
+                                                                        <option value="5">Social Science</option>
+                                                                        <option value="23">software testing</option>
+                                                                        <option value="69">Software Testing </option>
+                                                                        <option value="58">software testing</option>
+                                                                        <option value="67">Software Testing </option>
+                                                                        <option value="57">software testing</option>
+                                                                        <option value="40">ssc</option>
+                                                                        <option value="80">ST</option>
+                                                                        <option value="59">ST</option>
+                                                                        <option value="20">TELUGU</option>
+                                                                        <option value="30">test</option>
+                                                                        <option value="54">testing</option>
+                                                                        <option value="13">Yoruba</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Assignment_subjectid_em_" style="display:none"></div>
+                                                                    
+                                                                </div>
+                                                                
+                                                                <div class="form-group col-6">
+                                                                    <label for="reg_input_name" class="req">Title</label>
+                                                                    <input size="84" maxlength="45" class="form-control" name="Assignment[assignment_title]" id="Assignment_assignment_title" type="text" />
+                                                                    <div class="school_val_error" id="Assignment_assignment_title_em_" style="display:none"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-6">
+                                                                    <label for="reg_input_name" class="req">Description</label>
+                                                                    <textarea class="form-control" name="Assignment[assignment_description]" id="Assignment_assignment_description"></textarea>
+                                                                    <div class="school_val_error" id="Assignment_assignment_description_em_" style="display:none"></div>
+                                                                </div>
+                                                                
+                                                                
+                                                                <div class="form-group col-6">
+                                                                    <label for="reg_input_logo" >Attachment</label>
+                                                                    <input id="ytAssignment_assignment_atttachment" type="hidden" value="" name="Assignment[assignment_atttachment]" /><input class="file-input" name="Assignment[assignment_atttachment]" id="Assignment_assignment_atttachment" type="file" />
+                                                                    <div class="school_val_error" id="Assignment_assignment_atttachment_em_" style="display:none"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-6">
+                                                                    <label for="reg_input_name" >Date of Submission</label>
+                                                                    <div data-date-format="yyyy-M-dd" class="input-group date">
+                                                                        <input placeholder="Date of Submission" class="form-control pickadate" name="Assignment[assignment_dateofsubmission]" id="Assignment_assignment_dateofsubmission" type="text" />
+                                                                        <div class="school_val_error" id="Assignment_assignment_dateofsubmission_em_" style="display:none"></div>
+                                                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <div class="form_sep">
+                                                            <input class="btn btn-info" name="std_reg_submit"  type="submit" value="Save" />                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade show active" id="Report" role="tabpanel" aria-labelledby="Report-tab">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">Report</h4>
+                                                            <div class="panel-body">
+                                                                <div class="row">
+                                                                <div class="form-group col-6">
+                                                                    <label>Course</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Please Select</option>
+                                                                        <option value="1">UKG</option>
+                                                                        <option value="2">LKG</option>
+                                                                        <option value="3">GRADE I</option>
+                                                                        <option value="4">GRADE II</option>
+                                                                        <option value="5">GRADE III</option>
+                                                                        <option value="6">GRADE IV</option>
+                                                                        <option value="7">GRADE V</option>
+                                                                        <option value="8">GRADE VI</option>
+                                                                        <option value="9">GRADE VII</option>
+                                                                        <option value="10">GRADE VIII</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-6 col-sm-3">
+                                                                    <label for="reg_input">Batch</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option value="">Please Select</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                                <div class="form-group col-6 col-sm-3">
+                                                                    <label>&nbsp;</label><br>
+                                                                    <p>&nbsp;&nbsp;<button  class="btn btn-info" align="right" >Excel</button></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="print">
+                                        <div class="col-sm-12" id="gridview" style="display:none">
+                                            <div class="panel panel-default"  id="entermarks">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">Details</h4>
+                                                    <div class="row">
+                                                        <div class="col-sm-3"> 
+                                                        </div>
+                                                        <div class="col-sm-3"> 
+                                                        </div>
+                                                        <div class="col-sm-3"> 
+                                                        </div>
+                                                        <div class="col-sm-3"> 
+                                                            <input type="text"  id="search" class="form-control" placeholder="Search....">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-striped" id="marklist" data-filter="#filter">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="5%">Sl No:</th>
+                                                                <th width="15%">Title</th>
+                                                                <th width="15%">Date of Submission</th>
+                                                                <th width="15%">Description</th>
+                                                                <th width="15%">Create Time</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12" style="padding-top: 100px;">
+                    <div class="card card-cascade narrower">
+                        <div
+                        class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                        >
+                        <div class="col-6">
+                            <div class="mainWrapper">
+                                <h2>Customer</h2>
+                                <form class="form-inline waves-light" mdbWavesEffect>
+                                    <div class="md-form mt-0">
+                                        <input
+                                        class="form-control mr-sm-2 SearchForm"
+                                        type="text"
+                                        placeholder="Search"
+                                        />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="btn-list">
+                                <!-- <div class="downloadicon">
+                                    <span
+                                    ><i class="fa fa-download" aria-hidden="true"></i
+                                        ></span> 
+                                    </div>-->
+                                    <button class="btn btn-outline-primary btn-rounded modalPopup" >
+                                        <span class="mat-button-wrapper">
+                                            <i class="fa fa-filter" aria-hidden="true"></i>
+                                        </span>
+                                    </button>&nbsp;
+                                    <tr class="left">
+                                        <span class="mat-button-wrapper">
+                                            <td >
+                                                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="colour" class="btn btn-outline-primary btn-rounded modalPopup" >
+                                                    <mat-icon>more_vert</mat-icon>
+                                                </button>
+                                                <mat-menu #menu="matMenu">
+                                                    <button mat-menu-item>
+                                                        <mat-icon>print</mat-icon>
+                                                        <span>Print</span>
+                                                    </button>
+                                                    <button mat-menu-item >
+                                                        <mat-icon>import_export</mat-icon>
+                                                        <span>Export</span>
+                                                    </button>
+                                                    <button mat-menu-item>
+                                                        <mat-icon>delete</mat-icon>
+                                                        <span>Delete</span>
+                                                    </button>
+                                                </mat-menu>
+                                            </td>
+                                        </span>
+                                    </tr>
+                                </div>
+                            </div>
+                        </div>
+                        <!---------icons Start--------->
+                        <div class="">
+                            <div class="table-wrapper">
+                                <!--Table-->
+                                <table class="table">
+                                    <!--Table head-->
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="width: 4%">
+                                                <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="checkbox"
+                                                />
+                                            </th>
+                                            <th scope="col">Branch</th>
+                                            <th scope="col">Phone</th>
+                                            <th scope="col">AcademicYear</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <!--Table head-->
+                                    <!--Table body-->
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="checkbox1"
+                                                />
+                                            </th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img
+                                                    src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                                    alt=""
+                                                    class="rounded-circle"
+                                                    />
+                                                    <div class="ms-3">
+                                                        <p class="fw-bold">John Doe</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="forNumbers">
+                                                <mat-icon class="icon-cc"> phone</mat-icon>
+                                                <mat-icon class="icon-cc-1"> email</mat-icon>
+                                            </td>
+                                            <td>Senior</td>
+                                            <td >
+                                                <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                    <mat-icon>remove_red_eye</mat-icon>
+                                                </button>
+                                                <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                    <mat-icon>more_vert</mat-icon>
+                                                </button>
+                                                <mat-menu #menu1="matMenu">
+                                                    <button mat-menu-item>
+                                                        <mat-icon>edit</mat-icon>
+                                                        <span>Edit</span>
+                                                    </button>
+                                                    <button mat-menu-item>
+                                                        <mat-icon>delete</mat-icon>
+                                                        <span>Delete</span>
+                                                    </button>
+                                                </mat-menu>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="checkbox2"
+                                                />
+                                                <label
+                                                class="form-check-label"
+                                                for="checkbox2"
+                                                class="label-table"
+                                                ></label>
+                                            </th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img
+                                                    src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                                    class="rounded-circle"
+                                                    alt=""
+                                                    />
+                                                    <div class="ms-3">
+                                                        <p class="fw-bold">Kate Hunington</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="forNumbers">
+                                                <mat-icon class="icon-cc"> phone</mat-icon>
+                                                <mat-icon class="icon-cc-1"> email</mat-icon>
+                                            </td>
+                                            <td>Senior</td>
+                                            <td >
+                                                <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                    <mat-icon>remove_red_eye</mat-icon>
+                                                </button>
+                                                <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                    <mat-icon>more_vert</mat-icon>
+                                                </button>
+                                                <mat-menu #menu1="matMenu">
+                                                    <button mat-menu-item>
+                                                        <mat-icon>edit</mat-icon>
+                                                        <span>Edit</span>
+                                                    </button>
+                                                    <button mat-menu-item>
+                                                        <mat-icon>delete</mat-icon>
+                                                        <span>Delete</span>
+                                                    </button>
+                                                </mat-menu>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="checkbox3"
+                                                />
+                                                <label
+                                                class="form-check-label"
+                                                for="checkbox3"
+                                                class="label-table"
+                                                ></label>
+                                            </th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img
+                                                    src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                                    class="rounded-circle"
+                                                    alt=""
+                                                    />
+                                                    <div class="ms-3">
+                                                        <p class="fw-bold mb-1">Kate Hunington</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="forNumbers">
+                                                <mat-icon class="icon-cc"> phone</mat-icon>
+                                                <mat-icon class="icon-cc-1"> email</mat-icon>
+                                            </td>
+                                            <td>Senior</td>
+                                            <td >
+                                                <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                    <mat-icon>remove_red_eye</mat-icon>
+                                                </button>
+                                                <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                    <mat-icon>more_vert</mat-icon>
+                                                </button>
+                                                <mat-menu #menu1="matMenu">
+                                                    <button mat-menu-item>
+                                                        <mat-icon>edit</mat-icon>
+                                                        <span>Edit</span>
+                                                    </button>
+                                                    <button mat-menu-item>
+                                                        <mat-icon>delete</mat-icon>
+                                                        <span>Delete</span>
+                                                    </button>
+                                                </mat-menu>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <!--Table body-->
+                                </table>
+                                <!--Table-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

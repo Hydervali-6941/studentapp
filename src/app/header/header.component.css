@@ -1,0 +1,43 @@
+mat-toolbar {
+    position: static;
+    top: 0;
+    z-index: 100;
+    background: #f7f7f7;
+}
+
+::ng-deep .mat-menu-content {
+    width: 160px;
+}
+
+ul li{
+    list-style: none;
+    }
+    button{
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    .admin{
+        font-size: 14px;
+    }
+    .admin-image{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .admin-image-icon{
+        height: 18px;
+        font-size: 16px;
+    
+    }
+    
+    .mat-menu-content{
+        width: 160px;
+    }
+    button.mat-focus-indicator.mat-menu-trigger.admin.mt-2.d-flex.align-items-center.mat-button.mat-button-base {
+        height: 40px;
+        border-radius: 30px;
+        background-color: #fff;
+        box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    }

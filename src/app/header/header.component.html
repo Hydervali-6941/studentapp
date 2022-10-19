@@ -1,0 +1,32 @@
+<mat-toolbar class="navbar navbar-light" >
+  <mat-toolbar-row class="justify-content-between">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <div class="row mr-2 ml-auto">
+      <ul>
+        <li>
+          <button mat-button [mat-menu-trigger-for]="menu" class="admin mt-2 d-flex align-items-center">
+            <img src="assets/images/user.png" alt="" class="admin-image mr-1 p-2">
+            admin <mat-icon class="admin-image-icon ml-1">keyboard_arrow_down</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+            <button mat-menu-item>
+              <mat-icon>vpn_key</mat-icon>
+              Change Password
+            </button>
+            <button mat-menu-item>
+              <mat-icon>settings</mat-icon>
+              Setting
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

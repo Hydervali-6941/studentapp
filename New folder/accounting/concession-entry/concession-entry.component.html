@@ -1,0 +1,472 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">Accounts</div>
+      <div class="page content shadow p-3 position-relative">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="page-title-box d-sm-flex align-items-center justify-content-between"
+            >
+              <h4 class="mb-sm-0 font-size-18">Concession Entry</h4>
+            </div>
+          </div>
+        </div>
+        <form id="employeemaster-form">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="panel panel-default col">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Accounting</h4>
+                </div>
+                <div class="row">
+                  <div class="col-6 form-group">
+                    <!-- Group Under is used to define the group which the Account name belongs to.!-->
+                    <label class="req">SelectOrganisation</label>
+                    <select
+                      class="form-control"
+                      label=""
+                      name="Accountgroup[groupunder]"
+                      id="Accountgroup_groupunder"
+                    >
+                      <option value="">--Select--</option>
+                      <option value="AIBM">
+                        AlQurmoshi Institute of Business Management
+                      </option>
+                      <option value="MSGT">
+                        Cambridge Valley International Educational Society
+                      </option>
+                      <option value="DJC">Deeksha Junior College</option>
+                      <option selected="selected" value="DEMO">
+                        Demo Organisation
+                      </option>
+                      <option value="FEMS">
+                        Focus English Medium High School
+                      </option>
+                      <option value="kems">Krishnaveni EM School</option>
+                      <option value="PVES">PRATHIBHAVIKAS EM SCHOOL</option>
+                      <option value="RHS">RAGHAVAN EM HIGH SCHOOL</option>
+                      <option value="RMDC">RM Degree College</option>
+                      <option value="SVE">S.V Educational Institutions</option>
+                      <option value="RVJC">SADHANA GROUP OF COLLEGES</option>
+                      <option value="SRJC">
+                        SEETHARAMAIAH GIRLS JUNIOR COLLEGE
+                      </option>
+                      <option value="SRVA">Sree Vasavi Degree College</option>
+                      <option value="SASE">
+                        Sri Akshay Sai Educational Society
+                      </option>
+                      <option value="SBPS">Sri Bhashyam Public School</option>
+                      <option value="SGEI">
+                        SRI GAAYATHRI EDUCATIONAL INSTITUTIONS
+                      </option>
+                      <option value="SSKE">
+                        Sri Sai Krupa Educational Society
+                      </option>
+                      <option value="VES">
+                        Venkateswara Educational Society
+                      </option>
+                      <option value="VIPS">VIP CONCEPT SCHOOL</option>
+                      <option value="VEMS">Vision English Medium School</option>
+                    </select>
+                    <span
+                      class="school_val_error"
+                      id="Accountgroup_groupunder_em_"
+                      style="display: none"
+                    ></span>
+                  </div>
+                  <div class="col-6 form-group">
+                    <!-- Group Under is used to define the group which the Account name belongs to.!-->
+                    <label class="req">SelectBranch</label>
+                    <select
+                      class="form-control"
+                      label=""
+                      name="Accountgroup[groupunder]"
+                      id="Accountgroup_groupunder"
+                    >
+                      <option value="">Branch</option>
+                    </select>
+                    <span
+                      class="school_val_error"
+                      id="Accountgroup_groupunder_em_"
+                      style="display: none"
+                    ></span>
+                  </div>
+
+                  <div class="col-6 form-group">
+                    <!-- Account Name is used to define the name of account!-->
+                    <label class="req">Student ID</label>
+                    <input
+                      class="form-control"
+                      maxlength="45"
+                      label=""
+                      placeholder=""
+                      name="Accountgroup[accountname]"
+                      id="Accountgroup_accountname"
+                      type="text"
+                    />
+                    <span
+                      class="school_val_error"
+                      id="Accountgroup_accountname_em_"
+                      style="display: none"
+                    ></span>
+                  </div>
+
+                  <tr>
+                    <td>
+                      <input
+                        type="submit"
+                        name="ctl00$ContentPlaceHolder1$btnStSubmit"
+                        value="Show"
+                        id="ContentPlaceHolder1_btnStSubmit"
+                        class="btn1"
+                      />
+
+                      &nbsp;<a
+                        onclick="javascript:return OpenPopup();"
+                        id="ContentPlaceHolder1_lnlsearchStudent"
+                        href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lnlsearchStudent&#39;,&#39;&#39;)"
+                        style="
+                          color: rgb(107, 56, 21);
+                          font-weight: bold;
+                          text-decoration: underline;
+                        "
+                        >Search Student</a
+                      >
+                    </td>
+                    <br />
+                  </tr>
+                  <tr>
+                    <td class="label">NOTE</td>
+
+                    <td class="gape">:</td>
+                    <td>
+                      <span
+                        id="ContentPlaceHolder1_lblStdSub"
+                        style="color: rgb(107, 56, 21)"
+                        >Enter StudentID and Click on 'Show' to view Student
+                        Details</span
+                      >
+                    </td>
+                    <br />
+                  </tr>
+                </div>
+
+                <div class="form-group col-sm-6">
+                  <p>
+                    <a class="btn btn-info" href="#" data-toggle="modal"
+                      >Save</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="newMail">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    aria-hidden="true"
+                    data-dismiss="modal"
+                    class="close"
+                    type="button"
+                  >
+                    ×
+                  </button>
+                  <h4 id="myModalLabel" class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="table-responsive">
+                    <table>
+                      <tr>
+                        <td align="center">
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <img src="/img/withdrawal.png" width="50" alt="" />
+                        </td>
+                        <td align="center">
+                          <h5 align="center">
+                            &nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to
+                            withdraw the employee details?
+                          </h5>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="javascript:withdrawal()" class="btn btn-primary"
+                    >OK</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="col-lg-12" style="padding-top: 72px">
+          <div class="card card-cascade narrower">
+            <div
+              class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+            >
+              <div class="col-8">
+                <div class="mainWrapper">
+                  <h2>Customer</h2>
+                  <form class="form-inline waves-light" mdbWavesEffect>
+                    <div class="md-form mt-0">
+                      <input
+                        class="form-control mr-sm-2 SearchForm"
+                        type="text"
+                        placeholder="Search"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="btn-list">
+                  <button
+                    class="btn btn-outline-primary btn-rounded modalPopup"
+                  >
+                    <span class="mat-button-wrapper">
+                      <i class="fa fa-filter" aria-hidden="true"></i>
+                    </span></button
+                  >&nbsp;
+                  <tr class="left">
+                    <span class="mat-button-wrapper">
+                      <td>
+                        <button
+                          mat-icon-button
+                          [matMenuTriggerFor]="menu"
+                          aria-label="Example icon-button with a menu"
+                          class="colour"
+                          class="btn btn-outline-primary btn-rounded modalPopup"
+                        >
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                          <button mat-menu-item>
+                            <mat-icon>print</mat-icon>
+                            <span>Print</span>
+                          </button>
+                          <button mat-menu-item>
+                            <mat-icon>import_export</mat-icon>
+                            <span>Export</span>
+                          </button>
+                          <button mat-menu-item>
+                            <mat-icon>delete</mat-icon>
+                            <span>Delete</span>
+                          </button>
+                        </mat-menu>
+                      </td>
+                    </span>
+                  </tr>
+                </div>
+              </div>
+            </div>
+            <!---------icons Start--------->
+            <div class="">
+              <div class="table-wrapper">
+                <!--Table-->
+                <table class="table">
+                  <!--Table head-->
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 4%">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="checkbox"
+                        />
+                      </th>
+                      <th scope="col">Branch</th>
+                      <th scope="col">Phone</th>
+                      <th scope="col">AcademicYear</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <!--Table head-->
+                  <!--Table body-->
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="checkbox1"
+                        />
+                      </th>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                            alt=""
+                            class="rounded-circle"
+                          />
+                          <div class="ms-3">
+                            <p class="fw-bold">John Doe</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="forNumbers">
+                        <mat-icon class="icon-cc"> phone</mat-icon>
+                        <mat-icon class="icon-cc-1"> email</mat-icon>
+                      </td>
+                      <td>Senior</td>
+                      <td>
+                        <button
+                          mat-icon-button
+                          [matMenuTriggerFor]="menu1"
+                          aria-label="Example icon-button with a menu"
+                        >
+                          <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                        <button
+                          mat-icon-button
+                          [matMenuTriggerFor]="menu1"
+                          aria-label="Example icon-button with a menu"
+                        >
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu1="matMenu">
+                          <button mat-menu-item>
+                            <mat-icon>edit</mat-icon>
+                            <span>Edit</span>
+                          </button>
+                          <button mat-menu-item>
+                            <mat-icon>delete</mat-icon>
+                            <span>Delete</span>
+                          </button>
+                        </mat-menu>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="checkbox2"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="checkbox2"
+                          class="label-table"
+                        ></label>
+                      </th>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                            class="rounded-circle"
+                            alt=""
+                          />
+                          <div class="ms-3">
+                            <p class="fw-bold">Kate Hunington</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="forNumbers">
+                        <mat-icon class="icon-cc"> phone</mat-icon>
+                        <mat-icon class="icon-cc-1"> email</mat-icon>
+                      </td>
+                      <td>Senior</td>
+                      <td>
+                        <button
+                          mat-icon-button
+                          [matMenuTriggerFor]="menu1"
+                          aria-label="Example icon-button with a menu"
+                        >
+                          <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                        <button
+                          mat-icon-button
+                          [matMenuTriggerFor]="menu1"
+                          aria-label="Example icon-button with a menu"
+                        >
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu1="matMenu">
+                          <button mat-menu-item>
+                            <mat-icon>edit</mat-icon>
+                            <span>Edit</span>
+                          </button>
+                          <button mat-menu-item>
+                            <mat-icon>delete</mat-icon>
+                            <span>Delete</span>
+                          </button>
+                        </mat-menu>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="checkbox3"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="checkbox3"
+                          class="label-table"
+                        ></label>
+                      </th>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                            class="rounded-circle"
+                            alt=""
+                          />
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1">Kate Hunington</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="forNumbers">
+                        <mat-icon class="icon-cc"> phone</mat-icon>
+                        <mat-icon class="icon-cc-1"> email</mat-icon>
+                      </td>
+                      <td>Senior</td>
+                      <td>
+                        <button
+                          mat-icon-button
+                          [matMenuTriggerFor]="menu1"
+                          aria-label="Example icon-button with a menu"
+                        >
+                          <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                        <button
+                          mat-icon-button
+                          [matMenuTriggerFor]="menu1"
+                          aria-label="Example icon-button with a menu"
+                        >
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu1="matMenu">
+                          <button mat-menu-item>
+                            <mat-icon>edit</mat-icon>
+                            <span>Edit</span>
+                          </button>
+                          <button mat-menu-item>
+                            <mat-icon>delete</mat-icon>
+                            <span>Delete</span>
+                          </button>
+                        </mat-menu>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <!--Table body-->
+                </table>
+                <!--Table-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

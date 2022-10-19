@@ -1,0 +1,423 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Fee Collection</div>
+                <div class="page content shadow p-3 position-relative">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Fee Collection </h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        <form id="feesallocation-form" action="/index.php/core/feesallocation/collection" method="post">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="form-group col-sm-3">
+                                                    <label for="reg_input" class="req">Academic Year</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option value="">Select Academic Year</option>
+                                                        <option value="1" selected="selected">2021 - 2022</option>
+                                                        <option value="2">2020 - 2020</option>
+                                                        <option value="3">2016 - 2027</option>
+                                                        <option value="4">2020 - 2021</option>
+                                                        <option value="5">2021 - 2022</option>
+                                                        <option value="6">2019 - 2024</option>
+                                                        <option value="7">2012 - 2016</option>
+                                                        <option value="8">2030 - 2031</option>
+                                                        <option value="9">2022 - 2023</option>
+                                                        <option value="10">2031 - 2032</option>
+                                                    </select>
+                                                    <div class="school_val_error" id="Feesallocation_academicid_em_" style="display:none"></div>
+                                                </div>
+                                                <div class="form-group col-sm-3" id="course">
+                                                    <label for="reg_input">Course</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option value="">Please Select</option>
+                                                        <option value="1">UKG</option>
+                                                        <option value="2">LKG</option>
+                                                        <option value="3">GRADE I</option>
+                                                        <option value="4">GRADE II</option>
+                                                        <option value="5">GRADE III</option>
+                                                        <option value="6">GRADE IV</option>
+                                                        <option value="7">GRADE V</option>
+                                                        <option value="8">GRADE VI</option>
+                                                        <option value="9">GRADE VII</option>
+                                                        <option value="10">GRADE VIII</option>
+                                                    </select>
+                                                    <div class="school_val_error" id="Feesallocation_courseid_em_" style="display:none"></div>
+                                                </div>
+                                                <div class="form-group col-sm-3" id="batch">
+                                                    <label for="reg_input">Batch</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option value="">Please Select</option>
+                                                    </select>
+                                                    <div class="school_val_error" id="Feesallocation_batchid_em_" style="display:none"></div>
+                                                </div>
+                                                <div class="form-group col-sm-3">
+                                                    <label for="reg_input">Student</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option value="">Select Student</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row" align="center">
+                                                <strong style="font-size: 16px">OR</strong>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-3">
+                                                    <label>Search</label>
+                                                    <input placeholder="Student" class="form-control" id="student" type="text" value="" name="student" /><input id="hidden-field" name="output" type="hidden" value="" />                            
+                                                </div>
+                                                <div class="form-group col-sm-3">
+                                                    <label>&nbsp;</label><br>
+                                                    <a href="javascript:getfeedetails()" class="btn btn-info">Go</a>
+                                                </div>
+                                            </div>
+                                            <div class="row" id="studentdetail" style="display:none">
+                                                <div class="col-sm-8">
+                                                    <div class="panel panel-body">
+                                                        <table align="center">
+                                                            <tbody id="studentdetails" style="font-size: 14px">
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="panel panel-body">
+                                                        <table align="center">
+                                                            <tbody id="studentsiblings" style="font-size: 14px">
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="nav nav-tabs nav-tabs-highlight">
+                                    <li class="active"><a href="#tbb_a" data-toggle="tab">Fee Payment</a></li>
+                                    <li class=""><a href="#tbb_b" data-toggle="tab">Paid Details</a></li>
+                                    <li class=""><a href="#tbb_c" data-toggle="tab">Online Payment Status</a></li>
+                                </ul>
+                                <br>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tbb_a">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">Payment Window</h4>
+                                                        <div class="heading-elements">
+                                                            <div data-date-format="dd-mm-yyyy" class="input-group">
+                                                                <input type="text" class="form-control pickadate" id="paymentdate" value=2022-04-28 >
+                                                                <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="col-sm-12">
+                                                            <div class="panel-body">
+                                                                <div class="row">
+                                                                    <div class="table-responsive" style="overflow-x: visible;">
+                                                                        <table class="table table-bordered table-striped table-responsive" id="finish_table" style="display:none">
+                                                                            <thead>
+                                                                                <th width="14.28%">Fees Sub Category</th>
+                                                                                <th width="23.56%">Fees Type</th>
+                                                                                <th width="14.28%">Actual Amount / Due Amount</th>
+                                                                                <th width="14.28%">Amount due to be paid</th>
+                                                                                <th width="14.28%">Fine</th>
+                                                                                <th width="14.28%">Discount</th>
+                                                                                <th width="5%"><input type="checkbox" id="checkall">Select All</th>
+                                                                                <th width="0%"></th>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <input type="hidden" id="totalamounttobepaid" name="totalamounttobepaid" value="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel-body"  id="paymenttable">
+                                                        <div class="row">
+                                                            <div class="form-group col-sm-2">
+                                                                <label for="reg_input">Mode of Pay</label>
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option value="">-Select-</option>
+                                                                    <option value="0">Cash</option>
+                                                                    <option value="1">Cheque/DD</option>
+                                                                    <option value="3">NEFT/Other Mode </option>
+                                                                    <option value="4">Online Challan</option>
+                                                                    <option value="2">Online Payment</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-sm-2" id="bankname">
+                                                                <label for="reg_input">Bank Name</label>
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option value="">Please Select</option>
+                                                                    <option value="w">w</option>
+                                                                    <option value="State Bank Of India">State Bank Of India</option>
+                                                                    <option value="union bank of india">union bank of india</option>
+                                                                    <option value="Sardar Ballabh Bank">Sardar Ballabh Bank</option>
+                                                                    <option value="state bank of bijapur">state bank of bijapur</option>
+                                                                    <option value="indian premier league bank">indian premier league bank</option>
+                                                                    <option value="skl">skl</option>
+                                                                    <option value="mani">mani</option>
+                                                                    <option value="sbi">sbi</option>
+                                                                    <option value="664545">664545</option>
+                                                                    <option value="98979797">98979797</option>
+                                                                    <option value="CTI bank">CTI bank</option>
+                                                                    <option value="#$123">#$123</option>
+                                                                    <option value="$$$$">$$$$</option>
+                                                                    <option value="$#$#$#">$#$#$#</option>
+                                                                    <option value="ICICI Bank">ICICI Bank</option>
+                                                                    <option value="hdfc">hdfc</option>
+                                                                    <option value="SBI1">SBI1</option>
+                                                                    <option value="11555">11555</option>
+                                                                    <option value="Bank Of India ">Bank Of India </option>
+                                                                    <option value="1115433">1115433</option>
+                                                                    <option value="kotak">kotak</option>
+                                                                </select>
+                                                                <div class="school_val_error" id="Feesallocation_bankid_em_" style="display:none"></div>
+                                                            </div>
+                                                            <div class="form-group col-sm-2" id="cheque_no">
+                                                                <label for="reg_input">Cheque/DD No.</label>
+                                                                <input type="text" class="form-control" id="chequeno" name="chequeno">
+                                                            </div>
+                                                            <div class="form-group col-sm-3" id="cheque_date">
+                                                                <label for="reg_input">Cheque/DD Date</label>
+                                                                <input type="text" class="form-control pickadate" id="chequedate" name="chequedate">
+                                                            </div>
+                                                            <div class="form-group col-sm-3" id="reference">
+                                                                <label for="reg_input">Reference ID.</label>
+                                                                <input type="text" class="form-control" id="ref" >
+                                                            </div>
+                                                            <div class="form-group col-sm-3">
+                                                                <label for="reg_input">Remarks</label>
+                                                                <textarea class="form-control" id="remarks"></textarea>
+                                                            </div>
+                                                            <div class="form-group col-sm-2"><br>
+                                                                <label for="reg_input"><b>Total Amount: </b><input type="text" id="totalamount" class="form-control" readonly></label>
+                                                            </div>
+                                                            <div class="form-group col-sm-2"><br>
+                                                                <label for="reg_input"><b>RoundOff: </b><input type="text" id="roundoff" class="form-control"></label>
+                                                            </div>
+                                                            <div class="form-group col-sm-2"><br>
+                                                                <label for="reg_input"><b>Final Amount: </b><input type="text" id="finalamount" class="form-control" readonly></label>
+                                                            </div>
+                                                            <div class="form-group col-sm-3"><br>
+                                                                <label for="reg_input"><span>Do you want receipt? &nbsp;&nbsp;&nbsp;<input type="checkbox" id='checkbox1' checked="checked"/></span></label>
+                                                            </div>
+                                                            <div class="form-group col-sm-2">
+                                                                <label for="reg_input">Receipt No.</label>
+                                                                <input type="text" class="form-control" onchange="checkduplication()" id="receiptno"  value=236>
+                                                            </div>
+                                                        </div>
+                                                        <form action="https://biz.sparkitpay.com/v2/paymentrequest" id="payment_form" method="POST">
+                                                            <input type="hidden" value=""                   name="hash"/>
+                                                            <input type="hidden" value=""        name="api_key"/>
+                                                            <input type="hidden" value=""    name="return_url"/>
+                                                            <input type="hidden" value=""           name="mode"/>
+                                                            <input type="hidden" value=""       name="order_id"/>
+                                                            <input type="hidden" value=""         name="amount"/>
+                                                            <input type="hidden" value=""       name="currency"/>
+                                                            <input type="hidden" value=""    name="description"/>
+                                                            <input type="hidden" value=""           name="name"/>
+                                                            <input type="hidden" value=""          name="email"/>
+                                                            <input type="hidden" value=""          name="phone"/>
+                                                            <input type="hidden" value="" name="address_line_1"/>
+                                                            <input type="hidden" value="" name="address_line_2"/>
+                                                            <input type="hidden" value=""           name="city"/>
+                                                            <input type="hidden" value=""          name="state"/>
+                                                            <input type="hidden" value=""       name="zip_code"/>
+                                                            <input type="hidden" value=""        name="country"/>
+                                                            <input type="hidden" value=""           name="udf1"/>
+                                                            <input type="hidden" value=""           name="udf2"/>
+                                                            <input type="hidden" value=""           name="udf3"/>
+                                                            <input type="hidden" value=""           name="udf4"/>
+                                                            <input type="hidden" value=""           name="udf5"/>
+                                                            <div class="form-group">
+                                                                <div class="col-md-2">
+                                                                    <div id="disabledloadingonlinepayment" style="display: none">
+                                                                        <p> &nbsp;&nbsp;<a href="javascript:onlinepayment()" data-loading-text="&lt;i class='icon-spinner4 spinner position-left'&gt;&lt;/i&gt; Loading state" class="btn btn-success btn-loading"><i class="icon-spinner4 position-left"></i>Make Payment</a> </p>
+                                                                    </div>
+                                                                    <div id="enableloadingonlinepayment" style="display: none">
+                                                                        <p> &nbsp;&nbsp;<a href="" data-loading-text="&lt;i class='icon-spinner4 spinner position-left'&gt;&lt;/i&gt; Loading state" class="btn btn-success btn-loading disabled" disabled=""><i class="icon-spinner4 spinner position-left"></i>Make Payment</a> </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="col-md-4" style="display: none" id="onlinepaymentbutton">
+                                                                    <!--<button name="ftsubmit" class="btn btn-success" id="ftsubmit">Proccess Payment</button>-->
+                                                                    <p> &nbsp;&nbsp;<a href="javascript:onlinepayment()" class="btn btn-success">Make Payment</a> </p>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <div class="row">
+                                                            <div class="form-group col-sm-2">
+                                                                <br>
+                                                                <div id="disabledloading" style="display: none">
+                                                                    <p> &nbsp;&nbsp;<a href="javascript:savepayment()" data-loading-text="&lt;i class='icon-spinner4 spinner position-left'&gt;&lt;/i&gt; Loading state" class="btn btn-primary btn-loading"><i class="icon-spinner4 position-left"></i>Make Payment</a> </p>
+                                                                </div>
+                                                                <div id="enableloading" style="display: none">
+                                                                    <p> &nbsp;&nbsp;<a href="" data-loading-text="&lt;i class='icon-spinner4 spinner position-left'&gt;&lt;/i&gt; Loading state" class="btn btn-primary btn-loading disabled" disabled=""><i class="icon-spinner4 spinner position-left"></i>Make Payment</a> </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tbb_b">
+                                        <div class="row">
+                                            <div class="col-sm-12" id="gridview">
+                                                <div class="panel panel-default"  id="paidlist" style="display:none">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">Paid List</h4>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table responsive table-bordered table-striped" id="paid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th data-hide="phone,tablet" width="10%">Receipt No.</th>
+                                                                    <th data-hide="phone,tablet" width="10%">Fees Sub Category</th>
+                                                                    <th data-hide="phone,tablet" width="10%">Amount</th>
+                                                                    <th width="10%">Paid Date</th>
+                                                                    <th width="10%">Fine</th>
+                                                                    <th width="10%">Discount</th>
+                                                                    <th width="10%">Modeofpay</th>
+                                                                    <th width="10%">Cheque/DD No</th>
+                                                                    <th width="10%">Remarks</th>
+                                                                    <th width="10%"><input type="checkbox" id="checkallrecipt">Select All</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tbb_c">
+                                        <div class="row">
+                                            <div class="col-sm-12" id="gridview1">
+                                                <div class="panel panel-default"  id="onlinepayment" style="display:none">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">Online Payment Status</h4>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table responsive table-bordered table-striped" id="onlinepaymentstatus">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th data-hide="phone,tablet" width="12.5%">Order ID</th>
+                                                                    <th data-hide="phone,tablet" width="12.5%">Fees Sub Category</th>
+                                                                    <th data-hide="phone,tablet" width="12.5%">Amount</th>
+                                                                    <th width="12.5%">Fine</th>
+                                                                    <th width="12.5%">Remarks</th>
+                                                                    <th width="12.5%">Payment Status</th>
+                                                                    <th width="12.5%">Response Message</th>
+                                                                    <!--<th width="12.5%"><a href="javascript:generatereceipt()" class="btn btn-danger">Generate Receipt</a></th>-->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="modal_theme_primary" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h6 class="modal-title">Add New Details</h6>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form enctype="multipart/form-data" id="feepaymentdetails-form" action="/index.php/core/feesallocation/collection" method="post">
+                                                        <div class="row">
+                                                            <div class="form-group col-sm-6" id="newbank_name">
+                                                                <label for="reg_input_name" class="req">New Bank Name</label>
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option value="">Please Select</option>
+                                                                    <option value="w">w</option>
+                                                                    <option value="State Bank Of India">State Bank Of India</option>
+                                                                    <option value="union bank of india">union bank of india</option>
+                                                                    <option value="Sardar Ballabh Bank">Sardar Ballabh Bank</option>
+                                                                    <option value="state bank of bijapur">state bank of bijapur</option>
+                                                                    <option value="indian premier league bank">indian premier league bank</option>
+                                                                    <option value="skl">skl</option>
+                                                                    <option value="mani">mani</option>
+                                                                    <option value="sbi">sbi</option>
+                                                                    <option value="664545">664545</option>
+                                                                    <option value="98979797">98979797</option>
+                                                                    <option value="CTI bank">CTI bank</option>
+                                                                    <option value="#$123">#$123</option>
+                                                                    <option value="$$$$">$$$$</option>
+                                                                    <option value="$#$#$#">$#$#$#</option>
+                                                                    <option value="ICICI Bank">ICICI Bank</option>
+                                                                    <option value="hdfc">hdfc</option>
+                                                                    <option value="SBI1">SBI1</option>
+                                                                    <option value="11555">11555</option>
+                                                                    <option value="Bank Of India ">Bank Of India </option>
+                                                                    <option value="1115433">1115433</option>
+                                                                    <option value="kotak">kotak</option>
+                                                                </select>
+                                                                <div class="school_val_error" id="Feepaymentdetails_newbankname_em_" style="display:none"></div>
+                                                            </div>
+                                                            <div class="form-group col-sm-6">
+                                                                <label for="reg_input" class="req">New DD/Cheque No.</label>
+                                                                <input type="text" class="form-control" id="newcheque_no">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="form-group col-sm-6">
+                                                                <label for="reg_input" class="req">New DD/Cheque Date</label>
+                                                                <input type="text" class="form-control pickadate" id="newchequedate" >
+                                                            </div>
+                                                            <div class="form-group col-sm-6">
+                                                                <label for="reg_input" class="req">New Receipt Number</label>
+                                                                <input type="text" class="form-control" id="newreciptno" >
+                                                            </div>
+                                                        </div>
+                                                        <!-- </div> -->
+                                                        
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                                                            <a href="javascript:cancelcheque()" class="btn btn-primary">Cancel Cheque</a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </mat-drawer-content>
+        </mat-drawer-container>
+       
+
+         

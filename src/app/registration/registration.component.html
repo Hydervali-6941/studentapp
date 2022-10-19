@@ -1,0 +1,75 @@
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="" target="_blank" class="positronx">Logo</a></div>
+  <span class="nav-tool-items">
+    <a mat-button routerLink="/login" routerLinkActive="active">Log in</a>
+    <a
+      mat-button
+      mat-raised-button
+      routerLink="register"
+      routerLinkActive="active"
+      >Register</a
+    >
+  </span>
+</mat-toolbar>
+
+<div class="login-wrapper">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Registration</mat-card-title>
+    </mat-card-header>
+
+    <form action="">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input
+            type="text"
+            matInput
+            placeholder="username"
+            name="username"
+            [(ngModel)]="registraionUserData.username"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input
+            type="text"
+            matInput
+            placeholder="Email"
+            name="email"
+            [(ngModel)]="registraionUserData.email"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input
+            type="text"
+            matInput
+            placeholder="Password"
+            name="Password"
+            [(ngModel)]="registraionUserData.Password"
+          />
+        </mat-form-field>
+        <!-- <mat-form-field class="example-full-width">
+          <mat-label> Choose Rolles </mat-label>
+          <mat-select>
+            <mat-option
+              value="roles"
+              *ngFor="let roles of Roles"
+              name="select"
+              [(ngModel)]="dharma.select"
+              >{{ roles }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field> -->
+      </mat-card-content>
+
+      <button
+        mat-button
+        mat-raised-button
+        color="current"
+        class="btn-block"
+        (click)="registerUser()"
+      >
+        Submit
+      </button>
+    </form>
+  </mat-card>
+</div>

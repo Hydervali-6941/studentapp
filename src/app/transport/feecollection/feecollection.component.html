@@ -1,0 +1,125 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">Add Route</div>
+
+      <div class="page content shadow p-3 position-relative">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="col-lg-12">
+              <!-- new -->
+              <div class="tab-content" id="myTabContent">
+                <!--tab1-->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="form-group col-4">
+                            <label for="reg_input" class="req"
+                              >User Type*</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Select Type</option>
+                              <option value="1">Employee</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-4">
+                            <label for="reg_input" class="req"
+                              >Department*</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option value="">Select Department</option>
+                              <option value="1">Software1</option>
+                              <option value="2">Head teacher1</option>
+                              <option value="3">STIC</option>
+                              <option value="6">Reception</option>
+                              <option value="7">Administration</option>
+                              <option value="9">Transport-teacher</option>
+                              <option value="10">Class Teacher</option>
+                              <option value="12">Computer Science</option>
+                              <option value="13">Sen teacher</option>
+                              <option value="14">Math</option>
+                              <option value="15">science 3</option>
+                              <option value="16">Mathematics1</option>
+                              <option value="17">Hrpayroll12</option>
+                              <option value="19">physical education</option>
+                              <option value="20">maths</option>
+                              <option value="21">English</option>
+                              <option value="22">Math dept</option>
+                              <option value="24">Admin</option>
+                              <option value="27">TrialDept12</option>
+                              <option value="28">History department</option>
+                              <option value="30">BCdef</option>
+                              <option value="32">CDM2</option>
+                              <option value="33">science teacher</option>
+                              <option value="34">FINANCE</option>
+                            </select>
+                          </div>
+                          <div class="col-4">
+                            <label for="reg_input" class="req">Employee*</label>
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Select Employee</option>
+                              <option value="1">Employee</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                        </div>
+                        <br />
+
+                        <div class="row" align="center">
+                          <strong style="font-size: 16px">OR</strong>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <label for="reg_input" class="req">Employee*</label>
+                            <div class="input-group mb-3">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder=""
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                          <br />
+                          <a
+                            href="javascript:getfeedetails()"
+                            class="btn btn-info"
+                            >Go</a
+                          >
+                        </div>
+                      </div>
+                      <button class="btn btn-info">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content></mat-drawer-container
+>

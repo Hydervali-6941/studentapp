@@ -1,0 +1,58 @@
+/*--------Header--------*/
+/* header css starts  */
+mat-toolbar {
+  background-color: #003255;
+}
+
+button {
+  /* background: unset;
+  border: unset;
+  color: #fff; */
+  font-weight: 600;
+  font-size: 13px;
+}
+button.mat-menu-item {
+  color: #737171;
+  font-size: 12px;
+}
+.mat-menu-item {
+  height: 35px;
+  padding: 0 28px;
+}
+/* header css ends  */
+/* sidenav css start */
+mat-drawer-container {
+  height: 100%;
+}
+
+
+.sidenav a {
+  text-decoration: unset;
+  font-size: 14px;
+  color: rgb(245, 238, 238);
+}
+.sidenav mat-icon {
+  font-size: 15px;
+}
+.sidenavbutton button mat-icon {
+  color: #fff;
+}
+/* sidenav css ends */
+
+.page.box {
+  min-height: 150px;
+  background: linear-gradient(to right, #94a2c3, #4286f4) !important;
+  margin: 0 -1rem;
+  /* font-size: 36px; */
+}
+.head{
+    font-size: 30px;
+}
+.page.content{
+ min-height: calc(95vh - 160px);
+ border-radius: 10px;
+ margin-top: -2rem;
+ background: white;
+ color: black;
+ /* font-size: 2rem; */
+}

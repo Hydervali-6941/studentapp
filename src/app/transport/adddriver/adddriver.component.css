@@ -1,0 +1,198 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Rounded tabs */
+
+@media (min-width: 576px) {
+  .rounded-nav {
+    border-radius: 50rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .rounded-nav .nav-link {
+    border-radius: 50rem !important;
+  }
+}
+
+/* With arrow tabs */
+
+.with-arrow .nav-link.active {
+  position: relative;
+}
+
+.with-arrow .nav-link.active::after {
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #2b90d9;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+/* lined tabs */
+
+.lined .nav-link {
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link:hover {
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link.active {
+  background: none;
+  color: #555;
+  border-color: #2b90d9;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+body {
+  background: #304352;
+  background: -webkit-linear-gradient(to right, #304352, #d7d2cc);
+  background: linear-gradient(to right, #304352, #d7d2cc);
+  min-height: 100vh;
+}
+
+.nav-pills .nav-link {
+  color: #555;
+}
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+/*****/
+/*--------Header--------*/
+/* header css starts  */
+mat-toolbar {
+  background-color: #003255;
+}
+button {
+  /* background: unset;
+  border: unset;
+  color: #fff; */
+  font-weight: 600;
+  font-size: 13px;
+}
+button.mat-menu-item {
+  color: #737171;
+  font-size: 12px;
+}
+.mat-menu-item {
+  height: 35px;
+  padding: 0 28px;
+}
+/* header css ends  */
+/* sidenav css start */
+mat-drawer-container {
+  height: 100%;
+}
+
+
+.sidenav a {
+  text-decoration: unset;
+  font-size: 14px;
+  color: rgb(245, 238, 238);
+}
+.sidenav mat-icon {
+  font-size: 15px;
+}
+.sidenavbutton button mat-icon {
+  color: #fff;
+}
+/* sidenav css ends */
+
+/*datepicker---*/
+/* label {
+  margin-left: 20px;
+}
+#datepicker {
+  width: 180px;
+  margin: 0 20px 20px 20px;
+}
+#datepicker > span:hover {
+  cursor: pointer;
+} */
+.page{
+  color: #fff;
+  padding: 0 1rem;
+  background: #f1f5f9;
+
+}
+.page.box {
+min-height: 150px;
+background: linear-gradient(to right, #94a2c3, #4286f4) !important;
+margin: 0 -1rem;
+/* font-size: 36px; */
+}
+.head{
+  font-size: 30px;
+}
+.page.content{
+min-height: calc(95vh - 160px);
+border-radius: 10px;
+margin-top: -2rem;
+background: white;
+color: black;
+/* font-size: 2rem; */
+}
+#toggleTop{
+  margin-top: 6%;
+
+/* left: 50%;
+transform: translate(-50%, -50%); */
+display: flex;
+}
+.page.content.data{
+
+/* left: 50%;
+transform: translate(-50%, -50%); */
+display: flex;
+}
+.display-flex{
+  display: flex;
+}
+
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 50%;
+}
+
+.tt {
+  padding-right: 8px;
+}
+
+
+
+
+label {
+  /* display: inline-block; */
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+li{
+font-size: 10px;
+}

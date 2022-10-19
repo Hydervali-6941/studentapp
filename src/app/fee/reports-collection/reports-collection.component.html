@@ -1,0 +1,391 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">Finance</div>
+      <div class="ico-card">
+        <i class="fas fa-address-book"></i>
+      </div>
+      <div
+        class="page content shadow p-3 position-relative"
+        style="margin-top: -68px"
+      >
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="page-title-box d-sm-flex align-items-center justify-content-between"
+            >
+              <h4 class="mb-sm-0 font-size-18">Reports Collection</h4>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content">
+            <form id="studentabsent-form">
+              <div class="col-lg-12">
+                <!-- new -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="home-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#home"
+                      type="button"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                    >
+                      INDIVIDUALSTUDENT
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      BATCH
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="contact-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                    >
+                      COURSE
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="tbb_e-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tbb_e"
+                      type="button"
+                      role="tab"
+                      aria-controls="tbb_e"
+                      aria-selected="false"
+                    >
+                      SCHOOL
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="panel panel-default col">
+                          <div class="panel-heading">
+                            <!-- <h4 class="panel-title">Attendance</h4> -->
+                          </div>
+                          <br />
+                          <br />
+
+                          <div class="row">
+                            <div class="form-group col-sm-3">
+                              <label>Search</label>
+                              <input
+                                placeholder="Student"
+                                class="form-control"
+                                id="student"
+                                type="text"
+                                value=""
+                                name="student"
+                              /><input
+                                id="hidden-field"
+                                name="output"
+                                type="hidden"
+                                value=""
+                              />
+                            </div>
+                            <div class="form-group col-sm-3">
+                              <label>&nbsp;</label>
+                              <select
+                                class="form-control"
+                                name="reportof"
+                                id="reportof"
+                              >
+                                <option value="">Please Select</option>
+                                <option value="1">Paid Report</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group col-sm-12" align="right">
+                        <label>&nbsp;</label>
+                        <a href="javascript:showdetails()" class="btn btn-info"
+                          >GO</a
+                        >&nbsp;&nbsp;
+                        <input
+                          type="button"
+                          onclick="printDiv('print')"
+                          value="Print Report"
+                          class="btn btn-danger"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <br />
+                    <div class="tab-pane" id="tbb_c">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title"></h4>
+                            </div>
+                            <div class="panel-body">
+                              <div class="row">
+                                <div class="col-4 form-group">
+                                  <label for="reg_input" class="req"
+                                    >Course</label
+                                  >
+                                  <select
+                                    class="form-control"
+                                    name="Studentabsent[courseid3]"
+                                    id="Studentabsent_courseid3"
+                                  >
+                                    <option value="">Please Select</option>
+                                    <option value="1">UKG</option>
+                                    <option value="2">LKG</option>
+                                    <option value="3">GRADE I</option>
+                                    <option value="4">GRADE II</option>
+                                    <option value="5">GRADE III</option>
+                                    <option value="6">GRADE IV</option>
+                                    <option value="7">GRADE V</option>
+                                    <option value="8">GRADE VI</option>
+                                    <option value="9">GRADE VII</option>
+                                    <option value="10">GRADE VIII</option>
+                                  </select>
+                                  <div
+                                    class="school_val_error"
+                                    id="Studentabsent_courseid3_em_"
+                                    style="display: none"
+                                  ></div>
+                                </div>
+                                <div class="col-4 form-group">
+                                  <label for="reg_input" class="req"
+                                    >Batch</label
+                                  >
+                                  <select
+                                    class="form-control"
+                                    name="Studentabsent[courseid3]"
+                                    id="Studentabsent_courseid3"
+                                  >
+                                    <option value="">Please Select</option>
+                                    <option value="">Please Select</option>
+                                  </select>
+                                  <div
+                                    class="school_val_error"
+                                    id="Studentabsent_courseid3_em_"
+                                    style="display: none"
+                                  ></div>
+                                </div>
+
+                                <div class="form-group col-sm-3">
+                                  <label>&nbsp;</label>
+                                  <select
+                                    class="form-control"
+                                    name="reportof"
+                                    id="reportof"
+                                  >
+                                    <option value="">Please Select</option>
+                                    <option value="1">Paid Report</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="form-group col-sm-12" align="right">
+                                  <label>&nbsp;</label>
+                                  <a
+                                    href="javascript:showdetails()"
+                                    class="btn btn-info"
+                                    >GO</a
+                                  >&nbsp;&nbsp;
+                                  <input
+                                    type="button"
+                                    onclick="printDiv('print')"
+                                    value="Print Report"
+                                    class="btn btn-danger"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">Course</h4>
+                          </div>
+                          <div class="panel-body">
+                            <div class="row">
+                              <div class="col-4 form-group">
+                                <label for="reg_input" class="req"
+                                  >Course</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[courseid3]"
+                                  id="Studentabsent_courseid3"
+                                >
+                                  <option value="">Please Select</option>
+                                  <option value="1">UKG</option>
+                                  <option value="2">LKG</option>
+                                  <option value="3">GRADE I</option>
+                                  <option value="4">GRADE II</option>
+                                  <option value="5">GRADE III</option>
+                                  <option value="6">GRADE IV</option>
+                                  <option value="7">GRADE V</option>
+                                  <option value="8">GRADE VI</option>
+                                  <option value="9">GRADE VII</option>
+                                  <option value="10">GRADE VIII</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_courseid3_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="form-group col-sm-3">
+                                <label>&nbsp;</label>
+                                <select
+                                  class="form-control"
+                                  name="reportof"
+                                  id="reportof"
+                                >
+                                  <option value="">Please Select</option>
+                                  <option value="1">Paid Report</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-12" align="right">
+                        <label>&nbsp;</label>
+                        <a href="javascript:showdetails()" class="btn btn-info"
+                          >Excel</a
+                        >&nbsp;&nbsp;
+                        <input
+                          type="button"
+                          onclick="printDiv('print')"
+                          value="Print Report"
+                          class="btn btn-danger"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- new end -->
+                  <div
+                    class="tab-pane fade"
+                    id="tbb_e"
+                    role="tabpanel"
+                    aria-labelledby="tbb_e-tab"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              Fee Due Reports(SchoolWise)
+                            </h4>
+                            <div class="row">
+                              <div
+                                class="panel panel-white border-left-xlg border-left-info"
+                              >
+                                <div class="card">
+                                  <div class="panel-heading">
+                                    <p>
+                                      <span
+                                        class="icon-info22"
+                                        style="color: #26a69a"
+                                      ></span
+                                      >&nbsp; <b>Step-1 :</b>Please update the
+                                      student fee structure using the below
+                                      button. <br /><br /><span
+                                        class="icon-cloud-download2"
+                                        style="color: #26a69a"
+                                      ></span>
+                                      <b>Step-2 :</b>Download the excel file
+                                      with the due report for all the students
+                                      to date.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="form-group col-sm-3"
+                                  align="left"
+                                  id="up"
+                                >
+                                  <label>&nbsp;</label><br />
+                                  <a
+                                    href="javascript:updatefee()"
+                                    class="btn bg-teal-400 btn-labeled"
+                                    align="left"
+                                    style="padding-left: 10px"
+                                    ><i class="icon-spinner9"></i
+                                    >&nbsp;&nbsp;&nbsp;Fee Structure Update</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

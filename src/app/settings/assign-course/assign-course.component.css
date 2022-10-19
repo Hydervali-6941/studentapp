@@ -1,0 +1,21 @@
+.page {
+    color: #fff;
+    background: #f1f5f9;
+  }
+  .page.box {
+    min-height: 150px;
+    background: linear-gradient(to right, #94a2c3, #4286f4) !important;
+    margin: 0 -1rem;
+    /* font-size: 36px; */
+  }
+  .head {
+    font-size: 30px;
+  }
+  .page.content {
+    min-height: calc(84vh - 160px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+    color: black;
+    /* font-size: 2rem; */
+  }

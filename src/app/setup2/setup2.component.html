@@ -1,0 +1,238 @@
+
+<mat-drawer-container   >
+   <mat-drawer mode="side" [opened]="sideBarOpen"  >
+      <!-- <mat-drawer mode="side" opened="true"> -->
+         <app-sidenav></app-sidenav>
+      </mat-drawer>
+      <mat-drawer-content>
+         <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+         
+         
+         <!-- <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                     <h4 class="mb-sm-0 font-size-18">Admin Setup</h4>
+                     
+                  </div>
+               </div>
+            </div> -->
+            <div class="container-fluid">
+               <div class="page box p-3 mt-2">Admin Setup</div>
+               
+               <div class="page content shadow p-3 position-relative">
+                  
+                  
+                  
+                  
+                  
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                           <h4 class="mb-sm-0 font-size-18"> Admin Setup </h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xl-12">
+                        <div class="card overflow-hidden">
+                           <div class="bg-primary bg-soft">
+                              <div class="row">
+                                 <div class="col-7">
+                                    <div class="text-primary p-3">
+                                       <h5 class="text-primary">Welcome To !</h5>
+                                       <p>Admin Main Page</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-5 align-self-end">
+                                    <img src="assets/images/staff11.png" alt="" class="img-fluid">
+                                 </div>
+                              </div>
+                           </div>
+                           
+                        </div>
+                     </div>
+                     <div class="col-xl-12">
+                        <div class="row">
+                           <div class="col-md-4" >
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body" >
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0">User Creation</h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon  bb">
+                                          <span class="avatar-title">
+                                             <a class="mdi mdi-arrow-right ms-1"  routerLink="/usercreation" style="color: white;"></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- <div class="col-md-4">
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body">
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0">Roles Creation </h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                          <span class="avatar-title rounded-circle bg-primary">
+                                             <a class="mdi mdi-arrow-right ms-1"   routerLink="/rolescreat"  style="color: white;" ></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> -->
+                           <!-- <div class="col-md-4">
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body">
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0">User Roles</h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                          <span class="avatar-title rounded-circle bg-primary">
+                                             <a class="mdi mdi-arrow-right ms-1" routerLink="/userroles" style="color: white;" ></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> -->
+                           
+                           <!-- <div class="col-md-4">
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body">
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0"> Students   </h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                          <span class="avatar-title rounded-circle bg-primary">
+                                             <a class="mdi mdi-arrow-right ms-1"  routerLink="/stulog" style="color: white;" ></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> -->
+                           
+                           <div class="col-md-4">
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body">
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0">Menu Roles</h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                          <span class="avatar-title rounded-circle bg-primary">
+                                             <a class="mdi mdi-arrow-right ms-1" routerLink="/menu"  style="color: white;"></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-4">
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body">
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0">Campus Events</h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                          <span class="avatar-title rounded-circle bg-primary">
+                                             <a class="mdi mdi-arrow-right ms-1"  routerLink="/campus" style="color: white;"></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           
+                           <!-- <div class="col-md-4">
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body">
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0">Certificate Uplode</h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                          <span class="avatar-title rounded-circle bg-primary">
+                                             <a class="mdi mdi-arrow-right ms-1" routerLink="/certificate"  style="color: white;"></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> -->
+                           
+                           <div class="col-md-4">
+                              <div class="card mini-stats-wid">
+                                 <div class="card-body">
+                                    <div class="media">
+                                       <div class="media-body">
+                                          <h4 class="mb-0">Login Details </h4>
+                                       </div>
+                                       <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                          <span class="avatar-title rounded-circle bg-primary">
+                                             <a class="mdi mdi-arrow-right ms-1"  routerLink="/logdetails"  style="color: white;" ></a>
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- 
+                              <div class="col-md-4">
+                                 <div class="card mini-stats-wid">
+                                    <div class="card-body">
+                                       <div class="media">
+                                          <div class="media-body">
+                                             <h4 class="mb-0">Photos Uplode</h4>
+                                          </div>
+                                          <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                             <span class="avatar-title rounded-circle bg-primary">
+                                                <a class="mdi mdi-arrow-right ms-1"   routerLink="/uplode"   style="color: white;"></a>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div> -->
+                              
+                              <div class="col-md-4">
+                                 <div class="card mini-stats-wid">
+                                    <div class="card-body">
+                                       <div class="media">
+                                          <div class="media-body">
+                                             <h4 class="mb-0">SMS Details</h4>
+                                          </div>
+                                          <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon bb">
+                                             <span class="avatar-title rounded-circle bg-primary">
+                                                <a class="mdi mdi-arrow-right ms-1"  routerLink="/sms"  style="color: white;" ></a>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        
+                     </div>
+                     
+                     
+                  </div>
+               </div>
+               
+               
+            </mat-drawer-content>
+         </mat-drawer-container>
+         

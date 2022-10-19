@@ -1,0 +1,231 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Employee Attendance </div>
+                <div class="page content shadow p-3 position-relative">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18"> Employee Attendance </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <br>
+                            <div class="content">
+                                <form id="studentabsent-form" >
+                                    <div class="col-lg-12">
+                                        <!-- new -->
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Daily Attendance </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">View Attendance</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row ">
+                                                    <div class="col-lg-12">
+                                                        
+                                                        <div class="panel panel-default col ">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">Attendance</h4>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                <div class="row">
+                                                                    <div class="col-4 form-group" id="course">
+                                                                        <label for="reg_input">Department</label>
+                                                                        <select class="form-control" name="Employeeattendance[departmentid]" id="Employeeattendance_departmentid">
+                                                                            <option value="">Please Select</option>
+                                                                            <option value="1">Software1</option>
+                                                                            <option value="2">Head teacher1</option>
+                                                                            <option value="3">STIC</option>
+                                                                            <option value="6">Reception </option>
+                                                                            <option value="7">Administration</option>
+                                                                            <option value="9">Transport-teacher</option>
+                                                                            <option value="10">Class Teacher</option>
+                                                                            <option value="12">Computer Science</option>
+                                                                            <option value="13">Sen teacher</option>
+                                                                            <option value="14">Math</option>
+                                                                            <option value="15">science 3</option>
+                                                                            <option value="16">Mathematics1</option>
+                                                                            <option value="17">Hrpayroll12</option>
+                                                                            <option value="19">physical education</option>
+                                                                            <option value="20">maths</option>
+                                                                            <option value="21">English</option>
+                                                                            <option value="22">Math dept</option>
+                                                                            <option value="24">Admin</option>
+                                                                            <option value="27">TrialDept12</option>
+                                                                            <option value="28">History department</option>
+                                                                            <option value="30">BCdef</option>
+                                                                            <option value="32">CDM2</option>
+                                                                            <option value="33">science teacher</option>
+                                                                        </select><div class="school_val_error" id="Employeeattendance_departmentid_em_" ></div>                                </div>  
+                                                                        <div class="col-4 form-group" id="date">
+                                                                            <label for="reg_input_name">Date </label>
+                                                                            <div data-date-format="dd-mm-yyyy" class="input-group date">
+                                                                                
+                                                                                <input placeholder="Date" class="form-control pickadate" value="2022-04-20" readonly="readonly" onchange="validate()" name="Employeeattendance[date]" id="Employeeattendance_date" type="text" /><div class="school_val_error" id="Employeeattendance_date_em_" ></div>                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="alert alert-warning warning">
+                                                            <span class="icon-warning icon-2x" style="color:orange"></span> Put mark on employees who were present.
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-sm-12" id="gridview">
+                                                            <div class="panel panel-default"  id="attendance" >
+                                                                <div class="panel-heading">
+                                                                    <h4 class="panel-title">Employee Attendance Marking</h4>
+                                                                </div>
+                                                                <div class="table-responsive">
+                                                                    <table class="table responsive table table-bordered table table-striped" id="employeeattendence">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th data-hide="phone,tablet" ></th>
+                                                                                <th data-hide="phone" class="footable-last-column" width="25%"><input type="checkbox" id="checkall"> &nbsp;&nbsp;&nbsp;Check all</th>
+                                                                                <th data-hide="phone,tablet" width="25%">Employee Code</th>
+                                                                                <th data-hide="phone,tablet" width="25%">Name</th>
+                                                                                <th data-hide="phone,tablet" width="25%">Remarks</th>  
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-sm-5">
+                                                            <p>&nbsp;&nbsp;<a href="javascript:saveattendance();" class="btn btn-info" align="right" id="submit">Save</a></p> 
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                                    <div class="row ">
+                                                        <div class="col-sm-12">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <h4 class="panel-title">Attendance</h4>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-4 form-group" id="course">
+                                                                            <label for="reg_input">Department</label>
+                                                                            <select class="form-control" name="Employeeattendance[departmentid1]" id="Employeeattendance_departmentid1">
+                                                                                <option value="">Select Department</option>
+                                                                                <option value="1">Software1</option>
+                                                                                <option value="2">Head teacher1</option>
+                                                                                <option value="3">STIC</option>
+                                                                                <option value="6">Reception </option>
+                                                                                <option value="7">Administration</option>
+                                                                                <option value="9">Transport-teacher</option>
+                                                                                <option value="10">Class Teacher</option>
+                                                                                <option value="12">Computer Science</option>
+                                                                                <option value="13">Sen teacher</option>
+                                                                                <option value="14">Math</option>
+                                                                                <option value="15">science 3</option>
+                                                                                <option value="16">Mathematics1</option>
+                                                                                <option value="17">Hrpayroll12</option>
+                                                                                <option value="19">physical education</option>
+                                                                                <option value="20">maths</option>
+                                                                                <option value="21">English</option>
+                                                                                <option value="22">Math dept</option>
+                                                                                <option value="24">Admin</option>
+                                                                                <option value="27">TrialDept12</option>
+                                                                                <option value="28">History department</option>
+                                                                                <option value="30">BCdef</option>
+                                                                                <option value="32">CDM2</option>
+                                                                                <option value="33">science teacher</option>
+                                                                            </select><div class="school_val_error" id="Employeeattendance_departmentid1_em_" ></div>                                </div>  
+                                                                            <div class="col-4 form-group" id="year">
+                                                                                <label for="reg_input">Year</label>
+                                                                                
+                                                                                <select class="form-control" name="Employeeattendance[year]" id="Employeeattendance_year">
+                                                                                    <option value=" ">Select Year</option>
+                                                                                    <option value="2021">2021</option>
+                                                                                    <option value="2022">2022</option>
+                                                                                </select>                                </div>
+                                                                                <div class="col-4 form-group" id="date">
+                                                                                    <label for="reg_input_name">Month</label>
+                                                                                    <select maxlength="6" class="form-control" value="04" name="Employeeattendance[date15]" id="Employeeattendance_date15">
+                                                                                        <option value="1">January</option>
+                                                                                        <option value="2">February</option>
+                                                                                        <option value="3">March</option>
+                                                                                        <option value="4">April</option>
+                                                                                        <option value="5">May</option>
+                                                                                        <option value="6">June</option>
+                                                                                        <option value="7">July</option>
+                                                                                        <option value="8">August</option>
+                                                                                        <option value="9">September</option>
+                                                                                        <option value="10">October</option>
+                                                                                        <option value="11">November</option>
+                                                                                        <option value="12">December</option>
+                                                                                    </select><div class="school_val_error" id="Employeeattendance_date15_em_" ></div>                                </div>
+                                                                                    
+                                                                                    <div class="col-4 form-group">
+                                                                                        <label for="reg_input">&nbsp;</label><br>
+                                                                                        <input type="button" class="btn btn-danger" onclick="printDiv('print')" value=Print Report />
+                                                                                        
+                                                                                    </div>  
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row" id="print">
+                                                                    <div class="col-sm-12" id="gridview">
+                                                                        <div class="panel panel-default"  id="attendance">
+                                                                            <div class="panel-heading">
+                                                                                <h4 class="panel-title" id="title">Attendance Report</h4>
+                                                                            </div>
+                                                                            <div class="table-responsive" id="attendancebody" style="padding:2%;">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> 
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                                                    
+                                                    <!-- new end -->
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    <!-- </div> -->
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-drawer-content>
+                    </mat-drawer-container>

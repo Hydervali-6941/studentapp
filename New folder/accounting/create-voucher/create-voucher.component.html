@@ -1,0 +1,709 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">Accounts</div>
+      <div class="ico-card">
+        <i class="fas fa-address-book"></i>
+      </div>
+      <div
+        class="page content shadow p-3 position-relative"
+        style="margin-top: -68px"
+      >
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="page-title-box d-sm-flex align-items-center justify-content-between"
+            >
+              <h4 class="mb-sm-0 font-size-18">Create Voucher</h4>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content">
+            <br />
+            <div class="content">
+              <form id="studentabsent-form">
+                <div class="col-lg-12">
+                  <!-- new -->
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="home-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#home"
+                        type="button"
+                        role="tab"
+                        aria-controls="home"
+                        aria-selected="true"
+                      >
+                        CREATEVOUCHER
+                      </button>
+                    </li>
+                    <!-- <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="profile-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="profile"
+                        aria-selected="false"
+                      >
+                        List
+                      </button>
+                    </li> -->
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="contact-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#contact"
+                        type="button"
+                        role="tab"
+                        aria-controls="contact"
+                        aria-selected="false"
+                      >
+                        LIST
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="home"
+                      role="tabpanel"
+                      aria-labelledby="home-tab"
+                    >
+                      <br />
+                      <br />
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="panel panel-default col">
+                            <div class="panel-heading"></div>
+                            <div class="row">
+                              <div class="col-6 form-group">
+                                Voucher Number : 72
+                              </div>
+                              <div class="col-6 form-group">
+                                <label for="reg_input_name"
+                                  >Transaction Date</label
+                                >
+                                <input
+                                  class="form-control"
+                                  placeholder="Date"
+                                  value="2022-06-30"
+                                  autocomplete=""
+                                  label=""
+                                  id="date"
+                                  name="Datemaster[transactiondate]"
+                                  type="text"
+                                />
+                                <span
+                                  class="school_val_error"
+                                  id="Voucher_transactiondate_em_"
+                                  style="display: none"
+                                ></span>
+                              </div>
+                              <div class="col-6 form-group">
+                                <label for="reg_input" class="req"
+                                  >Voucher Master</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[batchid]"
+                                  id="Studentabsent_batchid"
+                                >
+                                  <option value="">
+                                    Select Voucher Master
+                                  </option>
+                                  <option value="1">x1234</option>
+                                  <option value="2">Cash Receipt</option>
+                                  <option value="3">Bank Payment 1</option>
+                                  <option value="4">Bank Receipt</option>
+                                  <option value="5">Loan</option>
+                                  <option value="6">Refund</option>
+                                  <option value="7">Journal</option>
+                                  <option value="8">Tuition Fee</option>
+                                  <option value="9">House Rent</option>
+                                  <option value="10">Employee Salary</option>
+                                  <option value="11">
+                                    Test Voucher Master Credit
+                                  </option>
+                                  <option value="12">
+                                    Test Voucher Master Debit
+                                  </option>
+                                  <option value="13">asd</option>
+                                  <option value="14">Student Fees</option>
+                                  <option value="15">ABCD</option>
+                                  <option value="16">Cheque Payment</option>
+                                  <option value="17">School Fees Cheque</option>
+                                  <option value="18">
+                                    Student Fees Voucher
+                                  </option>
+                                  <option value="19">hello123</option>
+                                  <option value="20">cash payment</option>
+                                  <option value="21">cash pay 1</option>
+                                  <option value="23">2463643</option>
+                                  <option value="24">Cash</option>
+                                  <option value="29">new credit</option>
+                                  <option value="30">cash payments</option>
+                                  <option value="31">cash paymentss</option>
+                                  <option value="33">Check no</option>
+                                  <option value="34">Fee</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_batchid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-6 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Voucher Head</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">Select Voucher Head</option>
+                                  <option value="1">!@#$</option>
+                                  <option value="2">LATE FINE</option>
+                                  <option value="3">Library Fee</option>
+                                  <option value="4">Tuition Fee</option>
+                                  <option value="5">House Rent</option>
+                                  <option value="6">Stationary</option>
+                                  <option value="7">Stationary Discount</option>
+                                  <option value="8">Employee Salary</option>
+                                  <option value="9">Purchase Order</option>
+                                  <option value="10">Course FEEs ath</option>
+                                  <option value="11">Let fee</option>
+                                  <option value="12">
+                                    Test Voucher Head Credit
+                                  </option>
+                                  <option value="13">
+                                    Test Voucher Head Debit
+                                  </option>
+                                  <option value="14">Tution Fee January</option>
+                                  <option value="15">Salary</option>
+                                  <option value="16">Registration Fee</option>
+                                  <option value="17">ABCD HEAD</option>
+                                  <option value="18">Hostel Fee</option>
+                                  <option value="19">accountent</option>
+                                  <option value="20">Student Fees</option>
+                                  <option value="21">Student Fees Debit</option>
+                                  <option value="22">
+                                    Student Fees payment
+                                  </option>
+                                  <option value="23">123456</option>
+                                  <option value="24">
+                                    111111111111111111111
+                                  </option>
+                                  <option value="25">1234@abc</option>
+                                  <option value="26">Course Fee</option>
+                                  <option value="27">xyzzzz</option>
+                                  <option value="28">
+                                    School Fees Collection
+                                  </option>
+                                  <option value="29">School Fees(Stu)</option>
+                                  <option value="30">Student Pry Fees</option>
+                                  <option value="32">!!!@#$$@#</option>
+                                  <option value="33">cash payment</option>
+                                  <option value="34">cash paydgfdg</option>
+                                  <option value="37">@#$%^^</option>
+                                  <option value="41">Head123</option>
+                                  <option value="42">@</option>
+                                  <option value="43">12</option>
+                                  <option value="44">!</option>
+                                  <option value="45">15</option>
+                                </select>
+                              </div>
+                              <div class="col-6 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Credit Ledger Account*</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">
+                                    Credit Ledger Account
+                                  </option>
+                                </select>
+                              </div>
+                              <div class="col-6 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Debit Ledger Account*</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">Debit Ledger Account</option>
+                                  <option value="1">Primaryyyy</option>
+                                  <option value="2">Cash Account</option>
+                                  <option value="3">Bank Account</option>
+                                  <option value="4">Course Fee</option>
+                                  <option value="5">Course Fee</option>
+                                  <option value="6">Library Fee</option>
+                                  <option value="7">General</option>
+                                  <option value="8">Temporary</option>
+                                  <option value="9">Course Fee</option>
+                                  <option value="10">Stationary</option>
+                                  <option value="11">
+                                    Stationary Discount
+                                  </option>
+                                  <option value="12">Course Fee</option>
+                                  <option value="13">Course Fee</option>
+                                  <option value="14">Course Fee</option>
+                                  <option value="15">Salary Expenses</option>
+                                  <option value="16">Course Fee</option>
+                                  <option value="17">Course Fee</option>
+                                  <option value="18">LATE FINE</option>
+                                  <option value="19">Purchase Order</option>
+                                  <option value="20">Test Account Group</option>
+                                  <option value="21">Cash In Hand</option>
+                                  <option value="22">Registration Fee</option>
+                                  <option value="23">Hostel Fee</option>
+                                  <option value="24">adcssdvvd</option>
+                                  <option value="25">abc</option>
+                                  <option value="26">Bipin ledger</option>
+                                  <option value="27">Student Fees</option>
+                                  <option value="28">
+                                    Student Cash Account
+                                  </option>
+                                  <option value="29">Student Cash Fee</option>
+                                  <option value="30">School Account</option>
+                                  <option value="31">
+                                    Student Cash Primary
+                                  </option>
+                                  <option value="32">test</option>
+                                  <option value="33">abcdhello</option>
+                                  <option value="34">
+                                    Student bank account
+                                  </option>
+                                  <option value="35">Fees</option>
+                                  <option value="36">Salary</option>
+                                  <option value="37">Discount</option>
+                                  <option value="38">Stationery</option>
+                                  <option value="39">Furniture</option>
+                                  <option value="40">Electricity bill</option>
+                                  <option value="41">3753753</option>
+                                  <option value="42">White boards</option>
+                                  <option value="43">Medical tools</option>
+                                  <option value="44">imdad fee</option>
+                                  <option value="45">rdeeee</option>
+                                  <option value="46">vfbnm</option>
+                                  <option value="47">new</option>
+                                  <option value="48">Ledger account</option>
+                                  <option value="49">sfdfgvfg</option>
+                                  <option value="50">Tanmay</option>
+                                  <option value="51">Pimary3</option>
+                                  <option value="52">anu</option>
+                                  <option value="53">Hani</option>
+                                  <option value="54">Pimary4</option>
+                                  <option value="55">My Account</option>
+                                  <option value="56">
+                                    A new account modified
+                                  </option>
+                                  <option value="57">Bank details</option>
+                                  <option value="58">sadf123</option>
+                                  <option value="59">veeha V</option>
+                                </select>
+                              </div>
+                              <div class="col-6 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Payment Mode</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">Please Select</option>
+                                  <option value="">Cash</option>
+                                  <option value="">Bank</option>
+                                </select>
+                              </div>
+                              <div class="col-6 form-group">
+                                <label for="reg_input">Amount*</label>
+                                <input
+                                  class="form-control"
+                                  id="employee"
+                                  type="text"
+                                  value=""
+                                  name="employee"
+                                />
+                              </div>
+                              <div class="col-6 form-group">
+                                <label for="reg_input_name">Narration</label>
+                                <textarea
+                                  class="form-control"
+                                  maxlength="45"
+                                  label=""
+                                  placeholder="Narration"
+                                  name="Voucher[description]"
+                                  id="Voucher_description"
+                                ></textarea>
+                                <span
+                                  class="school_val_error"
+                                  id="Voucher_description_em_"
+                                  style="display: none"
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="alert alert-warning warning">
+                        <span
+                          class="icon-warning icon-2x"
+                          style="color: orange"
+                        ></span
+                        >Put mark on students who were present.
+                      </div> -->
+
+                      <div class="form-group col-sm-6">
+                        <p>
+                          <a class="btn btn-info" href="#" data-toggle="modal"
+                            >Create</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <br />
+                    <div
+                      class="tab-pane fade"
+                      id="contact"
+                      role="tabpanel"
+                      aria-labelledby="contact-tab"
+                    >
+                      <div class="row"></div>
+                    </div>
+
+                    <!-- new end -->
+                  </div>
+                </div>
+                <div class="modal fade" id="newMail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          aria-hidden="true"
+                          data-dismiss="modal"
+                          class="close"
+                          type="button"
+                        >
+                          ×
+                        </button>
+                        <h4 id="myModalLabel" class="modal-title">
+                          Confirmation
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="table-responsive">
+                          <table>
+                            <tr>
+                              <td align="center">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img
+                                  src="/img/withdrawal.png"
+                                  width="50"
+                                  alt=""
+                                />
+                              </td>
+                              <td align="center">
+                                <h5 align="center">
+                                  &nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want
+                                  to withdraw the employee details?
+                                </h5>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <a
+                          href="javascript:withdrawal()"
+                          class="btn btn-primary"
+                          >OK</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="col-lg-12" style="padding-top: 72px">
+                <div class="card card-cascade narrower">
+                  <div
+                    class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="col-8">
+                      <div class="mainWrapper">
+                        <h2>Customer</h2>
+                        <form class="form-inline waves-light" mdbWavesEffect>
+                          <div class="md-form mt-0">
+                            <input
+                              class="form-control mr-sm-2 SearchForm"
+                              type="text"
+                              placeholder="Search"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="btn-list">
+                        <button
+                          class="btn btn-outline-primary btn-rounded modalPopup"
+                        >
+                          <span class="mat-button-wrapper">
+                            <i class="fa fa-filter" aria-hidden="true"></i>
+                          </span></button
+                        >&nbsp;
+                        <tr class="left">
+                          <span class="mat-button-wrapper">
+                            <td>
+                              <button
+                                mat-icon-button
+                                [matMenuTriggerFor]="menu"
+                                aria-label="Example icon-button with a menu"
+                                class="colour"
+                                class="btn btn-outline-primary btn-rounded modalPopup"
+                              >
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>print</mat-icon>
+                                  <span>Print</span>
+                                </button>
+                                <button mat-menu-item>
+                                  <mat-icon>import_export</mat-icon>
+                                  <span>Export</span>
+                                </button>
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>
+                              </mat-menu>
+                            </td>
+                          </span>
+                        </tr>
+                      </div>
+                    </div>
+                  </div>
+                  <!---------icons Start--------->
+                  <div class="">
+                    <div class="table-wrapper">
+                      <!--Table-->
+                      <table class="table">
+                        <!--Table head-->
+                        <thead>
+                          <tr>
+                            <th scope="col" style="width: 4%">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkbox"
+                              />
+                            </th>
+                            <th scope="col">Branch</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">AcademicYear</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <!--Table head-->
+                        <!--Table body-->
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkbox1"
+                              />
+                            </th>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                  alt=""
+                                  class="rounded-circle"
+                                />
+                                <div class="ms-3">
+                                  <p class="fw-bold">John Doe</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="forNumbers">
+                              <mat-icon class="icon-cc"> phone</mat-icon>
+                              <mat-icon class="icon-cc-1"> email</mat-icon>
+                            </td>
+                            <td>Senior</td>
+                            <td>
+                              <button
+                                mat-icon-button
+                                [matMenuTriggerFor]="menu1"
+                                aria-label="Example icon-button with a menu"
+                              >
+                                <mat-icon>remove_red_eye</mat-icon>
+                              </button>
+                              <button
+                                mat-icon-button
+                                [matMenuTriggerFor]="menu1"
+                                aria-label="Example icon-button with a menu"
+                              >
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu1="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>edit</mat-icon>
+                                  <span>Edit</span>
+                                </button>
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>
+                              </mat-menu>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkbox2"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="checkbox2"
+                                class="label-table"
+                              ></label>
+                            </th>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                  class="rounded-circle"
+                                  alt=""
+                                />
+                                <div class="ms-3">
+                                  <p class="fw-bold">Kate Hunington</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="forNumbers">
+                              <mat-icon class="icon-cc"> phone</mat-icon>
+                              <mat-icon class="icon-cc-1"> email</mat-icon>
+                            </td>
+                            <td>Senior</td>
+                            <td>
+                              <button
+                                mat-icon-button
+                                [matMenuTriggerFor]="menu1"
+                                aria-label="Example icon-button with a menu"
+                              >
+                                <mat-icon>remove_red_eye</mat-icon>
+                              </button>
+                              <button
+                                mat-icon-button
+                                [matMenuTriggerFor]="menu1"
+                                aria-label="Example icon-button with a menu"
+                              >
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu1="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>edit</mat-icon>
+                                  <span>Edit</span>
+                                </button>
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>
+                              </mat-menu>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkbox3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="checkbox3"
+                                class="label-table"
+                              ></label>
+                            </th>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                  class="rounded-circle"
+                                  alt=""
+                                />
+                                <div class="ms-3">
+                                  <p class="fw-bold mb-1">Kate Hunington</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="forNumbers">
+                              <mat-icon class="icon-cc"> phone</mat-icon>
+                              <mat-icon class="icon-cc-1"> email</mat-icon>
+                            </td>
+                            <td>Senior</td>
+                            <td>
+                              <button
+                                mat-icon-button
+                                [matMenuTriggerFor]="menu1"
+                                aria-label="Example icon-button with a menu"
+                              >
+                                <mat-icon>remove_red_eye</mat-icon>
+                              </button>
+                              <button
+                                mat-icon-button
+                                [matMenuTriggerFor]="menu1"
+                                aria-label="Example icon-button with a menu"
+                              >
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu1="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>edit</mat-icon>
+                                  <span>Edit</span>
+                                </button>
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>
+                              </mat-menu>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <!--Table body-->
+                      </table>
+                      <!--Table-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

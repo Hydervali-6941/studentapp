@@ -1,0 +1,106 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">SMS Alert</div>
+      <div class="page content shadow p-3 position-relative">
+        <div class="content">
+          <form
+            id="smssettings-form"
+            action="/index.php/transport/transportfeecollection/smsalert"
+            method="post"
+          >
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <!-- <h4 class="panel-title">SMS Alert</h4> -->
+                  </div>
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label for="reg_input" class="req">SMS For*</label>
+                      <select
+                        class="form-control"
+                        data-required="true"
+                        name="Transportfeecollection[sms_for]"
+                        id="Transportfeecollection_sms_for"
+                      >
+                        <option value="prompt">Please select</option>
+                        <option value="1">Common to All</option>
+                        <option value="2">Route wise</option>
+                        <option value="3">Destination wise</option>
+                      </select>
+                    </div>
+                    <br />
+
+                    <!-- <div class="form-group" id="route" style="display: none">
+                      <label class="req">Route</label>
+                      <select
+                        class="form-control"
+                        name="Transportfeecollection[routemasterid]"
+                        id="Transportfeecollection_routemasterid"
+                      >
+                        <option value="">Select Route Code</option>
+                        <option value="1">3245</option>
+                        <option value="6">SPRA</option>
+                        <option value="10">88</option>
+                        <option value="27">jjhh</option>
+                        <option value="45">gg</option>
+                        <option value="47">vk</option>
+                        <option value="48">13</option>
+                      </select>
+                    </div> -->
+                    <div
+                      class="form-group"
+                      id="destination"
+                      style="display: none"
+                    >
+                      <label class="req">Destination*</label>
+                      <select
+                        class="form-control"
+                        name="Transportfeecollection[routedetailsid]"
+                        id="Transportfeecollection_routedetailsid"
+                      >
+                        <option value="">Select Destination</option>
+                      </select>
+                    </div>
+                    <div class="alert alert-warning warning border-warning">
+                      <span
+                        class="icon-warning icon-2x"
+                        style="color: orange"
+                      ></span>
+                      <span class="material-icons">report_problem</span>
+                      If you want to incoorporate student information from the
+                      database in the message, then you have to include certain
+                      codes in the place of user information. <br />
+                      The codes are: <br />
+                      Student/Employee Name :#name#,Register No./Employee Code
+                      :#code# , Route Code : #route# , Destination :
+                      #destination#.
+                    </div>
+                    <div class="form-group" id="message">
+                      <label for="reg_input_name" class="req">Message*</label>
+                      <textarea
+                        rows="2"
+                        cols="50"
+                        class="form-control"
+                        name="Transportfeecollection[message]"
+                        id="Transportfeecollection_message"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <br />
+          <button class="btn btn-info">Send</button>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

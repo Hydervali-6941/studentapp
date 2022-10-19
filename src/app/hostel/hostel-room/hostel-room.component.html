@@ -1,0 +1,156 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header><div class="content">
+        <div class="container-fluid">
+          <div class="page box p-3 mt-2"> Add Hostel Room</div>
+          <div class="ico-card">
+              <i class="fas fa-address-card"></i>
+          </div>
+          <div class="page content shadow p-3 position-relative">
+            <form id="hostelroom-form" >   
+              <div class="col-sm-12">
+               
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">Add Hostel Room</h4>
+                          </div>
+                          <div class="panel-body">
+                            <div class="row">
+                              <div class="col-4">
+                                <div class="form-group error">
+                                  <label for="reg_input" class="req">Hostel Type</label>
+                                  <select class="form-control" name="Hostelroom[hosteltypeid]" id="Hostelroom_hosteltypeid">
+                                    <option value="">Select Option</option>
+                                    <option value="41">Girls</option>
+                                    
+                                  </select>                                    <div class="school_val_error" id="Hostelroom_hosteltypeid_em_" >Hostel Type cannot be blank.</div>                              
+                                </div>
+                              </div>
+                              
+                              <div class="col-4">
+                                <div class="form-group">
+                                  <label for="reg_input" class="req">Hostel Name</label>
+                                  <select class="form-control" name="Hostelroom[hosteldetailsid]" id="Hostelroom_hosteldetailsid">
+                                    <option value="">Select Option</option>
+                                    
+                                  </select>                                    <div class="school_val_error" id="Hostelroom_hosteldetailsid_em_" style="display:none"></div>  
+                                </div>
+                              </div> 
+                              <div class="col-4"> 
+                                <div class="form-group">
+                                  <label for="reg_input_name" class="req">Floor Name</label>
+                                  <input class="form-control" name="Hostelroom[hostelroom_floorname]" id="Hostelroom_hostelroom_floorname" type="text">                                  </div> 
+                                </div>
+                                
+                                <div class="col-4">
+                                  <div class="form-group">
+                                    <input class="form-control" placeholder="Room No." name="Hostelroom[hostelroom_roomno]" id="Hostelroom_hostelroom_roomno" type="text" maxlength="45">                                                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-4">
+                                    <div class="form-group">
+                                      <input class="form-control" placeholder="No of Beds" name="Hostelroom[hostelroom_noofbeds]" id="Hostelroom_hostelroom_noofbeds" type="text">                                    <div class="school_val_error" id="Hostelroom_hostelroom_noofbeds_em_" style="display:none"></div>       
+                                    </div>                         </div>
+                                    
+                                    <div class="col-4">
+                                      <div class="form-group">
+                                        <input class="form-control" placeholder="Amount" name="Hostelroom[hostelroom_rent]" id="Hostelroom_hostelroom_rent" type="text">                                    <div class="school_val_error" id="Hostelroom_hostelroom_rent_em_" style="display:none"></div>  
+                                      </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-group">
+                                      <div class="form_sep">
+                                        <p><a href="javascript:addroom();" class="btn btn-info" align="right" title="Addition"><span class="glyphicon glyphicon-plus"></span></a></p> 
+                                      </div>
+                                    </div> 
+                                    
+                                    <div class="form-group" id="roomlist">
+                                      <table class="table" id="roomdisplay">
+                                        <thead>
+                                          <tr><th>Room No.</th>
+                                            <th>No of Beds</th>
+                                            <th>Room Rent</th>
+                                            <th></th>
+                                          </tr></thead>
+                                          <tbody>
+                                            
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                      <!--</div>-->
+                                      
+                                      <div class="col-6">
+                                        <div class="form-group">
+                                          <label class="req">Fee Type</label>
+                                          <select class="form-control" data-required="true" name="Hostelroom[feestype]" id="Hostelroom_feestype">
+                                            <option value="" selected="selected">Select Type</option>
+                                            <option value="1">Annual</option>
+                                            <option value="2">Bi-Annual</option>
+                                            <option value="3">Tri-Annual</option>
+                                            <option value="4">Quarterly</option>
+                                            <option value="5">Monthly</option>
+                                          </select><div class="school_val_error" id="Hostelroom_feestype_em_" style="display:none"></div>                              
+                                        </div>
+                                      </div><br>
+                                      <br>
+                                      <div class="container-fluid">
+                                        <div class="page content shadow p-3 position-relative">
+                                          <div class="panel-heading">
+                                            <h4 class="panel-title"><b>Fee Dates</b></h4>
+                                          </div>
+                                          <div class="row">
+                                          <div class="col-4"> 
+                                            <div class="form-group">
+                                              <label for="reg_input_name" class="req">Start Date</label>
+                                              <input class="form-control" name="Hostelroom[hostelroom_floorname]" id="Hostelroom_hostelroom_floorname" type="text">                                  </div> 
+                                            </div>
+
+                                            <div class="col-4"> 
+                                              <div class="form-group">
+                                                <label for="reg_input_name" class="req">Due Date</label>
+                                                <input class="form-control" name="Hostelroom[hostelroom_floorname]" id="Hostelroom_hostelroom_floorname" type="text">                                  </div> 
+                                              </div>
+
+                                              <div class="col-4"> 
+                                                <div class="form-group">
+                                                  <label for="reg_input_name" class="req">End Date</label>
+                                                  <input class="form-control" name="Hostelroom[hostelroom_floorname]" id="Hostelroom_hostelroom_floorname" type="text">                                  </div> 
+                                                </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                      
+                                      <div class="row">
+                                        <div class="col-sm-5">
+                                          <div class="form_sep">
+                                            <p><a href="javascript:save();" class="btn btn-info" align="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p> 
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+        
+              
+            </mat-drawer-content>
+          </mat-drawer-container>

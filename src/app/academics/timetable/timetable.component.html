@@ -1,0 +1,1683 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">Timetable</div>
+      <div class="ico-card">
+        <i class="fas fa-address-card"></i>
+      </div>
+      <div
+        class="page content shadow p-3 position-relative"
+        style="margin-top: -68px"
+      >
+        <form>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                Room
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                Set Timetable
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#contact"
+                type="button"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+              >
+                Active Timetable
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="FATHER-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#FATHER"
+                type="button"
+                role="tab"
+                aria-controls="FATHER"
+                aria-selected="false"
+              >
+                View Batch Timetable
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="GUARDIAN-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#GUARDIAN"
+                type="button"
+                role="tab"
+                aria-controls="GUARDIAN"
+                aria-selected="false"
+              >
+                View Teachers Timetable
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="HEALTH-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#HEALTH"
+                type="button"
+                role="tab"
+                aria-controls="HEALTH"
+                aria-selected="false"
+              >
+                Allocate Proxy
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="EMERGENCY-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#EMERGENCY"
+                type="button"
+                role="tab"
+                aria-controls="EMERGENCY"
+                aria-selected="false"
+              >
+                Allocated List
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="PREVIOUS-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#PREVIOUS"
+                type="button"
+                role="tab"
+                aria-controls="PREVIOUS"
+                aria-selected="false"
+              >
+                Teacher working Hours
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="DOCUMENT-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#DOCUMENT"
+                type="button"
+                role="tab"
+                aria-controls="DOCUMENT"
+                aria-selected="false"
+              >
+                Timetable Export
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="OTHERS-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#OTHERS"
+                type="button"
+                role="tab"
+                aria-controls="OTHERS"
+                aria-selected="false"
+              >
+                Timetable Import
+              </button>
+            </li>
+          </ul>
+          <!--tab 1-->
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <div class="card">
+                <div class="card-header">
+                  <h2>Add Room</h2>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="reg_input_name" class="">Room Number :</label>
+                      <input
+                        class="form-control"
+                        name="Student[student_regno]"
+                        id="Student_student_regno"
+                        type="text"
+                      />
+                      <div
+                        class="school_val_error"
+                        id="Student_student_regno_em_"
+                        style="display: none"
+                      ></div>
+                    </div>
+                    <div class="form-group col-6">
+                      <label for="reg_input_name" class="">Room Name :</label>
+                      <input
+                        class="form-control"
+                        name="Student[student_regno]"
+                        id="Student_student_regno"
+                        type="text"
+                      />
+                      <div
+                        class="school_val_error"
+                        id="Student_student_regno_em_"
+                        style="display: none"
+                      ></div>
+                    </div>
+                  </div>
+                  <br />
+                  <button class="btn btn-primary" style="float: right">
+                    Create
+                  </button>
+                  <br /><br />
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="card card-cascade narrower">
+                                <div
+                                  class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                                >
+                                  <div class="col-8">
+                                    <div class="mainWrapper">
+                                      <h2>Customer</h2>
+
+                                      <form
+                                        class="form-inline waves-light"
+                                        mdbWavesEffect
+                                      >
+                                        <div class="md-form mt-0">
+                                          <input
+                                            class="form-control mr-sm-2 SearchForm"
+                                            type="text"
+                                            placeholder="Search"
+                                          />
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-4">
+                                    <div class="btn-list">
+                                      <!-- <div class="downloadicon">
+                                        <span
+                                          ><i class="fa fa-download" aria-hidden="true"></i
+                                        ></span>
+                                      </div>-->
+
+                                      <button
+                                        class="btn btn-outline-primary btn-rounded modalPopup"
+                                        (click)="
+                                          openDialogWithTemplateRef(myDialog)
+                                        "
+                                      >
+                                        <span class="mat-button-wrapper">
+                                          <i
+                                            class="fa fa-plus"
+                                            aria-hidden="true"
+                                          ></i>
+                                        </span></button
+                                      >&nbsp;
+                                      <tr class="left">
+                                        <!-- <div class="p3"> -->
+                                        <td>
+                                          <button
+                                            mat-icon-button
+                                            [matMenuTriggerFor]="mainmenu"
+                                            aria-label="Example icon-button with a menu"
+                                            class="colour btn btn-outline-primary btn-rounded modalPopup"
+                                          >
+                                            <mat-icon>more_vert</mat-icon>
+                                          </button>
+                                          <mat-menu #mainmenu="matMenu">
+                                            <button mat-menu-item>
+                                              <mat-icon>print</mat-icon>
+                                              <span>Print</span>
+                                            </button>
+                                            <button mat-menu-item>
+                                              <mat-icon>import_export</mat-icon>
+                                              <span>Export</span>
+                                            </button>
+                                            <button mat-menu-item>
+                                              <mat-icon>delete</mat-icon>
+                                              <span>Delete</span>
+                                            </button>
+                                          </mat-menu>
+                                        </td>
+                                      </tr>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="">
+                                  <div class="table-wrapper">
+                                    <!--Table-->
+
+                                    <table class="table">
+                                      <!--Table head-->
+                                      <thead>
+                                        <tr>
+                                          <th scope="col" style="width: 4%">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              id="checkbox"
+                                            />
+                                          </th>
+                                          <th scope="col">Class</th>
+                                          <th scope="col">Regd No</th>
+                                          <th scope="col">Marks</th>
+                                          <th scope="col">%</th>
+                                          <th scope="col">Year of Pass</th>
+                                          <th scope="col">Institution Name</th>
+                                          <th scope="col"></th>
+                                        </tr>
+                                      </thead>
+                                      <!--Table head-->
+                                      <!--Table body-->
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              id="checkbox1"
+                                            />
+                                          </th>
+                                          <td>6th Class</td>
+                                          <td>6678656447676</td>
+
+                                          <td>767</td>
+                                          <td>74</td>
+                                          <td>2021</td>
+                                          <td>Organisation</td>
+
+                                          <td>
+                                            <button
+                                              mat-icon-button
+                                              [matMenuTriggerFor]="datamenu"
+                                              type="button"
+                                            >
+                                              <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <mat-menu #datamenu="matMenu">
+                                              <button mat-menu-item>
+                                                <mat-icon
+                                                  ><i class="fas fa-edit"></i
+                                                ></mat-icon>
+                                                Modify
+                                              </button>
+                                              <button mat-menu-item>
+                                                <mat-icon>delete</mat-icon>
+                                                Delete
+                                              </button>
+                                            </mat-menu>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              id="checkbox1"
+                                            />
+                                          </th>
+                                          <td>12th Class</td>
+                                          <td>9999999999889</td>
+
+                                          <td>987</td>
+                                          <td>98</td>
+                                          <td>2022</td>
+                                          <td>Organisation</td>
+
+                                          <td>
+                                            <button
+                                              mat-icon-button
+                                              [matMenuTriggerFor]="datamenu"
+                                              type="button"
+                                            >
+                                              <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <mat-menu #datamenu="matMenu">
+                                              <button mat-menu-item>
+                                                <mat-icon
+                                                  ><i class="fas fa-edit"></i
+                                                ></mat-icon>
+                                                Modify
+                                              </button>
+                                              <button mat-menu-item>
+                                                <mat-icon>delete</mat-icon>
+                                                Delete
+                                              </button>
+                                            </mat-menu>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                      <!--Table body-->
+                                    </table>
+                                    <!--Table-->
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- table -->
+                            </div>
+                          </div>
+
+                          <!-- pop up -->
+
+                          <ng-template #myDialog>
+                            <mat-dialog-content>
+                              <div class="row">
+                                <div>
+                                  <button
+                                    mat-icon-button
+                                    aria-label="close dialog"
+                                    mat-dialog-close
+                                    style="float: right"
+                                  >
+                                    <mat-icon>close</mat-icon>
+                                  </button>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Class</mat-label>
+                                    <mat-icon matPrefix>class</mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Regd No</mat-label>
+                                    <mat-icon matPrefix
+                                      ><i class="far fa-registered"></i
+                                    ></mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Marks</mat-label>
+                                    <mat-icon matPrefix
+                                      ><i
+                                        class="fa fa-mars"
+                                        aria-hidden="true"
+                                      ></i
+                                    ></mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Percentage</mat-label>
+                                    <mat-icon matPrefix>percentage</mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Year of Pass</mat-label>
+                                    <mat-icon matPrefix>date_range</mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Institution Name</mat-label
+                                    ><mat-icon matPrefix>person</mat-icon>
+
+                                    <mat-select>
+                                      <mat-option value="one"
+                                        >First option</mat-option
+                                      >
+                                      <mat-option value="two"
+                                        >Second option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Third option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Four option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Five option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Six option</mat-option
+                                      >
+                                    </mat-select>
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                              <div [align]="'end'">
+                                <button class="btn btn-primary mx-4">
+                                  Save
+                                </button>
+                                <button class="btn btn-secondary">
+                                  Cancel
+                                </button>
+                              </div>
+                            </mat-dialog-content>
+                          </ng-template>
+                          <!--Table new end-->
+
+                          <br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div
+              class="tab-pane fade"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <div class="card">
+                <div class="card-header">
+                  <h2>Select Course & Batch</h2>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <label for="reg_input" class="req">Select Course</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-3">
+                      <label for="reg_input" class="req">Select Batch</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-3">
+                      <label for="reg_input_name" class="req"
+                        >Timetable Name
+                      </label>
+                      <input
+                        class="form-control"
+                        name="Student[student_firstname]"
+                        id="Student_student_firstname"
+                        type="text"
+                        maxlength="45"
+                      />
+                      <div
+                        class="school_val_error"
+                        id="Student_student_firstname_em_"
+                        style="display: none"
+                      ></div>
+                    </div>
+                    <div class="form-group col-3">
+                      <button
+                        class="btn btn-primary"
+                        style="float: right; margin-top: 25px"
+                      >
+                        Set Weekdays
+                      </button>
+                    </div>
+                  </div>
+                  <br />
+                </div>
+              </div>
+              <br />
+              <div class="card">
+                <div class="card-header">
+                  <h2>Create Timetable</h2>
+                </div>
+                <div class="card-body">
+                  <br />
+                  <button class="btn btn-primary" style="float: right">
+                    Save Timetable
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <!-- 3 -->
+
+            <div
+              class="tab-pane fade"
+              id="contact"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+            >
+              <div class="card">
+                <div class="card-header">
+                  <h1>Active Timetable</h1>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="reg_input" class="req">Course</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label for="reg_input" class="req">Batch</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h1>Timetable List</h1>
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sl.No</th>
+                        <th scope="col">Timetable Name</th>
+                        <th scope="col">Operations</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <!-- 4 -->
+
+            <div
+              class="tab-pane fade"
+              id="FATHER"
+              role="tabpanel"
+              aria-labelledby="FATHER-tab"
+            >
+              <div class="card">
+                <div class="card-header">
+                  <h2>View Timetable</h2>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-4">
+                      <label for="reg_input" class="req">Course</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="reg_input" class="req">Batch</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="reg_input" class="req">Timetable Name</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="btns">
+                    <button class="btn btn-primary" style="margin-right: 50px">
+                      Show Timetable
+                    </button>
+                    <button class="btn btn-primary">Edit Timetable</button>
+
+                    <button class="btn btn-secondary" style="float: right">
+                      Print
+                    </button>
+                  </div>
+                  <br />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h2>View Timetable</h2>
+                </div>
+                <div class="card-body"></div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <!-- 5 -->
+            <div
+              class="tab-pane fade"
+              id="GUARDIAN"
+              role="tabpanel"
+              aria-labelledby="GUARDIAN-tab"
+            >
+              <div class="card">
+                <div class="card-header"><h1>View Teachers Timetable</h1></div>
+                <div class="card-body">
+                  <div class="col-6">
+                    <label for="reg_input" class="req">Select Faculty</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <h4 class="mt-4 mx-5">(OR)</h4>
+
+                  <div class="form-group col-6">
+                    <label for="reg_input_name" class="req"
+                      >Employee Name</label
+                    >
+                    <input
+                      class="form-control"
+                      name="Student[student_firstname]"
+                      id="Student_student_firstname"
+                      type="text"
+                      maxlength="45"
+                    />
+                    <div
+                      class="school_val_error"
+                      id="Student_student_firstname_em_"
+                      style="display: none"
+                    ></div>
+                  </div>
+
+                  <br />
+                  <div [align]="'right'">
+                    <button class="btn btn-primary mx-4">Go</button>
+                    <button class="btn btn-secondary">Print</button>
+                  </div>
+                </div>
+              </div>
+              <br />
+
+              <div class="card">
+                <div class="card-header">
+                  <h1>Timetable</h1>
+                </div>
+                <div class="card-body"></div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <!-- 6 -->
+            <div
+              class="tab-pane fade"
+              id="HEALTH"
+              role="tabpanel"
+              aria-labelledby="HEALTH-tab"
+            >
+              <br />
+              <div class="card">
+                <div class="card-header"><h1>Allocate Proxy</h1></div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="form-group col-4">
+                      <label for="reg_input_name" class="">Choose Date</label>
+                      <input
+                        class="form-control"
+                        name="Student[student_regno]"
+                        id="Student_student_regno"
+                        type="text"
+                      />
+                      <div
+                        class="school_val_error"
+                        id="Student_student_regno_em_"
+                        style="display: none"
+                      ></div>
+                    </div>
+                    <div class="col-4">
+                      <label for="reg_input" class="req">Select Teacher</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="reg_input" class="req">Select Timing</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br />
+                  <button class="btn btn-primary sidebtn">Find Proxy</button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h1>Proxy Teachers Available List</h1>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="card card-cascade narrower">
+                                <div
+                                  class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                                >
+                                  <div class="col-8">
+                                    <div class="mainWrapper">
+                                      <h2>Customer</h2>
+
+                                      <form
+                                        class="form-inline waves-light"
+                                        mdbWavesEffect
+                                      >
+                                        <div class="md-form mt-0">
+                                          <input
+                                            class="form-control mr-sm-2 SearchForm"
+                                            type="text"
+                                            placeholder="Search"
+                                          />
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-4">
+                                    <div class="btn-list">
+                                      <!-- <div class="downloadicon">
+                                        <span
+                                          ><i class="fa fa-download" aria-hidden="true"></i
+                                        ></span>
+                                      </div>-->
+
+                                      <button
+                                        class="btn btn-outline-primary btn-rounded modalPopup"
+                                        (click)="
+                                          openDialogWithTemplateRef(myDialog)
+                                        "
+                                      >
+                                        <span class="mat-button-wrapper">
+                                          <i
+                                            class="fa fa-plus"
+                                            aria-hidden="true"
+                                          ></i>
+                                        </span></button
+                                      >&nbsp;
+                                      <tr class="left">
+                                        <!-- <div class="p3"> -->
+                                        <td>
+                                          <button
+                                            mat-icon-button
+                                            [matMenuTriggerFor]="mainmenu"
+                                            aria-label="Example icon-button with a menu"
+                                            class="colour btn btn-outline-primary btn-rounded modalPopup"
+                                          >
+                                            <mat-icon>more_vert</mat-icon>
+                                          </button>
+                                          <mat-menu #mainmenu="matMenu">
+                                            <button mat-menu-item>
+                                              <mat-icon>print</mat-icon>
+                                              <span>Print</span>
+                                            </button>
+                                            <button mat-menu-item>
+                                              <mat-icon>import_export</mat-icon>
+                                              <span>Export</span>
+                                            </button>
+                                            <button mat-menu-item>
+                                              <mat-icon>delete</mat-icon>
+                                              <span>Delete</span>
+                                            </button>
+                                          </mat-menu>
+                                        </td>
+                                      </tr>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="">
+                                  <div class="table-wrapper">
+                                    <!--Table-->
+
+                                    <table class="table">
+                                      <!--Table head-->
+                                      <thead>
+                                        <tr>
+                                          <th scope="col" style="width: 4%">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              id="checkbox"
+                                            />
+                                          </th>
+                                          <th scope="col">Class</th>
+                                          <th scope="col">Regd No</th>
+                                          <th scope="col">Marks</th>
+                                          <th scope="col">%</th>
+                                          <th scope="col">Year of Pass</th>
+                                          <th scope="col">Institution Name</th>
+                                          <th scope="col"></th>
+                                        </tr>
+                                      </thead>
+                                      <!--Table head-->
+                                      <!--Table body-->
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              id="checkbox1"
+                                            />
+                                          </th>
+                                          <td>6th Class</td>
+                                          <td>6678656447676</td>
+
+                                          <td>767</td>
+                                          <td>74</td>
+                                          <td>2021</td>
+                                          <td>Organisation</td>
+
+                                          <td>
+                                            <button
+                                              mat-icon-button
+                                              [matMenuTriggerFor]="datamenu"
+                                              type="button"
+                                            >
+                                              <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <mat-menu #datamenu="matMenu">
+                                              <button mat-menu-item>
+                                                <mat-icon
+                                                  ><i class="fas fa-edit"></i
+                                                ></mat-icon>
+                                                Modify
+                                              </button>
+                                              <button mat-menu-item>
+                                                <mat-icon>delete</mat-icon>
+                                                Delete
+                                              </button>
+                                            </mat-menu>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              id="checkbox1"
+                                            />
+                                          </th>
+                                          <td>12th Class</td>
+                                          <td>9999999999889</td>
+
+                                          <td>987</td>
+                                          <td>98</td>
+                                          <td>2022</td>
+                                          <td>Organisation</td>
+
+                                          <td>
+                                            <button
+                                              mat-icon-button
+                                              [matMenuTriggerFor]="datamenu"
+                                              type="button"
+                                            >
+                                              <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <mat-menu #datamenu="matMenu">
+                                              <button mat-menu-item>
+                                                <mat-icon
+                                                  ><i class="fas fa-edit"></i
+                                                ></mat-icon>
+                                                Modify
+                                              </button>
+                                              <button mat-menu-item>
+                                                <mat-icon>delete</mat-icon>
+                                                Delete
+                                              </button>
+                                            </mat-menu>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                      <!--Table body-->
+                                    </table>
+                                    <!--Table-->
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- table -->
+                            </div>
+                          </div>
+
+                          <!-- pop up -->
+
+                          <ng-template #myDialog>
+                            <mat-dialog-content>
+                              <div class="row">
+                                <div>
+                                  <button
+                                    mat-icon-button
+                                    aria-label="close dialog"
+                                    mat-dialog-close
+                                    style="float: right"
+                                  >
+                                    <mat-icon>close</mat-icon>
+                                  </button>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Class</mat-label>
+                                    <mat-icon matPrefix>class</mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Regd No</mat-label>
+                                    <mat-icon matPrefix
+                                      ><i class="far fa-registered"></i
+                                    ></mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Marks</mat-label>
+                                    <mat-icon matPrefix
+                                      ><i
+                                        class="fa fa-mars"
+                                        aria-hidden="true"
+                                      ></i
+                                    ></mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Percentage</mat-label>
+                                    <mat-icon matPrefix>percentage</mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Year of Pass</mat-label>
+                                    <mat-icon matPrefix>date_range</mat-icon>
+                                    <input matInput />
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-6">
+                                  <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Institution Name</mat-label
+                                    ><mat-icon matPrefix>person</mat-icon>
+
+                                    <mat-select>
+                                      <mat-option value="one"
+                                        >First option</mat-option
+                                      >
+                                      <mat-option value="two"
+                                        >Second option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Third option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Four option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Five option</mat-option
+                                      >
+                                      <mat-option value="one"
+                                        >Six option</mat-option
+                                      >
+                                    </mat-select>
+                                  </mat-form-field>
+                                </div>
+                              </div>
+                              <div [align]="'end'">
+                                <button class="btn btn-primary mx-4">
+                                  Save
+                                </button>
+                                <button class="btn btn-secondary">
+                                  Cancel
+                                </button>
+                              </div>
+                            </mat-dialog-content>
+                          </ng-template>
+                          <!--Table new end-->
+
+                          <br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 6 -->
+            <!-- 7 -->
+            <div
+              class="tab-pane fade"
+              id="EMERGENCY"
+              role="tabpanel"
+              aria-labelledby="EMERGENCY-tab"
+            >
+              <div class="card">
+                <div class="card-header"><h1>Allocated List</h1></div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <div class="form-group col-6">
+                      <label for="reg_input_name" class="">Choose Date</label>
+                      <input
+                        class="form-control"
+                        name="Student[student_regno]"
+                        id="Student_student_regno"
+                        type="text"
+                      />
+                      <div
+                        class="school_val_error"
+                        id="Student_student_regno_em_"
+                        style="display: none"
+                      ></div>
+                    </div>
+                    <div class="mt-4">
+                      <button class="btn btn-primary">Go</button>
+                      <button class="btn btn-secondary ml-3">
+                        Print Report
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="card card-cascade narrower">
+                            <div
+                              class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                            >
+                              <div class="col-8">
+                                <div class="mainWrapper">
+                                  <h2>Customer</h2>
+
+                                  <form
+                                    class="form-inline waves-light"
+                                    mdbWavesEffect
+                                  >
+                                    <div class="md-form mt-0">
+                                      <input
+                                        class="form-control mr-sm-2 SearchForm"
+                                        type="text"
+                                        placeholder="Search"
+                                      />
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+
+                              <div class="col-4">
+                                <div class="btn-list">
+                                  <!-- <div class="downloadicon">
+                                    <span
+                                      ><i class="fa fa-download" aria-hidden="true"></i
+                                    ></span>
+                                  </div>-->
+
+                                  <button
+                                    class="btn btn-outline-primary btn-rounded modalPopup"
+                                    (click)="
+                                      openDialogWithTemplateRef(myDialog)
+                                    "
+                                  >
+                                    <span class="mat-button-wrapper">
+                                      <i
+                                        class="fa fa-plus"
+                                        aria-hidden="true"
+                                      ></i>
+                                    </span></button
+                                  >&nbsp;
+                                  <tr class="left">
+                                    <!-- <div class="p3"> -->
+                                    <td>
+                                      <button
+                                        mat-icon-button
+                                        [matMenuTriggerFor]="mainmenu"
+                                        aria-label="Example icon-button with a menu"
+                                        class="colour btn btn-outline-primary btn-rounded modalPopup"
+                                      >
+                                        <mat-icon>more_vert</mat-icon>
+                                      </button>
+                                      <mat-menu #mainmenu="matMenu">
+                                        <button mat-menu-item>
+                                          <mat-icon>print</mat-icon>
+                                          <span>Print</span>
+                                        </button>
+                                        <button mat-menu-item>
+                                          <mat-icon>import_export</mat-icon>
+                                          <span>Export</span>
+                                        </button>
+                                        <button mat-menu-item>
+                                          <mat-icon>delete</mat-icon>
+                                          <span>Delete</span>
+                                        </button>
+                                      </mat-menu>
+                                    </td>
+                                  </tr>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="">
+                              <div class="table-wrapper">
+                                <!--Table-->
+
+                                <table class="table">
+                                  <!--Table head-->
+                                  <thead>
+                                    <tr>
+                                      <th scope="col" style="width: 4%">
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="checkbox"
+                                        />
+                                      </th>
+                                      <th scope="col">Class</th>
+                                      <th scope="col">Regd No</th>
+                                      <th scope="col">Marks</th>
+                                      <th scope="col">%</th>
+                                      <th scope="col">Year of Pass</th>
+                                      <th scope="col">Institution Name</th>
+                                      <th scope="col"></th>
+                                    </tr>
+                                  </thead>
+                                  <!--Table head-->
+                                  <!--Table body-->
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="checkbox1"
+                                        />
+                                      </th>
+                                      <td>6th Class</td>
+                                      <td>6678656447676</td>
+
+                                      <td>767</td>
+                                      <td>74</td>
+                                      <td>2021</td>
+                                      <td>Organisation</td>
+
+                                      <td>
+                                        <button
+                                          mat-icon-button
+                                          [matMenuTriggerFor]="datamenu"
+                                          type="button"
+                                        >
+                                          <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                          <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                        <mat-menu #datamenu="matMenu">
+                                          <button mat-menu-item>
+                                            <mat-icon
+                                              ><i class="fas fa-edit"></i
+                                            ></mat-icon>
+                                            Modify
+                                          </button>
+                                          <button mat-menu-item>
+                                            <mat-icon>delete</mat-icon>
+                                            Delete
+                                          </button>
+                                        </mat-menu>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="checkbox1"
+                                        />
+                                      </th>
+                                      <td>12th Class</td>
+                                      <td>9999999999889</td>
+
+                                      <td>987</td>
+                                      <td>98</td>
+                                      <td>2022</td>
+                                      <td>Organisation</td>
+
+                                      <td>
+                                        <button
+                                          mat-icon-button
+                                          [matMenuTriggerFor]="datamenu"
+                                          type="button"
+                                        >
+                                          <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                          <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                        <mat-menu #datamenu="matMenu">
+                                          <button mat-menu-item>
+                                            <mat-icon
+                                              ><i class="fas fa-edit"></i
+                                            ></mat-icon>
+                                            Modify
+                                          </button>
+                                          <button mat-menu-item>
+                                            <mat-icon>delete</mat-icon>
+                                            Delete
+                                          </button>
+                                        </mat-menu>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                  <!--Table body-->
+                                </table>
+                                <!--Table-->
+                              </div>
+                            </div>
+                          </div>
+                          <!-- table -->
+                        </div>
+                      </div>
+
+                      <!-- pop up -->
+
+                      <ng-template #myDialog>
+                        <mat-dialog-content>
+                          <div class="row">
+                            <div>
+                              <button
+                                mat-icon-button
+                                aria-label="close dialog"
+                                mat-dialog-close
+                                style="float: right"
+                              >
+                                <mat-icon>close</mat-icon>
+                              </button>
+                            </div>
+                            <div class="col-6">
+                              <mat-form-field appearance="fill" class="bb">
+                                <mat-label>Class</mat-label>
+                                <mat-icon matPrefix>class</mat-icon>
+                                <input matInput />
+                              </mat-form-field>
+                            </div>
+                            <div class="col-6">
+                              <mat-form-field appearance="fill" class="bb">
+                                <mat-label>Regd No</mat-label>
+                                <mat-icon matPrefix
+                                  ><i class="far fa-registered"></i
+                                ></mat-icon>
+                                <input matInput />
+                              </mat-form-field>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-6">
+                              <mat-form-field appearance="fill" class="bb">
+                                <mat-label>Marks</mat-label>
+                                <mat-icon matPrefix
+                                  ><i class="fa fa-mars" aria-hidden="true"></i
+                                ></mat-icon>
+                                <input matInput />
+                              </mat-form-field>
+                            </div>
+                            <div class="col-6">
+                              <mat-form-field appearance="fill" class="bb">
+                                <mat-label>Percentage</mat-label>
+                                <mat-icon matPrefix>percentage</mat-icon>
+                                <input matInput />
+                              </mat-form-field>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-6">
+                              <mat-form-field appearance="fill" class="bb">
+                                <mat-label>Year of Pass</mat-label>
+                                <mat-icon matPrefix>date_range</mat-icon>
+                                <input matInput />
+                              </mat-form-field>
+                            </div>
+                            <div class="col-6">
+                              <mat-form-field appearance="fill" class="bb">
+                                <mat-label>Institution Name</mat-label
+                                ><mat-icon matPrefix>person</mat-icon>
+
+                                <mat-select>
+                                  <mat-option value="one"
+                                    >First option</mat-option
+                                  >
+                                  <mat-option value="two"
+                                    >Second option</mat-option
+                                  >
+                                  <mat-option value="one"
+                                    >Third option</mat-option
+                                  >
+                                  <mat-option value="one"
+                                    >Four option</mat-option
+                                  >
+                                  <mat-option value="one"
+                                    >Five option</mat-option
+                                  >
+                                  <mat-option value="one"
+                                    >Six option</mat-option
+                                  >
+                                </mat-select>
+                              </mat-form-field>
+                            </div>
+                          </div>
+                          <div [align]="'end'">
+                            <button class="btn btn-primary mx-4">Save</button>
+                            <button class="btn btn-secondary">Cancel</button>
+                          </div>
+                        </mat-dialog-content>
+                      </ng-template>
+                      <!--Table new end-->
+
+                      <br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 7 -->
+            <!-- 8 -->
+            <div
+              class="tab-pane fade"
+              id="PREVIOUS"
+              role="tabpanel"
+              aria-labelledby="PREVIOUS-tab"
+            >
+              <div class="card">
+                <div class="card-header">
+                  <h1>Select Department</h1>
+                </div>
+                <div class="card-body">
+                  <div class="form-group col-6">
+                    <label for="reg_input" class="req">Department</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h1>Teachers Working Hour Calculation</h1>
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sl.No</th>
+                        <th scope="col">Teacher Name</th>
+                        <th scope="col">Hours</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8 -->
+
+            <!-- 9 -->
+            <div
+              class="tab-pane fade"
+              id="DOCUMENT"
+              role="tabpanel"
+              aria-labelledby="DOCUMENT-tab"
+            >
+              <div class="card">
+                <div class="card-header">
+                  <h1>Export Timetable</h1>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="form-group col-3">
+                      <label for="reg_input" class="req">Course</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-3">
+                      <label for="reg_input" class="req">Batch</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-3">
+                      <label for="reg_input" class="req">Timetable Name</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-3">
+                      <button
+                        class="btn btn-primary"
+                        style="float: right; margin-top: 25px"
+                      >
+                        Export
+                      </button>
+                    </div>
+                  </div>
+                  <br />
+                </div>
+              </div>
+            </div>
+
+            <!-- 9 -->
+
+            <!-- 10 -->
+            <div
+              class="tab-pane fade"
+              id="OTHERS"
+              role="tabpanel"
+              aria-labelledby="OTHERS-tab"
+            >
+              <div class="card">
+                <div class="card-header">
+                  <h1>Timetable Import</h1>
+                </div>
+                <div class="card-body">
+                  <div class="col-4">
+                    <label for="formFile" class="form-label">Browse File</label>
+                    <input class="form-control" type="file" id="formFile" />
+                  </div>
+                </div>
+              </div>
+              <div class="card p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                  <symbol
+                    id="check-circle-fill"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                    />
+                  </symbol>
+                  <symbol
+                    id="info-fill"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+                    />
+                  </symbol>
+                  <symbol
+                    id="exclamation-triangle-fill"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </symbol>
+                </svg>
+                <div
+                  class="alert alert-warning d-flex align-items-center border-warning"
+                  role="alert"
+                >
+                  <svg
+                    class="bi flex-shrink-0 me-2"
+                    width="24"
+                    height="24"
+                    role="img"
+                    aria-label="Warning:"
+                  >
+                    <use xlink:href="#exclamation-triangle-fill" />
+                  </svg>
+                  <div>
+                    Download the excel file format from below link and copy the
+                    below values in corresponding columns while filling excel.
+                    <br />
+                    <a href="#">Timetable Format</a>
+                  </div>
+                </div>
+                <div class="card col-4">
+                  <div class="card-header"><h1>Course&Batch&Employee</h1></div>
+
+                  <div class="card-body"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10 -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

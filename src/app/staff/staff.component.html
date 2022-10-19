@@ -1,0 +1,256 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+            
+            
+            <div class="mainbox">
+                <div class="page box">
+                    <h5>Dashboard</h5>
+                </div>
+                <div class="flex items-center dashboard">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon"
+                    >home</mat-icon
+                    >
+                    <span>Dashboard</span>
+                    <span class="forDot">
+                        <mat-icon>radio_button_checked</mat-icon>
+                    </span>
+                    <h6>Analytics</h6>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="page content shadow p-3 position-relative">
+                                    <div class="row align-middle">
+                                        
+                                        <!-- new -->
+                                        <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-cherry">
+                                                <div class="btn-list left badge" >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/addemp">
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-building"></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0">Add Employee</h3>
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Count
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>21</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-cyan" role="progressbar" data-width="21%" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-blue-dark">
+                                                <div class="btn-list left badge" >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/emplist">
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0">Employee List</h3>
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Count
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>10</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-green" role="progressbar" data-width="10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-green-dark">
+                                                <div class="btn-list left badge" >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/with">
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0">Withdrawal</h3>
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Items
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>12</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-orange" role="progressbar" data-width="12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                              
+                            <!-- new cards -->
+                            
+                            <div class="col-xl-4 col-lg-8">
+                                <div class="card l-bg-green-dark">
+                                    <div class="btn-list left badge" >
+                                        <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/empatten">
+                                            <span class="mat-button-wrapper">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="card-statistic-3 p-4">
+                                        <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+                                        <div class="mb-4">
+                                            <h3 class="card-title mb-0">Employee Attendance</h3>
+                                        </div>
+                                        <div class="row align-items-center mb-2 d-flex">
+                                            <div class="col-8">
+                                                <h2 class="d-flex align-items-center mb-0">
+                                                    Total Count
+                                                </h2>
+                                            </div>
+                                            <div class="col-4 text-right">
+                                                <span>6</span>
+                                            </div>
+                                        </div>
+                                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                            <div class="progress-bar l-bg-orange" role="progressbar" data-width="6%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100" style="width: 6%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-8">
+                                <div class="card l-bg-orange-dark">
+                                    <div class="btn-list left badge" >
+                                        <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/addDep">
+                                            <span class="mat-button-wrapper">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="card-statistic-3 p-4">
+                                        <div class="card-icon card-icon-large"><i class="fas fa-envelope "></i></div>
+                                        <div class="mb-4">
+                                            <h3 class="card-title mb-0">Add Department</h3>
+                                        </div>
+                                        <div class="row align-items-center mb-2 d-flex">
+                                            <div class="col-8">
+                                                <h2 class="d-flex align-items-center mb-0">
+                                                    Total Items
+                                                </h2>
+                                            </div>
+                                            <div class="col-4 text-right">
+                                                <span>10</span>
+                                            </div>
+                                        </div>
+                                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                            <div class="progress-bar l-bg-cyan" role="progressbar" data-width="10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-8">
+                                <div class="card l-bg-green-dark">
+                                    <div class="btn-list left badge" >
+                                        <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/adddesig">
+                                            <span class="mat-button-wrapper">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="card-statistic-3 p-4">
+                                        <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                        <div class="mb-4">
+                                            <h3 class="card-title mb-0">Add Designation</h3>
+                                        </div>
+                                        <div class="row align-items-center mb-2 d-flex">
+                                            <div class="col-8">
+                                                <h2 class="d-flex align-items-center mb-0">
+                                                    Total Items
+                                                </h2>
+                                            </div>
+                                            <div class="col-4 text-right">
+                                                <span>12</span>
+                                            </div>
+                                        </div>
+                                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                            <div class="progress-bar l-bg-orange" role="progressbar" data-width="12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xl-4 col-lg-8">
+                                <div class="card l-bg-green-dark">
+                                    <div class="btn-list left badge" >
+                                        <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/leave">
+                                            <span class="mat-button-wrapper">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="card-statistic-3 p-4">
+                                        <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                        <div class="mb-4">
+                                            <h3 class="card-title mb-0">Add Designation</h3>
+                                        </div>
+                                        <div class="row align-items-center mb-2 d-flex">
+                                            <div class="col-8">
+                                                <h2 class="d-flex align-items-center mb-0">
+                                                    Total Items
+                                                </h2>
+                                            </div>
+                                            <div class="col-4 text-right">
+                                                <span>12</span>
+                                            </div>
+                                        </div>
+                                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                            <div class="progress-bar l-bg-orange" role="progressbar" data-width="12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- new cards ends -->
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </mat-drawer-content>
+        </mat-drawer-container>

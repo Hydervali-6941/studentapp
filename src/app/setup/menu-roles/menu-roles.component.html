@@ -1,0 +1,1181 @@
+
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+            
+            
+            
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Menu Roles</div>
+                
+                
+                <!-- Table -->
+                <div class="page content shadow p-3 position-relative">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Menu Roles </h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        
+                        <!-- <div class="row"> -->
+                            <div class="col-lg-12">
+                                <!-- <div class="card"> -->
+                                    <div class="card-body">
+                                        <!-- <div class="card-body"> -->
+                                            <form>
+                                                <mat-form-field appearance="fill" class="example-full-width example-form tt">
+                                                    <mat-label>ORG Name</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                    </mat-select>
+                                                    <mat-icon matPrefix  >verified_user</mat-icon>
+                                                </mat-form-field>
+                                                <mat-form-field appearance="fill" class="example-full-width example-form tt">
+                                                    <mat-label>Branch Name</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                                
+                                                
+                                                <mat-form-field appearance="fill" class="example-full-width example-form tt">
+                                                    <mat-label>User</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                    </mat-select>
+                                                    <mat-icon matPrefix  >supervised_user_circle</mat-icon>
+                                                </mat-form-field>
+                                                
+                                                
+                                                <!-- expansion -->
+                                                
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" >
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Setup 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon matPrefix > phonelink_setup</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Roles</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Setup</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Branch Reg</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >User Creation</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Roles Creation</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >User Roles</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Certificates Upload</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Downloads</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Campus Events</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Stu. Login Display</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >SMS Details</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Photos Upload </mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Login Details</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Menu Roles</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Change Password</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                
+                                                <!-- exp-1 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" >
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Academics 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon>account_circle</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Academics</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Academics</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Stu. Registration</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Student Edit</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Daywise Attendance</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Marks Entry</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Student Profile</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > Stu. Bulk Transfer</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Stu. Applications</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Student Deletion </mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > Student Transfer</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Section Change</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > Deleted Students</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >  Time Table</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Update Stu.Details</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Update UID</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >BiometricID Details</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > InactiveStd.List</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >HallticketNo Edit</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Update StudentID  </mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > Device Attendance</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Update RollNo</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Monthly Attendance </mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Promotions</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Enquiry Form</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > Hall Tickets Gen.</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-1 -->
+                                                
+                                                
+                                                
+                                                
+                                                <!-- exp-2 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" >
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Accounts 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon>account_balance</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Accounts</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Accounts</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >New Fee Assign</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Fee Collection</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Concession Entry</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Vouchers</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Deleted Receipts</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Delete Fee Structure	 </mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Group Concession</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >AHfee Collection	</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > ATfee Collection</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Set Fee for Students </mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Receipt Deletion</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >AH Concession</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox > Material Issue</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >FD Entries</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Bank Details</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >AT Concession</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-2 -->
+                                                
+                                                <!-- exp-3 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)">
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Employee 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon>supervisor_account</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Employee</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-6 col-sm-6" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Employee</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp. Registration</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp. Attendance</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp. Salary Details</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-6 col-sm-6" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Emp. Leave Details</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp. Salary Payment</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Employee Events</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-3 -->
+                                                
+                                                <!-- exp-4 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" >
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                SMS 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon matPrefix  > message</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">SMS</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Quick SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Attendance SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Birthday SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Staff SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Transport SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Marks SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Fee SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >General SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Mobile Nos Edit</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Application SMS</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-4 -->
+                                                
+                                                <!-- exp-5 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)">
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Reports 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon>report</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Reports</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Academic Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Attendance Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Marks Reports</mat-checkbox>
+                                                                                    </div>                                                                      
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Accounts Reports	</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >SMS Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Genera Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Device Att. Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Library Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Customised Report</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >AthenaReports</mat-checkbox>
+                                                                                    </div>  
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Employee Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Total Fee Report</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-5 -->
+                                                
+                                                <!-- exp-6 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)">
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Transport 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon> directions_bus</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Transport</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Transport</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Buses</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Routes Details</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Trip Information	</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Boarding Master</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Stu. Seat Allotment</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-6 -->
+                                                
+                                                <!-- exp-7 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 7" (opened)="setStep(7)">
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                HostelMNG 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon> hotel</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">HostelMNG</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >HOSTEL</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Hostel Details</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Hostel Rooms	</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Hostel Blocks</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-4 col-sm-4" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Hostel Bed Allotment	</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Hostel Reports</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-7 -->
+                                                
+                                                <!-- exp-8 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 8" (opened)="setStep(8)">
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Inventory 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon>account_circle</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Inventory</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >INVENTORY</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Category Maste</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Purchase Orders</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Received Orders</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Item Master	</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Suppliers</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Stock Entry</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Selling Price</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-8 -->
+                                                
+                                                <!-- exp-9 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 9" (opened)="setStep(9)">
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Library 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon>library_books</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Library</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Library</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Purchase Orders</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Received Orders</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Binding Details</mat-checkbox>
+                                                                                    </div> 
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Book Search</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Issues And Returns</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Due Payments</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Item Type</mat-checkbox>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Eligibility</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Suppliers</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Publishers</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Books Entry</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Accession Register</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Departments</mat-checkbox>
+                                                                                    </div>   
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion>
+                                                <!-- exp-9 -->
+                                                
+                                                <!-- exp-10 -->
+                                                <mat-accordion class="example-headers-align" multi>
+                                                    <mat-expansion-panel [expanded]="step === 10" (opened)="setStep(10)">
+                                                        <mat-expansion-panel-header>
+                                                            <mat-panel-title>
+                                                                Masters 
+                                                            </mat-panel-title>
+                                                            <mat-panel-description>
+                                                                Give Access To
+                                                                <mat-icon>account_circle</mat-icon>
+                                                            </mat-panel-description>
+                                                        </mat-expansion-panel-header>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Masters</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Masters</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Sessions Entry</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Subjects Creation</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Exams Creation</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Account Heads</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >FeeTypes</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Installments</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Fee Structure</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp Departments</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp Allowances</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Emp Deductions</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp Designations</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Emp Pay Scale</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Classes Creation</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Sections Creation</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                                <div class="mt-4">
+                                                                                    <div class="form-check mb-3">
+                                                                                        <mat-checkbox >Grades Creation</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Biometric Shifts</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Academic year</mat-checkbox>
+                                                                                    </div>
+                                                                                    <div class="form-check  mb-3">
+                                                                                        <mat-checkbox >Enrollno Master</mat-checkbox>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <mat-action-row>
+                                                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                            <button mat-button color="primary" (click)="nextStep()">End</button>
+                                                        </mat-action-row>
+                                                        
+                                                    </mat-expansion-panel>
+                                                </mat-accordion><br><br>
+                                                <!-- exp-10 -->
+                                                
+                                                <!-- expansion -->
+                                                
+                                                
+                                                
+                                                <!-- checkbox -->
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title">Roles</h4>
+                                                                <div class="row">
+                                                                    <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                        <div class="mt-4">
+                                                                            <div class="form-check mb-3">
+                                                                                <mat-checkbox >admin</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >Mpin</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >att</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >accoutant</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >ACCOUTANTAS</mat-checkbox>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                        <div class="mt-4">
+                                                                            <div class="form-check mb-3">
+                                                                                <mat-checkbox >anandtest</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >PRAKASH SIR</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >TEAM MANAGER</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >CEO</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >Hide required marker</mat-checkbox>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                        <div class="mt-4">
+                                                                            <div class="form-check mb-3">
+                                                                                <mat-checkbox >anandtest</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >PRAKASH SIR</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >TEAM MANAGER</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >CEO</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >Hide required marker</mat-checkbox>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-3 col-sm-3" id="dispalygrid">
+                                                                        <div class="mt-4">
+                                                                            <div class="form-check mb-3">
+                                                                                <mat-checkbox >anandtest</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >PRAKASH SIR</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >TEAM MANAGER</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >CEO</mat-checkbox>
+                                                                            </div>
+                                                                            <div class="form-check  mb-3">
+                                                                                <mat-checkbox >Hide required marker</mat-checkbox>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div> -->
+                                                <!-- checkbox -->
+                                                
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                                        Submit
+                                                    </button>
+                                                    <button type="reset" class="btn btn-secondary waves-effect">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            
+                                            <!-- end card body -->
+                                            <!-- </div> -->
+                                            <!-- end card -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </mat-drawer-content>
+                </mat-drawer-container> 

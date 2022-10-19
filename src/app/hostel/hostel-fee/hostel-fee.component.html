@@ -1,0 +1,205 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid"> 
+        <div class="page box p-3 mt-2"> Fee Collection</div>
+        <div class="ico-card">
+            <i class="fas fa-address-card"></i>
+        </div>
+        <div class="page content shadow p-3 position-relative">
+          <div class="content">
+            <form id="hostelfeecollection-form" >   
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Fee Collection</h4>
+                    </div>
+                    
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="form-group col-sm-4">
+                          <label class="req">User Type</label>
+                          <select class="form-control" name="Hostelfeecollection[usertypeid]" id="Hostelfeecollection_usertypeid">
+                            <option value="">Please Select</option>
+                            <option value="1">Student</option>
+                            <option value="2">Employee</option>
+                          </select>                        
+                          <div class="school_val_error" id="Hostelfeecollection_usertypeid_em_" style="display:none"></div>                    </div>
+                          <div class="form-group col-sm-4" id="studentautocomplete" >
+                            <label>Student Name</label>
+                            <input class="form-control ui-autocomplete-input" id="student" type="text" value="" name="student" autocomplete="off"><input id="hidden-fieldstudent" name="output" type="hidden" value="">                    </div> 
+                            <div class="form-group col-sm-4" id="employeeautocomplete" style="display: none;">
+                              <label>Employee Name</label>
+                              <input class="form-control ui-autocomplete-input" id="employee" type="text" value="" name="employee" autocomplete="off"><input id="hidden-fieldemployee" name="output" type="hidden" value="">                    </div>
+                              <div class="form-group col-sm-4">
+                                <label>&nbsp;</label>
+                                <p> &nbsp;&nbsp;<a href="javascript:userroomdetails()" class="btn btn-info">GO</a></p> 
+                              </div>
+                              <div class="form-group col-sm-12" id="roomdetails">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Fee Payment</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Paid List</button>
+                          </li>
+                          
+                        </ul>
+                        <h6 class="content-group text-semibold"></h6>
+                        <div class="tab-content">
+                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title">Fee Payment</h4>
+                                  </div>
+                                  <div class="panel-body">
+                                    <div class="row">
+                                      <div class="form-group col-sm-6">
+                                        <label class="req">Fee Type</label>
+                                        <select class="form-control" multiple="multiple" name="Hostelfeecollection[hostelfeedatesid][]" id="Hostelfeecollection_hostelfeedatesid">
+                                          <option value="">Please Select</option>
+                                        </select>                                            <div class="school_val_error" id="Hostelfeecollection_hostelfeedatesid_em_" style="display:none"></div>                                        </div>
+                                        <div class="form-group col-sm-6">
+                                          <label for="reg_input_name" class="req">Amount</label>
+                                          <input class="form-control" name="Hostelfeecollection[amount]" id="Hostelfeecollection_amount" type="text" maxlength="45">                                            <div class="school_val_error" id="Hostelfeecollection_amount_em_" style="display:none"></div>                
+                                        </div> 
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-group col-4">
+                                          <label for="reg_input_name">Fine</label>
+                                          <input class="form-control" name="Hostelfeecollection[fine]" id="Hostelfeecollection_fine" type="text" maxlength="45">                                        <div class="school_val_error" id="Hostelfeecollection_fine_em_" style="display:none"></div>                
+                                        </div>
+                                        <div class="form-group col-4">
+                                          <label for="reg_input_name">Discount</label>
+                                          <input class="form-control" name="Hostelfeecollection[discount]" id="Hostelfeecollection_discount" type="text" maxlength="45">                                        <div class="school_val_error" id="Hostelfeecollection_discount_em_" style="display:none"></div>                
+                                        </div>
+                                        <div class="form-group col-4">
+                                          <label for="reg_input_name">Remarks</label>
+                                          <textarea class="form-control" name="Hostelfeecollection[remarks]" id="Hostelfeecollection_remarks"></textarea>                                        <div class="school_val_error" id="Hostelfeecollection_remarks_em_" style="display:none"></div>                
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-group col-sm-2">
+                                          <label for="reg_input" class="req">Mode of Pay</label>
+                                          <select class="form-control" id="modeofpay">
+                                            <option value="">-Select-</option>
+                                            <option value="0">Cash</option>
+                                            <option value="1">Cheque</option>
+                                            <option value="2">Online Payment</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group col-sm-2"  id="bankname">
+                                          <label for="reg_input">Bank Name</label>
+                                          <select class="form-control" name="bank_name" id="bank_name">
+                                            <option value="">Please Select</option>
+                                            <option value="w">w</option>
+                                            <option value="State Bank Of India">State Bank Of India</option>
+                                            <option value="union bank of india">union bank of india</option>
+                                            <option value="Sardar Ballabh Bank">Sardar Ballabh Bank</option>
+                                            <option value="state bank of bijapur">state bank of bijapur</option>
+                                            <option value="indian premier league bank">indian premier league bank</option>
+                                            <option value="skl">skl</option>
+                                            <option value="mani">mani</option>
+                                            <option value="sbi">sbi</option>
+                                            <option value="664545">664545</option>
+                                            <option value="98979797">98979797</option>
+                                            <option value="CTI bank">CTI bank</option>
+                                            <option value="#$123">#$123</option>
+                                            <option value="$$$$">$$$$</option>
+                                            <option value="$#$#$#">$#$#$#</option>
+                                            <option value="ICICI Bank">ICICI Bank</option>
+                                            <option value="hdfc">hdfc</option>
+                                            <option value="SBI1">SBI1</option>
+                                            <option value="11555">11555</option>
+                                            <option value="Bank Of India ">Bank Of India </option>
+                                            <option value="1115433">1115433</option>
+                                            <option value="kotak">kotak</option>
+                                            <option value="BANK OF AMERICA">BANK OF AMERICA</option>
+                                          </select><div class="school_val_error" id="Hostelfeecollection_bankid_em_" style="display:none"></div>                                        </div> 
+                                          <div class="form-group col-sm-2"  id="cheque_no">
+                                            <label for="reg_input">Cheque No.</label>
+                                            <input type="text" class="form-control" id="chequeno" name="chequeno">
+                                          </div> 
+                                          <div class="form-group col-sm-2"  id="cheque_no">
+                                            <label for="reg_input">Cheque Date.</label>
+                                            <input type="text" class="form-control" id="chequeno" name="chequeno">
+                                          </div> 
+                                          <div class="form-group col-sm-2"><br>
+                                            <label for="reg_input"><b>Total Amount: <p id="totalamount" style="font-size: 16px"></p></b></label>
+                                          </div>
+                                          <div class="form-group col-sm-3"><br>
+                                            <label for="reg_input"><span>Do you want receipt? &nbsp;&nbsp;&nbsp;<input type="checkbox" id="checkbox1" checked="checked"></span></label>
+                                          </div>
+                                          <div class="form-group col-sm-2">
+                                            <label for="reg_input">Receipt No.</label>
+                                            <input type="text" class="form-control" id="receiptno" value="10">
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-sm-5">
+                                                <div class="form_sep">
+                                                    <p> &nbsp;&nbsp;<a href="javascript:savepayment()" class="btn btn-info">Make Payment</a> </p> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">Fee Paid List</h4>
+                                      </div>
+                                      <div class="panel-body">
+                                        <div class="table-responsive">
+                                          <table class="table responsive table-bordered table-striped" id="paid">
+                                            <thead>
+                                              <tr>
+                                                <th data-hide="phone,tablet" width="6.5%">Receipt No.</th>
+                                                <th data-hide="phone,tablet" width="18.5%">Hostel Room</th>
+                                                <th data-hide="phone,tablet" width="12.5%">Amount</th>
+                                                <th width="12.5%">Paid Date</th>
+                                                <th width="12.5%">Fine</th>
+                                                <th width="12.5%">Discount</th>
+                                                <th width="12.5%">Remarks</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form></div>
+                      
+                    </div>
+                  </div>
+                </mat-drawer-content>
+              </mat-drawer-container>

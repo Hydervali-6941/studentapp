@@ -1,0 +1,458 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">Finance</div>
+      <div class="ico-card">
+        <i class="fas fa-address-book"></i>
+      </div>
+      <div
+        class="page content shadow p-3 position-relative"
+        style="margin-top: -68px"
+      >
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="page-title-box d-sm-flex align-items-center justify-content-between"
+            >
+              <h4 class="mb-sm-0 font-size-18">Quick Payment</h4>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content">
+            <form id="studentabsent-form">
+              <div class="col-lg-12">
+                <!-- new -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="home-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#home"
+                      type="button"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                    >
+                      QUICKPAYMENT
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      REPORTS(PAIDLIST)
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="contact-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                    >
+                      REPORTS(FUTUREPAYMENTLIST)
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="panel panel-default col">
+                          <div class="panel-heading">
+                            <!-- <h4 class="panel-title">Attendance</h4> -->
+                          </div>
+                          <br />
+                          <br />
+                          <div class="row">
+                            <div class="col-4 form-group">
+                              <label for="reg_input" class="req">Course</label>
+                              <select
+                                class="form-control"
+                                name="Studentabsent[courseid]"
+                                id="Studentabsent_courseid"
+                              >
+                                <option value="">Please Select</option>
+                                <option value="1">UKG</option>
+                                <option value="2">LKG</option>
+                                <option value="3">GRADE I</option>
+                                <option value="4">GRADE II</option>
+                                <option value="5">GRADE III</option>
+                                <option value="6">GRADE IV</option>
+                                <option value="7">GRADE V</option>
+                                <option value="8">GRADE VI</option>
+                                <option value="9">GRADE VII</option>
+                                <option value="10">GRADE VIII</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_courseid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                            <div class="col-4 form-group">
+                              <label for="reg_input" class="req">Batch</label>
+                              <select
+                                class="form-control"
+                                name="Studentabsent[batchid]"
+                                id="Studentabsent_batchid"
+                              >
+                                <option value="">SelectBatch</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_batchid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                            <div class="col-4 form-group" id="subject">
+                              <label for="reg_input" class="req"
+                                >Fees Category</label
+                              >
+                              <select
+                                class="form-control"
+                                name="Studentabsent[subjectid]"
+                                id="Studentabsent_subjectid"
+                              >
+                                <option value="">-Please Select-</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_subjectid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                            <div class="col-4 form-group" id="subject">
+                              <label for="reg_input" class="req"
+                                >Fees SubCategory</label
+                              >
+                              <select
+                                class="form-control"
+                                name="Studentabsent[subjectid]"
+                                id="Studentabsent_subjectid"
+                              >
+                                <option value="">-Please Select-</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_subjectid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                            <div class="col-4 form-group" id="subject">
+                              <label for="reg_input" class="req"
+                                >Fees Type</label
+                              >
+                              <select
+                                class="form-control"
+                                name="Studentabsent[subjectid]"
+                                id="Studentabsent_subjectid"
+                              >
+                                <option value="">-Please Select-</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_subjectid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <p>
+                          &nbsp;&nbsp;
+                          <a href="#" class="btn btn-info" align="right"
+                            >Make Payment</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <br />
+                    <div class="tab-pane" id="tbb_c">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">Reports(paidlist)</h4>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 form-group">
+                                <label for="reg_input" class="req"
+                                  >Course</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[courseid]"
+                                  id="Studentabsent_courseid"
+                                >
+                                  <option value="">Please Select</option>
+                                  <option value="1">UKG</option>
+                                  <option value="2">LKG</option>
+                                  <option value="3">GRADE I</option>
+                                  <option value="4">GRADE II</option>
+                                  <option value="5">GRADE III</option>
+                                  <option value="6">GRADE IV</option>
+                                  <option value="7">GRADE V</option>
+                                  <option value="8">GRADE VI</option>
+                                  <option value="9">GRADE VII</option>
+                                  <option value="10">GRADE VIII</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_courseid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group">
+                                <label for="reg_input" class="req">Batch</label>
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[batchid]"
+                                  id="Studentabsent_batchid"
+                                >
+                                  <option value="">SelectBatch</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_batchid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Fees Category</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">-Please Select-</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_subjectid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Fees SubCategory</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">-Please Select-</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_subjectid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Fees Type</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">-Please Select-</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_subjectid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="row">
+                                <div class="form-group col-sm-12" align="right">
+                                  <label>&nbsp;</label>
+
+                                  <input
+                                    type="button"
+                                    onclick="printDiv('print')"
+                                    value="Print Report"
+                                    class="btn btn-danger"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">Report</h4>
+                          </div>
+                          <div class="panel-body">
+                            <div class="row">
+                              <div class="col-4 form-group">
+                                <label for="reg_input" class="req"
+                                  >Course</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[courseid]"
+                                  id="Studentabsent_courseid"
+                                >
+                                  <option value="">Please Select</option>
+                                  <option value="1">UKG</option>
+                                  <option value="2">LKG</option>
+                                  <option value="3">GRADE I</option>
+                                  <option value="4">GRADE II</option>
+                                  <option value="5">GRADE III</option>
+                                  <option value="6">GRADE IV</option>
+                                  <option value="7">GRADE V</option>
+                                  <option value="8">GRADE VI</option>
+                                  <option value="9">GRADE VII</option>
+                                  <option value="10">GRADE VIII</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_courseid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group">
+                                <label for="reg_input" class="req">Batch</label>
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[batchid]"
+                                  id="Studentabsent_batchid"
+                                >
+                                  <option value="">SelectBatch</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_batchid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Fees Category</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">-Please Select-</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_subjectid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Fees SubCategory</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">-Please Select-</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_subjectid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                              <div class="col-4 form-group" id="subject">
+                                <label for="reg_input" class="req"
+                                  >Fees Type</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[subjectid]"
+                                  id="Studentabsent_subjectid"
+                                >
+                                  <option value="">-Please Select-</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_subjectid_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-12" align="right">
+                        <label>&nbsp;</label>
+
+                        <input
+                          type="button"
+                          onclick="printDiv('print')"
+                          value="Print Report"
+                          class="btn btn-danger"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

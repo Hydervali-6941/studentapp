@@ -1,0 +1,124 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid">
+        <div class="page box p-3 mt-2">Assign Course</div>
+        <div class="page content shadow p-3 position-relative">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">Assign Course</h4>
+              </div>
+              <div class="panel-body">
+                <div class="col-sm-12">
+                  
+                  <div class="panel-body">
+                    
+                    <div class="form-group success" id="usertype">
+                      <label for="reg_input" class="req">Users</label>
+                      <select class="form-control" name="Assignclass[usertypeid]" id="Assignclass_usertypeid">
+                        <option value="">Select Usertype</option>
+                        <option value="1">Student</option>
+                        <option value="2">Employee</option>
+                        <option value="3">Guardian</option>
+                        <option value="4">Admin</option>
+                        <option value="7">Dharam3452</option>
+                        <option value="14">Student10</option>
+                        <option value="17">Admin22323jghghg</option>
+                        <option value="18">Class Teacher</option>
+                        <option value="23">Admin Coordinator</option>
+                        <option value="24">Remedial Teacher</option>
+                        <option value="26">Stdent</option>
+                        <option value="29">Anav gautam</option>
+                        <option value="30">hfgfhfhfjf</option>
+                        <option value="32">Teacher</option>
+                        <option value="33">Admin123</option>
+                        <option value="35">gurusir </option>
+                        <option value="36">Student1</option>
+                        <option value="37">Student127</option>
+                        <option value="38">Dev1</option>
+                        <option value="39">dfgdg</option>
+                        <option value="40">xyz</option>
+                        <option value="41">Magesh</option>
+                        <option value="42">gurdian</option>
+                        <option value="43">Neha1</option>
+                        <option value="44">professor</option>
+                        <option value="45">kamini</option>
+                        <option value="46">kamini11</option>
+                        <option value="47">employee123</option>
+                        <option value="48">Ruchi Priya</option>
+                        <option value="53">Student23</option>
+                        <option value="54">Student077</option>
+                        <option value="55">Student00007</option>
+                        <option value="56">bfghjkhvch</option>
+                        <option value="57">Student7000</option>
+                        <option value="58">Radhika23</option>
+                        <option value="59">Computer</option>
+                        <option value="60">computer2</option>
+                        <option value="61">student05</option>
+                        <option value="62">Student5555</option>
+                        <option value="63">ngfmhv</option>
+                        <option value="64">A23 1234 123 123</option>
+                        <option value="65">student 1</option>
+                        <option value="67">ramesh</option>
+                        <option value="68">student123</option>
+                        <option value="69">abcdefghijklmnopqrstuvwxyz</option>
+                        <option value="70">abcdefghijklmnopqrstuvwxyzqwer</option>
+                        <option value="71">abcdefghijklmnopqrstuvwxyzabcd</option>
+                        <option value="84">OhGDORQ</option>
+                        <option value="85">YUmyYgv</option>
+                        <option value="86">BVFhakj</option>
+                        <option value="87">kLphOfh</option>
+                        <option value="88">hvIVyVF</option>
+                        <option value="89">YgYTODW</option>
+                        <option value="90">QcCmUBi</option>
+                        <option value="91">TEST </option>
+                        <option value="93">NEWDEFECT</option>
+                        <option value="94">BHARTIJEWRANISangtani</option>
+                        <option value="95">Pavan</option>
+                        <option value="97">Student 2</option>
+                        <option value="98">Student 3</option>
+                        <option value="104">STUDENT 20</option>
+                        <option value="107">sTUDENT008</option>
+                        <option value="108">Sweta</option>
+                        <option value="110">StudentG</option>
+                        <option value="111">ACCOUNTANT</option>
+                        <option value="112">TEACHER1</option>
+                      </select><div class="school_val_error" id="Assignclass_usertypeid_em_" style="display:none"></div>                                    </div> 
+                      
+                      <div class="form-group success validating" id="course">
+                        <label for="reg_input" class="req">Course (Press Ctrl to select more than one course)</label>
+                        <select class="form-control" multiple="multiple" size="7" name="Assignclass[courseid][]" id="Assignclass_courseid">
+                          <option value="">Please Select</option>
+                          <option value="1">UKG</option>
+                          <option value="2">LKG</option>
+                          <option value="3">GRADE I</option>
+                          <option value="4">GRADE II</option>
+                          <option value="5">GRADE III</option>
+                          <option value="6">GRADE IV</option>
+                          <option value="7">GRADE V</option>
+                          <option value="8">GRADE VI</option>
+                          <option value="9">GRADE VII</option>
+                          <option value="10">GRADE VIII</option>
+                        </select><div class="school_val_error" id="Assignclass_courseid_em_" style="display:none"></div>                                    </div>  
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <div class="form_sep">
+                          <input class="btn btn-info" name="std_reg_submit" id="std_reg_submit" type="submit" value="Save">                                    </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </mat-drawer-content>
+        </mat-drawer-container>
+        

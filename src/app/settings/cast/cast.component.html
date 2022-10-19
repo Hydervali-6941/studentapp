@@ -1,0 +1,124 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid">
+        <div class="page box p-3 mt-2">Cast And Religion</div>
+        <div class="page content shadow p-3 position-relative">
+          <div class="content">
+            <div class="col-sm-12">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Student Cast</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Student Religion</button>
+                </li>
+              </ul><br>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <form id="studentcaste-form" >
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">Student caste</h4>
+                          </div>
+                          <div class="panel-body">
+                            <div class="col-sm-12">
+                              <div class="panel-body">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">Add Caste</h4>
+                                      </div>
+                                      <div class="panel-body">
+                                        <div class="col-sm-12">
+                                          <div class="col-sm-12">
+                                            <div class="form-group">
+                                              <label for="reg_input_name" class="req">Caste Name</label>
+                                              <input size="45" maxlength="45" class="form-control" name="Studentcaste[student_caste_name]" id="Studentcaste_student_caste_name" type="text">                                                                    
+                                              <div class="school_val_error" id="Studentcaste_student_caste_name_em_" style="display:none"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-sm-5">
+                                            <div class="form_sep">
+                                              <input class="btn btn-info" type="submit" name="yt0" value="Save">                                                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!--   tab b-->
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <form id="studentreligion-form" >
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">Student Religion</h4>
+                          </div>
+                          <div class="panel-body">
+                            <div class="col-sm-12">
+                              <div class="panel-body">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">Add Religion</h4>
+                                      </div>
+                                      <div class="panel-body">
+                                        <div class="col-sm-12">
+                                          <div class="col-sm-12">
+                                            <div class="form-group">
+                                              <label for="reg_input_name" class="req">Religion Name</label>
+                                              <input size="45" maxlength="45" class="form-control" name="Studentcaste[student_religion_name]" id="Studentcaste_student_religion_name" type="text">                                                                    
+                                              <div class="school_val_error" id="Studentcaste_student_religion_name_em_" style="display:none"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-sm-5">
+                                            <div class="form_sep">
+                                              <p>&nbsp;&nbsp;<a href="javascript:savereligion();" class="btn btn-info" align="left" id="button_save">Save</a></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </mat-drawer-content>
+    </mat-drawer-container>

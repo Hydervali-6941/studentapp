@@ -1,0 +1,335 @@
+<mat-drawer-container   >
+   <mat-drawer mode="side" [opened]="sideBarOpen"  >
+      <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+   </mat-drawer>
+   <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid">
+         <div class="page box p-3 mt-2">Admin Setup</div>
+         <div class="ico-card">
+            <i class="fas fa-address-book"></i>
+         </div>
+        <div class="page content shadow p-3 position-relative" style="margin-top: -68px;">
+            <div class="row">
+               <div class="col-12">
+                  <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                     <h4 class="mb-sm-0 font-size-18"> Student Attendance </h4>
+                  </div>
+               </div>
+            </div>
+            <div class="content-wrapper">
+               <div class="content">
+                  <br>
+                  <div class="content">
+                     <form id="studentabsent-form" >
+                        <div class="col-lg-12">
+                           <!-- new -->
+                           <ul class="nav nav-tabs" id="myTab" role="tablist">
+                             <li class="nav-item" role="presentation">
+                               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Attendance (Daily & Subject Wise)</button>
+                             </li>
+                             <li class="nav-item" role="presentation">
+                               <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">View Attendance</button>
+                             </li>
+                             <li class="nav-item" role="presentation">
+                               <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Absentees Report</button>
+                             </li>
+                           </ul>
+                           <div class="tab-content" id="myTabContent">
+                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row ">
+                                   <div class="col-lg-12">
+                                     
+                                      <div class="panel panel-default col ">
+                                         <div class="panel-heading">
+                                            <h4 class="panel-title">Attendance </h4>
+                                         </div>
+                                         <div class="row">
+               
+                                           <div class="col-4 form-group">
+                                               
+                                               <label for="reg_input" class="req">Course</label>
+                                               <select class="form-control" name="Studentabsent[courseid]" id="Studentabsent_courseid">
+                                                  <option value="">SelectCourse</option>
+                                                  <option value="1">UKG</option>
+                                                  <option value="2">LKG</option>
+                                                  <option value="3">GRADE I</option>
+                                                  <option value="4">GRADE II</option>
+                                                  <option value="5">GRADE III</option>
+                                                  <option value="6">GRADE IV</option>
+                                                  <option value="7">GRADE V</option>
+                                                  <option value="8">GRADE VI</option>
+                                                  <option value="9">GRADE VII</option>
+                                                  <option value="10">GRADE VIII</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_courseid_em_" style="display:none"></div>
+                                               
+                                            </div>
+                                            <div class="col-4 form-group" >
+                                               <label for="reg_input" class="req">Batch</label>
+                                               <select class="form-control" name="Studentabsent[batchid]" id="Studentabsent_batchid">
+                                                  <option value="">SelectBatch</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_batchid_em_" style="display:none"></div>
+                                               
+                                            </div>
+                                            <div class="col-4 form-group" id="subject" >
+                                               <label for="reg_input" class="req">Subject</label>
+                                               <select class="form-control" name="Studentabsent[subjectid]" id="Studentabsent_subjectid">
+                                                  <option value="">Select Subject</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_subjectid_em_" style="display:none"></div>
+                                            </div>
+                                            <div class="col-4 form-group" id="date" >
+                                               <label for="reg_input_name" class="req">Date </label>
+                                               <div data-date-format="dd-mm-yyyy" class="input-group date">
+                                                  <input placeholder="Date" class="form-control pickadate" value="2022-04-18" name="Studentabsent[date]" id="Studentabsent_date" type="text" maxlength="6" />
+                                                  <div class="school_val_error" id="Studentabsent_date_em_" style="display:none"></div>
+                                                  <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      
+                                         
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="alert alert-warning warning">
+                                   <span class="icon-warning icon-2x" style="color:orange"></span>Put mark on students who were present.
+                                </div>
+                                <div class="row">
+                                   <div class="col-lg-12" id="gridview">
+                                      <div class="panel panel-default" id="attendancediv" style="display:none">
+                                         <div class="panel-heading">
+                                            <h4 class="panel-title">Attendance </h4>
+                                         </div>
+                                         <div class="table-responsive">
+                                            <div id="overlaygif"  ></div>
+                                            <table class="table responsive table-bordered table-striped" id="studentattendence">
+                                               <thead>
+                                                  <tr>
+                                                     <th data-hide="phone" class="footable-last-column" width="15%"><input type="checkbox" id="checkall">&nbsp;&nbsp;&nbsp;Check all</th>
+                                                     <th data-hide="phone,tablet"  width="10%">Roll No.</th>
+                                                     <th data-hide="phone,tablet" width="15%">Student Ad No.</th>
+                                                     <th data-hide="phone,tablet" width="30%">Student Name</th>
+                                                     <th data-hide="phone,tablet" width="30%">Guardian Name/ Mobile No.</th>
+                                                     <th data-hide="phone,tablet" width="15%">Remarks</th>
+                                                     <th data-hide="phone,tablet" width="30%">Late Arrival</th>
+                                                  </tr>
+                                               </thead>
+                                               <tbody>
+                                               </tbody>
+                                            </table>
+                                         </div>
+                                      </div>
+                                      <div id="overlaygif5"  ></div>
+                                   </div>
+                                </div>
+                                <div class="row">
+                                   <div class="col-sm-5">
+                                      <p>&nbsp;&nbsp; <a href="#" class="btn btn-info" align="right">Save</a></p>
+                                   </div>
+                                </div>
+                             
+                                
+                             </div>
+                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row ">
+                                   <div class="col-lg-12">
+                                      <div class="panel panel-default">
+                                         <div class="panel-heading">
+                                            <h4 class="panel-title">Attendance</h4>
+                                         </div>
+                                         <div class="panel-body">
+                                           <div class="row">
+               
+                                             <div class="col-4 form-group">
+                                               <label for="reg_input" class="req">Course</label>
+                                               <select class="form-control" name="Studentabsent[courseid1]" id="Studentabsent_courseid1">
+                                                  <option value="">SelectCourse</option>
+                                                  <option value="1">UKG</option>
+                                                  <option value="2">LKG</option>
+                                                  <option value="3">GRADE I</option>
+                                                  <option value="4">GRADE II</option>
+                                                  <option value="5">GRADE III</option>
+                                                  <option value="6">GRADE IV</option>
+                                                  <option value="7">GRADE V</option>
+                                                  <option value="8">GRADE VI</option>
+                                                  <option value="9">GRADE VII</option>
+                                                  <option value="10">GRADE VIII</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_courseid1_em_" style="display:none"></div>
+                                            </div>
+                                            <div class="col-4 form-group" id="Batch_subject1" >
+                                               <label for="reg_input" class="req">Batch</label>
+                                               <select class="form-control" name="Studentabsent[batchid1]" id="Studentabsent_batchid1">
+                                                  <option value="">SelectBatch</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_batchid1_em_" style="display:none"></div>
+                                            </div>
+                                           
+                                            <div class="col-4 form-group" id="subject1" >
+                                               <label for="reg_input" class="req">Subject</label>
+                                               <select class="form-control" name="Studentabsent[subjectid1]" id="Studentabsent_subjectid1">
+                                                  <option value="">Select Subject</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_subjectid1_em_" style="display:none"></div>
+                                            </div>
+                                            <div class="col-4 form-group">
+                                               <label for="reg_input" class="req">Year</label>
+                                               <select class="form-control" name="Studentabsent[year]" id="Studentabsent_year">
+                                                  <option value="">Select Year</option>
+                                                  <option value="2021">2021</option>
+                                                  <option value="2022">2022</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_year_em_" style="display:none"></div>
+                                            </div>
+                                            <div class="col-4 form-group">
+                                               <label for="reg_input_name">Month</label>
+                                               <select maxlength="6" class="form-control" value="04" name="Studentabsent[date15]" id="Studentabsent_date15">
+                                                  <option value="0">Select</option>
+                                                  <option value="1">January</option>
+                                                  <option value="2">February</option>
+                                                  <option value="3">March</option>
+                                                  <option value="4">April</option>
+                                                  <option value="5">May</option>
+                                                  <option value="6">June</option>
+                                                  <option value="7">July</option>
+                                                  <option value="8">August</option>
+                                                  <option value="9">September</option>
+                                                  <option value="10">October</option>
+                                                  <option value="11">November</option>
+                                                  <option value="12">December</option>
+                                               </select>
+                                               <div class="school_val_error" id="Studentabsent_date15_em_" style="display:none"></div>
+                                            </div>
+                                            <div class="form-group col-xl-3 col-sm-3"></div>
+                                            <div class="form-group col-xl-3 col-sm-3">
+                                               <input type="button" onclick="printDiv('print')" class="btn btn-danger" value=Print Report/>
+                                            </div>
+                                         </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="row" id="print">
+                                   <div class="col-lg-12" id="gridview">
+                                      <div class="panel panel-default"  id="attendance">
+                                         <div class="panel-heading">
+                                            <h4 class="panel-title" id="reporttitle">Attendance Report</h4>
+                                         </div>
+                                         <div class="table-responsive">
+                                            <table class="table responsive table table-bordered table table-striped" id="employeeattendence1">
+                                            </table>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                
+                             </div>
+                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                             <h4 class="panel-title">Absentees Report </h4>
+                                          </div>
+                                          <div class="panel-body">
+                                           <div class="row">
+               
+                                             <div class="col-4 form-group">
+                                                <label for="reg_input" class="req">Course</label>
+                                                <select class="form-control" name="Studentabsent[courseid3]" id="Studentabsent_courseid3">
+                                                   <option value="">SelectCourse</option>
+                                                   <option value="1">UKG</option>
+                                                   <option value="2">LKG</option>
+                                                   <option value="3">GRADE I</option>
+                                                   <option value="4">GRADE II</option>
+                                                   <option value="5">GRADE III</option>
+                                                   <option value="6">GRADE IV</option>
+                                                   <option value="7">GRADE V</option>
+                                                   <option value="8">GRADE VI</option>
+                                                   <option value="9">GRADE VII</option>
+                                                   <option value="10">GRADE VIII</option>
+                                                </select>
+                                                <div class="school_val_error" id="Studentabsent_courseid3_em_" style="display:none"></div>
+                                             </div>
+                                             <div class="col-4 form-group" id="Batch_subject3" >
+                                                <label for="reg_input" class="req">Batch</label>
+                                                <select class="form-control" name="Studentabsent[batchid3]" id="Studentabsent_batchid3">
+                                                   <option value="">SelectBatch</option>
+                                                </select>
+                                                <div class="school_val_error" id="Studentabsent_batchid3_em_" style="display:none"></div>
+                                             </div>
+                                             <div class="col-4 form-group" id="subject3" >
+                                                <label for="reg_input" class="req">Subject</label>
+                                                <select class="form-control" name="Studentabsent[subjectid3]" id="Studentabsent_subjectid3">
+                                                   <option value="">Select Subject</option>
+                                                </select>
+                                                <div class="school_val_error" id="Studentabsent_subjectid3_em_" style="display:none"></div>
+                                             </div>
+                                             <div class="col-4 form-group" id="date3" >
+                                                <label for="reg_input_name" class="req">Date </label>
+                                                <div data-date-format="dd-mm-yyyy" class="input-group date">
+                                                   <input placeholder="Date" class="form-control pickadate" value="2022-04-18" name="Studentabsent[date3]" id="Studentabsent_date3" type="text" />
+                                                   <div class="school_val_error" id="Studentabsent_date3_em_" style="display:none"></div>
+                                                   <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-lg-12" id="gridview">
+                                       <div class="panel panel-default" id="attendancediv3" style="display:none">
+                                          <div class="panel-heading">
+                                             <h4 class="panel-title">Absentees List </h4>
+                                          </div>
+                                          <div class="table-responsive">
+                                             <table class="table responsive table-bordered table-striped" id="studentattendence3">
+                                                <thead>
+                                                   <tr>
+                                                      <th data-hide="phone,tablet"  width="10%">Roll No.</th>
+                                                      <th data-hide="phone,tablet" width="15%">Student Admission No.</th>
+                                                      <th data-hide="phone,tablet" width="30%">Student Name</th>
+                                                      <th data-hide="phone,tablet" width="30%">Guardian Name</th>
+                                                      <th data-hide="phone,tablet" width="30%">Guardian Mobile</th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-5">
+                                          <p>&nbsp;&nbsp; <a href="javascript:sendmessage();" class="btn btn-info" align="right">Send SMS</a></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                                
+                             </div>
+
+                           <!-- new end -->
+
+
+
+
+
+
+
+
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </mat-drawer-content>
+</mat-drawer-container>

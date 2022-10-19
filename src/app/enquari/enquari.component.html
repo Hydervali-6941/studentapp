@@ -1,0 +1,34 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Add  Document Type  </div>
+                <div class="ico-card">
+                    <i class="fas fa-file"></i>
+                </div>
+                <div class="page content shadow p-3 position-relative" style="margin-top: -68px;">
+                    <div>
+                        <label>name</label>
+                        <input size="84" maxlength="45" class="form-control" type="text" />
+                    </div><br>
+
+                    <div>
+                        <label>last name</label>
+                        <input size="84" maxlength="45" class="form-control" type="text" />
+                    </div>
+                    <br>
+                    <div>
+                        <label>email</label>
+                        <input size="84" maxlength="45" class="form-control" type="text" />
+                    </div>
+                    <button value="submit">submit</button>
+                    
+                   
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

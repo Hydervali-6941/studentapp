@@ -1,0 +1,468 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+            
+            <div class="mainbox">
+                <div class="page box">
+                    <h5>Dashboard</h5>
+                </div>
+                <div class="flex items-center dashboard">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon"
+                    >home</mat-icon
+                    >
+                    <span>Dashboard</span>
+                    <span class="forDot">
+                        <mat-icon>radio_button_checked</mat-icon>
+                    </span>
+                    <h6>Analytics</h6>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="page content shadow p-3 position-relative">
+                  
+                                    <div class="row align-middle">
+                                        
+                                        <!-- new -->
+                                        <div class="col-lg-4" >
+                                            
+                                            <div class="card l-bg-blue-dark" routerLink="/asd" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas  fa-address-card "></i></div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0" >
+                                                                Students<br> Addmission
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>19</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-cherry" routerLink="/studentReg" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-list "></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Students<br> List
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>21</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-blue-dark" routerLink="/stdhouse" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-house-user"></i></div>
+                                                   
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Student<br> House
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>12</span>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <!-- new cards -->
+                                        
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-red"  routerLink="/Atten" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-address-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Attendance<br> List
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>6</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div><br><br>
+                                        
+                                        <div class="col-lg-4">
+                                            <div class=" card l-bg-blue-dark"  onclick="location.href = '/doctype';"  style="cursor:pointer;" >
+
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-file"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0" >
+                                                                Add Document Type
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>10</span>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class=" card l-bg-red" routerLink="/assing" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Add<br> Assignment
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-blue-dark" routerLink="/feecol" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-wallet"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Fees <br>Collection
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <div class=" card l-bg-cherry" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Library<br> Details
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4" >
+                                            <div class="card l-bg-blue-dark"  style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Library<br> Details
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <!-- <div class="col-lg-4">
+                                            <div class="card l-bg-cherry">
+                                                <div class="panel card-1" onclick="location.href = '/index.php/core/student/admin';" style="cursor:pointer;">
+                                                    <div class="panel-body" style="color: #797979;">
+                                                       <div class="row">
+                                                          <div class="col-lg-6" ><img src="data:image/png;base64,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"></div>
+                                                          <div class="col-lg-6">
+                                                             <h2 class="no-margin" style="font-size:15px">74</h2>
+                                                          </div>
+                                                       </div>
+                                                       &emsp;&emsp;&emsp;
+                                                      <a href=""  style="font-size:15px"> TOTAL STUDENTS </a>                
+                                                    </div>
+                                                 </div>
+                                               
+                                             
+                                            </div>
+                                        </div> -->
+
+                                       
+
+
+
+
+
+                                        
+                                        
+                                        <!-- new -->
+                                        <!-- <div class="col-xl-4 col-lg-8">
+                                            
+                                            <div class="card l-bg-blue-dark">
+                                                <div class="btn-list left " >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/asd">
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-building"></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0">Students Addmission</h3>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Count
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>19</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-cyan" role="progressbar" data-width="19%" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100" style="width: 19%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-cherry">
+                                                <div class="btn-list   left"  >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup" style="background: #5282d2;" routerLink="/studentReg"  >
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-envelope "></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0">Students List</h3>
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Items
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>21</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-cyan" role="progressbar" data-width="21%" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-blue-dark">
+                                                <div class="btn-list  left" >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup" routerLink="/stdhouse" >
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0"> Student House</h3>
+                                                        
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Items
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>12</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-orange" role="progressbar" data-width="12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        
+                                        
+                                        
+                                        <!-- new cards -->
+                                        
+                                        <!-- <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-red">
+                                                <div class="btn-list  left" >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup" style="background: #5282d2;" routerLink="/Atten"    >
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-bus"></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0">Attendance</h3>
+                                                        
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Count
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>6</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-orange" role="progressbar" data-width="6%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100" style="width: 6%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-blue-dark">
+                                                <div class="btn-list  left" >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup"  routerLink="/doctype"  >
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-envelope "></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0">Add Document Type</h3>
+                                                        
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Items
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>10</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-cyan" role="progressbar" data-width="10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-8">
+                                            <div class="card l-bg-cherry">
+                                                <div class="btn-list  left" >
+                                                    <button class="btn btn-outline-primary btn-rounded modalPopup"   style="background: #5282d2;" >
+                                                        <span class="mat-button-wrapper">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-book"></i></div>
+                                                    <div class="mb-4">
+                                                        <h3 class="card-title mb-0"> Library</h3>
+                                                        
+                                                    </div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Total Items
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                                                        <div class="progress-bar l-bg-orange" role="progressbar" data-width="13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100" style="width: 13%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+
+
+
+                                       
+
+                                        
+                                    </div>
+                                    <!-- new cards ends -->
+                                    
+                                    
+                                    <!-- new-cards -->
+                                   
+                                    
+                                    <!-- new-cards -->
+                                    
+                                    
+                                    
+                                    
+                                    <!-- </div> -->
+                                    
+                                    <!-- </div> -->
+                                    
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                        </mat-drawer-content>
+                    </mat-drawer-container>

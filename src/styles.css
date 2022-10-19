@@ -1,0 +1,46 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+.mat-expansion-panel{
+    background: #0f172a !important;
+}
+mat-panel-title.mat-expansion-panel-header-title.ng-tns-c154-2,mat-panel-title.mat-expansion-panel-header-title.ng-tns-c154-4,mat-panel-title.mat-expansion-panel-header-title.ng-tns-c154-6,mat-panel-title.mat-expansion-panel-header-title.ng-tns-c154-8{
+    color: #94a3b8!important;
+}
+.mat-expansion-indicator::after{
+    color: #94a3b8!important;
+
+}
+
+.mat-expansion-panel-header-title{
+    color: #94a3b8!important;
+
+}
+.mat-icon{
+    font-size: 16px !important;
+}
+.p3{
+    float: left !important;
+  }
+
+  .colour{
+    color: #000 !important;
+  }  
+
+.mat-form-field-infix {
+    border-radius: 4px 4px 0 0;
+    padding: 0px !important;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+mat-drawer {
+    width: 260px;
+}
+mat-drawer-container {
+    height: 100%;
+}
+mat-drawer {
+    background: #0f172a !important;
+}

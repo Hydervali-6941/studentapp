@@ -1,0 +1,416 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+
+    <div class="container-fluid">
+      
+      <div class="page box p-3 mt-2">Add Driver</div>
+
+      <div class="page content shadow p-3 position-relative">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="col-lg-12">
+              <!-- new -->
+              <div class="tab-content" id="myTabContent">
+                <!--tab1-->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="form-group col-4">
+                            <label for="reg_input" class="req"
+                              >Vehicle No*</label
+                            >
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Select Option</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-4">
+                            <label for="reg_input" class="req">Name*</label>
+                            <div class="input-group mb-3">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder=""
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <label for="reg_input" class="req"
+                              >Present Address*</label
+                            >
+                            <div class="input-group mb-3">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder=""
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <label for="reg_input" class="req"
+                              >Permanent Address*</label
+                            >
+                            <div class="input-group mb-3">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder=""
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <label for="reg_input" class="req"
+                              >Date Of Birth*</label
+                            >
+                            <div class="input-group mb-3">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder=""
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <label for="reg_input" class="req">Phone*</label>
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>select</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <label for="reg_input" class="req"
+                              >License Number*</label
+                            >
+                            <div class="input-group mb-3">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder=""
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-4"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-info">Save</button>
+                  </div>
+                </div>
+                <!--tab2-->
+                <!-- <div
+              class="tab-pane fade"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <label for="reg_input" class="req">Day/Hostel</label>
+
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox1"
+                              value="option1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox1"
+                              >Day Scholar</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox2"
+                              value="option2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox2"
+                              >Hostel</label
+                            >
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <label for="reg_input" class="req"
+                            >Organization For</label
+                          >
+
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox1"
+                              value="option1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox1"
+                              >Boys</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox2"
+                              value="option2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox2"
+                              >Girls</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <label for="reg_input" class="req">Attendance</label
+                          >&nbsp;&nbsp;&nbsp;&nbsp;
+
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="option1"
+                            />
+                            <label class="form-check-label" for="inlineRadio1"
+                              >Daywise</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >Monthly</label
+                            >
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <label for="reg_input" class="req">Student ID</label
+                          >&nbsp;&nbsp;&nbsp;&nbsp;
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="option1"
+                            />
+                            <label class="form-check-label" for="inlineRadio1"
+                              >Manual</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >Auto Gen.</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <label for="reg_input" class="req">Student ID</label
+                          >&nbsp;&nbsp;&nbsp;&nbsp;
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="option1"
+                            />
+                            <label class="form-check-label" for="inlineRadio1"
+                              >Manual</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >Auto Gen.</label
+                            >
+                          </div>
+                        </div>
+                        <div class="col-6"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="input-group mb-3">
+                            <label for="">Student ID</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Username"
+                              aria-label="Username"
+                              aria-describedby="basic-addon1"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+                <!---Tab3-->
+                <!-- <div
+              class="tab-pane fade"
+              id="contact"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+            >
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <h1>Ajayudu!</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+                <!-- new end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        Date formats: yyyy-mm-dd, yyyymmdd, dd-mm-yyyy, dd/mm/yyyy, ddmmyyyyy
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="form-group">
+            <div class="input-group date" id="datetimepicker1">
+              <input type="text" class="form-control" />
+              <span class="input-group-addon"
+                ><span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        var bindDatePicker = function () {
+          $(".date")
+            .datetimepicker({
+              format: "YYYY-MM-DD",
+              icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-arrow-up",
+                down: "fa fa-arrow-down",
+              },
+            })
+            .find("input:first")
+            .on("blur", function () {
+              // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+              // update the format if it's yyyy-mm-dd
+              var date = parseDate($(this).val());
+
+              if (!isValidDate(date)) {
+                //create date based on momentjs (we have that)
+                date = moment().format("YYYY-MM-DD");
+              }
+
+              $(this).val(date);
+            });
+        };
+
+        var isValidDate = function (value, format) {
+          format = format || false;
+          // lets parse the date to the best of our knowledge
+          if (format) {
+            value = parseDate(value);
+          }
+
+          var timestamp = Date.parse(value);
+
+          return isNaN(timestamp) == false;
+        };
+
+        var parseDate = function (value) {
+          var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+          if (m)
+            value =
+              m[5] +
+              "-" +
+              ("00" + m[3]).slice(-2) +
+              "-" +
+              ("00" + m[1]).slice(-2);
+
+          return value;
+        };
+
+        bindDatePicker();
+      });
+    </script>
+  </mat-drawer-content></mat-drawer-container
+>

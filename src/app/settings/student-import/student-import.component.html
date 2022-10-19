@@ -1,0 +1,120 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid">
+        <div class="page box p-3 mt-2">Students Imports</div>
+        <div class="page content shadow p-3 position-relative">
+          
+          <div class="content">
+            <div class="col-sm-12">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Student Import</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Student Data Update</button>
+                </li>
+              </ul><br>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  
+                  <form enctype="multipart/form-data" id="contact-form" action="/index.php/site/import" method="post">                <div class="row">
+                    <div class="col-sm-6">
+                      <div class="panel panel-white border-left-xlg  border-left-info">
+                        <div class="panel-heading">
+                          <h4 class="panel-title"><span class="icon-cloud-upload2" style="color:orange;padding-right: 4px;font-size: 20px;"></span>Student Import</h4>
+                        </div>
+                        <div class="panel-body">
+                          <div class="panel-body"><div id="overlaygif" style="display:none;"></div>
+                          <div class="form-group">
+                            <label for="reg_input_name" class="req">Browse File</label><br>
+                            <input id="ytContactForm_filea" type="hidden" value="" name="ContactForm[filea]"><input name="ContactForm[filea]" id="ContactForm_filea" type="file">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12" align="right"><input class="btn bg-info " type="submit" name="yt0" value="   Upload   "></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="panel panel-white border-left-xlg  border-left-info">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><span class="icon-info22" style="color:orange;padding-right: 4px"></span>Instructions</h4>
+                        <div class="heading-elements" align="right">
+                          <a href=" /img/Student.xlsx" class="btn btn-info" align="left" data-popup="tooltip" title="" data-placement="bottom" data-trigger="hover" data-content="" data-original-title="click to download"><b><i class="btn"></i></b>Student Excel</a>
+                        </div>
+                        <a class="heading-elements-toggle"><i class="icon-menu"></i></a></div>
+                        <div class="panel-body">
+                          <p><span style="font-size: 14px; color: #cc0000;padding-right: 4px;">*</span>Download the excel template from the above link.</p>
+                          <p><span style="font-size: 14px; color: #cc0000;padding-right: 4px;">*</span> For a successful data import, the data in the import file must be formatted correctly and must match data in ERP for master data's. <a href="#masterdata">click here</a> to see all master data</p>
+                          <p><span style="font-size: 14px; color: #cc0000;padding-right: 4px;">*</span>Please make sure all the mandatory fields have values in the excel.</p>
+                          <p><span style="font-size: 14px; color: #cc0000;padding-right: 4px;">*</span>The guardian email id is used to identify siblings. So please use unique email ids for each guardian and for the siblings you can use the same guardian email id.</p>
+                          <p><span style="font-size: 14px; color: #cc0000;padding-right: 4px;">*</span>All the date format should be in yyyy-mm-dd(ex:2019-10-20).</p>
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>            </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  
+                  <form enctype="multipart/form-data" id="student-import-form" >                <div class="row">
+                    <div class="col-sm-6">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">Student Data Update</h4>
+                        </div>
+                        <div class="panel-body">
+                          <div class="panel-body"><div id="overlaygif" style="display:none;"></div>
+                          <div class="form-group">
+                            <label for="reg_input_name" class="req">Browse File</label><br>
+                            <input id="ytContactForm_filea" type="hidden" value="" name="ContactForm[filea]"><input name="ContactForm[filea]" id="ContactForm_filea" type="file">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12" align="right"><input class="btn btn-info" type="submit" name="yt1" value="   submit   "></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                      <div class="panel-body"> 
+                        
+                        <div class="row">
+                          
+                          <div class="col-sm-12">
+                            <div class="alert alert-warning warning">
+                              <span class="icon-info22" style="color:orange"></span> 
+                              Download the excel file format from below link and copy the below values in corresponding columns while filling excel sheet.                                            <br>
+                              <p class="form-control-static">&nbsp;&nbsp;&nbsp;&nbsp;<a href="/img/student_update.xlsx">Student excel format</a></p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </mat-drawer-content>
+              </mat-drawer-container>
+              
+              

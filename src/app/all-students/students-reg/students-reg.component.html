@@ -1,0 +1,1355 @@
+
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            <ng-template #myDialog>
+                <mat-dialog-content>
+                    
+                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4 style="float: left;">Student Registration</h4>
+                            <tr class="left new">
+                                
+                                <td > 
+                                    <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+                                        <mat-icon>close</mat-icon>
+                                    </button>
+                                </td>
+                                
+                                
+                            </tr>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="container-fluid">
+                        <!-- <div class="p3"> -->
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="avatar-upload">
+                                                <div class="avatar-edit">
+                                                    <input
+                                                    type="file"
+                                                    id="imageUpload"
+                                                    accept=".png, .jpg, .jpeg"
+                                                    />
+                                                    <label for="imageUpload"></label>
+                                                </div>
+                                                <div class="avatar-preview">
+                                                    <div
+                                                    id="imagePreview"
+                                                    style="
+                                                    background-image: url('../../assets/images/organization1.jpg');
+                                                    "
+                                                    ></div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <hr />
+                                                
+                                                <h2>Additional Links:</h2>
+                                                <div>
+                                                    <div>
+                                                        <mat-form-field appearance="fill" class="sidebm">
+                                                            <mat-label>Appli.No</mat-label>
+                                                            <input matInput />
+                                                        </mat-form-field>
+                                                        <button mat-raised-button color="primary">Show</button>
+                                                    </div>
+                                                    <div class="tooltips">
+                                                        <button
+                                                        class="btn btn-outline-primary btn-rounded tips"
+                                                        matTooltip="Student Search"
+                                                        
+                                                        >
+                                                        <i class="fas fa-search"></i>
+                                                    </button>
+                                                    <button
+                                                    class="btn btn-outline-primary btn-rounded tips"
+                                                    matTooltip="Excel Import"
+                                                    
+                                                    >
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                                <button
+                                                class="btn btn-outline-primary btn-rounded tips"
+                                                matTooltip="Excel Export"
+                                                
+                                                >
+                                                <i class="fas fa-upload"></i>
+                                            </button>
+                                            <button
+                                            class="btn btn-outline-primary btn-rounded tips"
+                                            matTooltip="Fee Receipt"
+                                            
+                                            >
+                                            <i class="fas fa-receipt"></i></button
+                                            ><br /><br />
+                                            <button
+                                            class="btn btn-outline-primary btn-rounded tips"
+                                            matTooltip="Print ID Card"
+                                            
+                                            >
+                                            <i class="fas fa-print"></i>
+                                        </button>
+                                        <button
+                                        class="btn btn-outline-primary btn-rounded tips"
+                                        matTooltip="Submitted Certifications"
+                                        
+                                        >
+                                        <i class="fas fa-certificate"></i>
+                                    </button>
+                                    <button
+                                    class="btn btn-outline-primary btn-rounded tips"
+                                    matTooltip="Admission Card"
+                                    
+                                    >
+                                    <i class="far fa-address-card"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <mat-form-field appearance="fill" class="bb">
+                                    <mat-icon matPrefix class="prefix">verified_user</mat-icon>
+                                    <mat-label>Organization</mat-label>
+                                    <mat-select>
+                                        <mat-option value="one">First option</mat-option>
+                                        <mat-option value="two">Second option</mat-option>
+                                        <mat-option value="one">Third option</mat-option>
+                                        <mat-option value="one">Four option</mat-option>
+                                        <mat-option value="one">Five option</mat-option>
+                                        <mat-option value="one">Six option</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Branch</mat-label>
+                                    <mat-icon matPrefix>code</mat-icon>
+                                    <mat-select>
+                                        <mat-option value="one">First option</mat-option>
+                                        <mat-option value="two">Second option</mat-option>
+                                        <mat-option value="one">Third option</mat-option>
+                                        <mat-option value="one">Four option</mat-option>
+                                        <mat-option value="one">Five option</mat-option>
+                                        <mat-option value="one">Six option</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Academic Year</mat-label>
+                                    <mat-icon matPrefix>date_range</mat-icon>
+                                    <mat-select>
+                                        <mat-option value="one">First option</mat-option>
+                                        <mat-option value="two">Second option</mat-option>
+                                        <mat-option value="one">Third option</mat-option>
+                                        <mat-option value="one">Four option</mat-option>
+                                        <mat-option value="one">Five option</mat-option>
+                                        <mat-option value="one">Six option</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Student Name</mat-label>
+                                    <mat-icon matPrefix>person</mat-icon>
+                                    <input matInput />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Admission No</mat-label>
+                                    <mat-icon matPrefix
+                                    ><i class="fas fa-list-ol"></i
+                                        ></mat-icon>
+                                        <input matInput />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <mat-form-field appearance="fill" class="bb">
+                                        <mat-label>Surname</mat-label>
+                                        <mat-icon matPrefix>person</mat-icon>
+                                        <input matInput />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <mat-form-field appearance="fill" class="bb">
+                                        <mat-label>Student Id</mat-label>
+                                        <mat-icon matPrefix>perm_identity</mat-icon>
+                                        <input matInput />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <mat-form-field appearance="fill" class="bb">
+                                        <mat-label>Gender Select</mat-label>
+                                        <mat-select>
+                                            <mat-option value="one">Male</mat-option>
+                                            <mat-option value="two">Female</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <mat-form-field appearance="fill" class="bb">
+                                        <mat-label>Class RollNo</mat-label>
+                                        <mat-icon matPrefix
+                                        ><i class="fas fa-list-ol"></i
+                                            ></mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Fathers Name</mat-label>
+                                            <mat-icon matPrefix>person</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Aadhaar(UID)No</mat-label>
+                                            <mat-icon matPrefix>perm_identity</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Mothers Name</mat-label>
+                                            <mat-icon matPrefix>person</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Biometric Id</mat-label>
+                                            <mat-icon matPrefix>perm_identity</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Date of Birth</mat-label>
+                                            <input matInput [matDatepicker]="picker1" />
+                                            <mat-datepicker-toggle
+                                            matPrefix
+                                            [for]="picker1"
+                                            ></mat-datepicker-toggle>
+                                            <mat-datepicker #picker1></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Class</mat-label>
+                                            <mat-select>
+                                                <mat-option>--Select--</mat-option>
+                                                <mat-option>Nursery</mat-option>
+                                                <mat-option>I B.COM</mat-option>
+                                                <mat-option>I B.COM</mat-option>
+                                                <mat-option>X</mat-option>
+                                                <mat-option>UKG</mat-option>
+                                                <mat-option>B.S.C MPC's</mat-option>
+                                                <mat-option>First</mat-option>
+                                                <mat-option>Second</mat-option>
+                                                <mat-option>Third</mat-option>
+                                                <mat-option>Fourth</mat-option>
+                                                <mat-option>Fifth</mat-option>
+                                                <mat-option>Sixth</mat-option>
+                                                <mat-option>Seventh</mat-option>
+                                                <mat-option>Eighth</mat-option>
+                                                <mat-option>Nineth</mat-option>
+                                                <mat-option>Tenth</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Date of Join</mat-label>
+                                            <mat-icon matPrefix>date_range</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Section</mat-label>
+                                            <mat-select>
+                                                <mat-option value="one">First option</mat-option>
+                                                <mat-option value="two">Second option</mat-option>
+                                                <mat-option value="one">Third option</mat-option>
+                                                <mat-option value="one">Four option</mat-option>
+                                                <mat-option value="one">Five option</mat-option>
+                                                <mat-option value="one">Six option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Mobile</mat-label>
+                                            <mat-icon matPrefix> phone</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Address</mat-label>
+                                            <mat-icon matPrefix> location_on</mat-icon>
+                                            <textarea matInput></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Contact No2</mat-label>
+                                            <mat-icon matPrefix> phone</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Area</mat-label>
+                                            <mat-icon matPrefix> location_on</mat-icon>
+                                            <mat-select>
+                                                <mat-option value="one">First option</mat-option>
+                                                <mat-option value="two">Second option</mat-option>
+                                                <mat-option value="one">Third option</mat-option>
+                                                <mat-option value="one">Four option</mat-option>
+                                                <mat-option value="one">Five option</mat-option>
+                                                <mat-option value="one">Six option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Email ID</mat-label>
+                                            <mat-icon matPrefix> email</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>District</mat-label>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Second Language</mat-label>
+                                            <mat-select>
+                                                <mat-option value="one">First option</mat-option>
+                                                <mat-option value="two">Second option</mat-option>
+                                                <mat-option value="one">Third option</mat-option>
+                                                <mat-option value="one">Four option</mat-option>
+                                                <mat-option value="one">Five option</mat-option>
+                                                <mat-option value="one">Six option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>State</mat-label>
+                                            <mat-select>
+                                                <mat-option value="one">First option</mat-option>
+                                                <mat-option value="two">Second option</mat-option>
+                                                <mat-option value="one">Third option</mat-option>
+                                                <mat-option value="one">Four option</mat-option>
+                                                <mat-option value="one">Five option</mat-option>
+                                                <mat-option value="one">Six option</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Remarks</mat-label>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <mat-form-field appearance="fill" class="bb">
+                                        <mat-label>Student Type</mat-label>
+                                        <mat-icon matPrefix>person</mat-icon>
+                                        <mat-select>
+                                            <mat-option value="one">First option</mat-option>
+                                            <mat-option value="two">Second option</mat-option>
+                                            <mat-option value="one">Third option</mat-option>
+                                            <mat-option value="one">Four option</mat-option>
+                                            <mat-option value="one">Five option</mat-option>
+                                            <mat-option value="one">Six option</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-6">
+                                    <mat-form-field appearance="fill" class="bb">
+                                        <mat-label>Active</mat-label>
+                                        <mat-icon matPrefix>notifications_active</mat-icon>
+                                        <mat-select>
+                                            <mat-option value="one">Active</mat-option>
+                                            <mat-option value="two">InActive</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <label>Hostel</label
+                                            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<mat-radio-group
+                                            aria-label="Select an option"
+                                            >
+                                            <mat-radio-button value="1">Yes</mat-radio-button
+                                                >&nbsp;&nbsp;
+                                                <mat-radio-button value="2">No</mat-radio-button>
+                                            </mat-radio-group>
+                                        </div>
+                                        <br />
+                                        <div>
+                                            <label>Medium</label
+                                                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<mat-radio-group
+                                                aria-label="Select an option"
+                                                >
+                                                <mat-radio-button value="1">English</mat-radio-button
+                                                    >&nbsp;&nbsp;
+                                                    <mat-radio-button value="2">Telugu</mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <label>Transportation</label
+                                                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<mat-radio-group
+                                                    aria-label="Select an option"
+                                                    >
+                                                    <mat-radio-button value="1">Yes</mat-radio-button
+                                                        >&nbsp;&nbsp;
+                                                        <mat-radio-button value="2">No</mat-radio-button>
+                                                    </mat-radio-group>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <!--tabs Starts Here-->
+                                <mat-tab-group mat-align-tabs="center">
+                                    <mat-tab label="First">
+                                        <h2>Student Additional Details</h2>
+                                        
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Admission Class</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                        <mat-option value="one">Third option</mat-option>
+                                                        <mat-option value="one">Four option</mat-option>
+                                                        <mat-option value="one">Five option</mat-option>
+                                                        <mat-option value="one">Six option</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Mother Tongue</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                        <mat-option value="one">Third option</mat-option>
+                                                        <mat-option value="one">Four option</mat-option>
+                                                        <mat-option value="one">Five option</mat-option>
+                                                        <mat-option value="one">Six option</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Nationality</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                        <mat-option value="one">Third option</mat-option>
+                                                        <mat-option value="one">Four option</mat-option>
+                                                        <mat-option value="one">Five option</mat-option>
+                                                        <mat-option value="one">Six option</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Religion</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                        <mat-option value="one">Third option</mat-option>
+                                                        <mat-option value="one">Four option</mat-option>
+                                                        <mat-option value="one">Five option</mat-option>
+                                                        <mat-option value="one">Six option</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Caste</mat-label>
+                                                    <mat-select>
+                                                        <mat-option value="one">First option</mat-option>
+                                                        <mat-option value="two">Second option</mat-option>
+                                                        <mat-option value="one">Third option</mat-option>
+                                                        <mat-option value="one">Four option</mat-option>
+                                                        <mat-option value="one">Five option</mat-option>
+                                                        <mat-option value="one">Six option</mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>SubCaste</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>IdentificationMark1</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>IdentificationMark2</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>FatherQualification</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>MotherQualification</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>FatherOccupation</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Father AnnualIncome</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>MotherOccupation</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Mother AnnualIncome</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Second Language</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Remarks</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                    </mat-tab>
+                                    <mat-tab label="Second">
+                                        <h2>Health Details</h2>
+                                        
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Student BloodGroup</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Student Height</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Student Weight</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Mother BloodGroup</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Father BloodGroup</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Health Issue1</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-6">
+                                                <mat-form-field appearance="fill" class="bb">
+                                                    <mat-label>Health Issue2</mat-label>
+                                                    <input matInput />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                    </mat-tab>
+                                    <mat-tab label="Third">
+                                        <h2>Previous Activity Details</h2>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div>
+                                                    <mat-form-field appearance="fill" class="bb">
+                                                        <mat-label>Activity</mat-label>
+                                                        <input matInput />
+                                                    </mat-form-field>
+                                                </div>
+                                                <div>
+                                                    <mat-form-field appearance="fill" class="bb">
+                                                        <mat-label>Place/Score</mat-label>
+                                                        <input matInput />
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div>
+                                                    <mat-form-field appearance="fill" class="bb">
+                                                        <mat-label>Choose a date</mat-label>
+                                                        <input matInput [matDatepicker]="picker2" />
+                                                        <mat-datepicker-toggle
+                                                        matPrefix
+                                                        [for]="picker2"
+                                                        ></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker2></mat-datepicker>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div>
+                                                    <mat-form-field appearance="fill" class="bb">
+                                                        <mat-label>Student Remarks</mat-label>
+                                                        <textarea matInput></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </mat-tab>
+                                </mat-tab-group>
+                                <!--tabs Ends Here-->
+                                
+                                <hr />
+                                
+                                <!--table new start-->
+                                
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card card-cascade narrower">
+                                            <div
+                                            class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                                            >
+                                            <div class="col-8">
+                                                <div class="mainWrapper">
+                                                    <h2>Customer</h2>
+                                                    
+                                                    <form class="form-inline waves-light" mdbWavesEffect>
+                                                        <div class="md-form mt-0">
+                                                            <input
+                                                            class="form-control mr-sm-2 SearchForm"
+                                                            type="text"
+                                                            placeholder="Search"
+                                                            />
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-4">
+                                                <div class="btn-list">
+                                                    <!-- <div class="downloadicon">
+                                                        <span
+                                                        ><i class="fa fa-download" aria-hidden="true"></i
+                                                            ></span> 
+                                                        </div>-->
+                                                        
+                                                        <button class="btn btn-outline-primary btn-rounded modalPopup" >
+                                                            <span class="mat-button-wrapper">
+                                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                                            </span></button
+                                                            >&nbsp;
+                                                            <tr class="left">
+                                                                <!-- <div class="p3"> -->
+                                                                    <td>
+                                                                        <button
+                                                                        mat-icon-button
+                                                                        [matMenuTriggerFor]="mainmenu"
+                                                                        aria-label="Example icon-button with a menu"
+                                                                        class="colour btn btn-outline-primary btn-rounded modalPopup"
+                                                                        >
+                                                                        <mat-icon>more_vert</mat-icon>
+                                                                    </button>
+                                                                    <mat-menu #mainmenu="matMenu">
+                                                                        <button mat-menu-item>
+                                                                            <mat-icon>print</mat-icon>
+                                                                            <span>Print</span>
+                                                                        </button>
+                                                                        <button mat-menu-item>
+                                                                            <mat-icon>import_export</mat-icon>
+                                                                            <span>Export</span>
+                                                                        </button>
+                                                                        <button mat-menu-item>
+                                                                            <mat-icon>delete</mat-icon>
+                                                                            <span>Delete</span>
+                                                                        </button>
+                                                                    </mat-menu>
+                                                                </td>
+                                                            </tr>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="">
+                                                    <div class="table-wrapper">
+                                                        <!--Table-->
+                                                        
+                                                        <table class="table">
+                                                            <!--Table head-->
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" style="width: 4%">
+                                                                        <input
+                                                                        class="form-check-input"
+                                                                        type="checkbox"
+                                                                        id="checkbox"
+                                                                        />
+                                                                    </th>
+                                                                    <th scope="col">Class</th>
+                                                                    <th scope="col">Regd No</th>
+                                                                    <th scope="col">Marks</th>
+                                                                    <th scope="col">%</th>
+                                                                    <th scope="col">Year of Pass</th>
+                                                                    <th scope="col">Institution Name</th>
+                                                                    <th scope="col"></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <!--Table head-->
+                                                            <!--Table body-->
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">
+                                                                        <input
+                                                                        class="form-check-input"
+                                                                        type="checkbox"
+                                                                        id="checkbox1"
+                                                                        />
+                                                                    </th>
+                                                                    <td>6th Class</td>
+                                                                    <td>6678656447676</td>
+                                                                    
+                                                                    <td>767</td>
+                                                                    <td>74</td>
+                                                                    <td>2021</td>
+                                                                    <td>Organisation</td>
+                                                                    
+                                                                    <td>
+                                                                        <button
+                                                                        mat-icon-button
+                                                                        [matMenuTriggerFor]="datamenu"
+                                                                        type="button"
+                                                                        >
+                                                                        <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                                                        <i class="fas fa-ellipsis-v"></i>
+                                                                    </button>
+                                                                    <mat-menu #datamenu="matMenu">
+                                                                        <button mat-menu-item>
+                                                                            <mat-icon><i class="fas fa-edit"></i></mat-icon>
+                                                                            Modify
+                                                                        </button>
+                                                                        <button mat-menu-item>
+                                                                            <mat-icon>delete</mat-icon> Delete
+                                                                        </button>
+                                                                    </mat-menu>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    <input
+                                                                    class="form-check-input"
+                                                                    type="checkbox"
+                                                                    id="checkbox1"
+                                                                    />
+                                                                </th>
+                                                                <td>12th Class</td>
+                                                                <td>9999999999889</td>
+                                                                
+                                                                <td>987</td>
+                                                                <td>98</td>
+                                                                <td>2022</td>
+                                                                <td>Organisation</td>
+                                                                
+                                                                <td>
+                                                                    <button
+                                                                    mat-icon-button
+                                                                    [matMenuTriggerFor]="datamenu"
+                                                                    type="button"
+                                                                    >
+                                                                    <!-- <i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
+                                                                    <i class="fas fa-ellipsis-v"></i>
+                                                                </button>
+                                                                <mat-menu #datamenu="matMenu">
+                                                                    <button mat-menu-item>
+                                                                        <mat-icon><i class="fas fa-edit"></i></mat-icon>
+                                                                        Modify
+                                                                    </button>
+                                                                    <button mat-menu-item>
+                                                                        <mat-icon>delete</mat-icon> Delete
+                                                                    </button>
+                                                                </mat-menu>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <!--Table body-->
+                                                </table>
+                                                <!--Table-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- table -->
+                                </div>
+                            </div>
+                            
+                            <!-- pop up -->
+                            
+                            
+                            <div class="row">
+                                <div>
+                                    <button
+                                    mat-icon-button
+                                    aria-label="close dialog"
+                                    mat-dialog-close
+                                    style="float: right"
+                                    >
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Class</mat-label>
+                                    <mat-icon matPrefix>class</mat-icon>
+                                    <input matInput />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6">
+                                <mat-form-field appearance="fill" class="bb">
+                                    <mat-label>Regd No</mat-label>
+                                    <mat-icon matPrefix
+                                    ><i class="far fa-registered"></i
+                                        ></mat-icon>
+                                        <input matInput />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <mat-form-field appearance="fill" class="bb">
+                                        <mat-label>Marks</mat-label>
+                                        <mat-icon matPrefix
+                                        ><i class="fa fa-mars" aria-hidden="true"></i
+                                            ></mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6">
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Percentage</mat-label>
+                                            <mat-icon matPrefix>percentage</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Year of Pass</mat-label>
+                                            <mat-icon matPrefix>date_range</mat-icon>
+                                            <input matInput />
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6">
+                                        <mat-form-field appearance="fill" class="bb">
+                                            <mat-label>Institution Name</mat-label
+                                                ><mat-icon matPrefix>person</mat-icon>
+                                                
+                                                <mat-select>
+                                                    <mat-option value="one">First option</mat-option>
+                                                    <mat-option value="two">Second option</mat-option>
+                                                    <mat-option value="one">Third option</mat-option>
+                                                    <mat-option value="one">Four option</mat-option>
+                                                    <mat-option value="one">Five option</mat-option>
+                                                    <mat-option value="one">Six option</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div [align]="'end'">
+                                        <button class="btn btn-primary mx-4">Save</button>
+                                        <button class="btn btn-secondary">Cancel</button>
+                                    </div>
+                                    
+                                    <!--Table new end-->
+                                    
+                                    <br />
+                                    
+                                    <div class="row">
+                                        <h2>Submitted Certificates Details:</h2>
+                                        <br /><br />
+                                        <section class="example-section mx-5">
+                                            <mat-checkbox class="example-margin mx-4"
+                                            >TC Certificate</mat-checkbox
+                                            >
+                                            <mat-checkbox class="example-margin mx-4"
+                                            >Conduct Certificate</mat-checkbox
+                                            >
+                                            <mat-checkbox class="example-margin mx-4"
+                                            >Bonafied Certificate</mat-checkbox
+                                            >
+                                            <mat-checkbox class="example-margin mx-4"
+                                            >Income Certificate
+                                        </mat-checkbox>
+                                        <mat-checkbox class="example-margin mx-4"
+                                        >Inter Short Memo</mat-checkbox
+                                        >
+                                        <mat-checkbox class="example-margin mx-4"
+                                        >Inter Long Memo</mat-checkbox
+                                        >
+                                        
+                                        <mat-checkbox class="example-margin mx-4"
+                                        >SSC Certificate</mat-checkbox
+                                        >
+                                        <mat-checkbox class="example-margin mx-4"
+                                        >Caste Certificate</mat-checkbox
+                                        >
+                                        <mat-checkbox class="example-margin mx-4"
+                                        >Birth Certificate</mat-checkbox
+                                        >
+                                    </section>
+                                </div>
+                                <div [align]="'right'">
+                                    <button class="btn btn-primary">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="btn btn-secondary">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </mat-dialog-content>
+            </ng-template>
+            
+            
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Student Registration
+                    <div class="ico-card">
+                        <i class="fas fa-building"></i>
+                    </div>
+                </div>
+                
+                <!-- Table -->
+                <div class="container">
+                    
+                    <!-- Table -->
+                    <div class="page content shadow position-relative">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card card-cascade narrower">
+                                    <div
+                                    class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                                    >
+                                    <div class="col-8">
+                                        <div class="mainWrapper">
+                                            <h2>Customer</h2>
+                                            
+                                            <form class="form-inline waves-light" mdbWavesEffect>
+                                                <div class="md-form mt-0">
+                                                    <input
+                                                    class="form-control mr-sm-2 SearchForm"
+                                                    type="text"
+                                                    placeholder="Search"
+                                                    />
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-4">
+                                        <div class="btn-list">
+                                            <!-- <div class="downloadicon">
+                                                <span
+                                                ><i class="fa fa-download" aria-hidden="true"></i
+                                                    ></span> 
+                                                </div>-->
+                                                
+                                                <button
+                                                class="btn btn-outline-primary btn-rounded modalPopup"
+                                                (click)="openDialogWithTemplateRef(myDialog)"
+                                                >
+                                                <span class="mat-button-wrapper">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </span>
+                                            </button>&nbsp;
+                                            
+                                            <tr class="left">
+                                                <span class="mat-button-wrapper">
+                                                    <td >
+                                                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="colour" class="btn btn-outline-primary btn-rounded modalPopup" >
+                                                            <mat-icon>more_vert</mat-icon>
+                                                        </button>
+                                                        <mat-menu #menu="matMenu">
+                                                            <button mat-menu-item>
+                                                                <mat-icon>print</mat-icon>
+                                                                <span>Print</span>
+                                                            </button>
+                                                            <button mat-menu-item >
+                                                                <mat-icon>import_export</mat-icon>
+                                                                <span>Export</span>
+                                                            </button>
+                                                            <button mat-menu-item>
+                                                                <mat-icon>delete</mat-icon>
+                                                                <span>Delete</span>
+                                                            </button>                      
+                                                        </mat-menu>                   
+                                                    </td>   
+                                                </span>               
+                                            </tr>                
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!---------icons Start--------->
+                                
+                                <div class="">
+                                    <div class="table-wrapper">
+                                        <!--Table-->
+                                        
+                                        
+                                        <table class="table">
+                                            <!--Table head-->
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 4%">
+                                                        <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        id="checkbox"
+                                                        />
+                                                    </th>
+                                                    <th scope="col">Branch</th>
+                                                    <th scope="col">Phone</th>
+                                                    <th scope="col">AcademicYear</th>
+                                                    <th scope="col">Action</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <!--Table head-->
+                                            <!--Table body-->
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        id="checkbox1"
+                                                        />
+                                                    </th>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img
+                                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                                            alt=""
+                                                            class="rounded-circle"
+                                                            />
+                                                            <div class="ms-3">
+                                                                <p class="fw-bold">John Doe</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forNumbers">
+                                                        <mat-icon class="icon-cc"> phone</mat-icon>
+                                                        <mat-icon class="icon-cc-1"> email</mat-icon>
+                                                    </td>
+                                                    
+                                                    <td>Senior</td>
+                                                    <td >
+                                                        <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                            <mat-icon>more_vert</mat-icon>
+                                                        </button>
+                                                        <mat-menu #menu1="matMenu">
+                                                            <button mat-menu-item>
+                                                                <mat-icon>edit</mat-icon>
+                                                                <span>Edit</span>
+                                                            </button>
+                                                            
+                                                            <button mat-menu-item>
+                                                                <mat-icon>delete</mat-icon>
+                                                                <span>Delete</span>
+                                                            </button>
+                                                        </mat-menu>
+                                                        
+                                                    </td>   
+                                                </tr>
+                                                
+                                                
+                                                <tr>
+                                                    <th scope="row">
+                                                        <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        id="checkbox2"
+                                                        />
+                                                        <label
+                                                        class="form-check-label"
+                                                        for="checkbox2"
+                                                        class="label-table"
+                                                        ></label>
+                                                    </th>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img
+                                                            src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                                            class="rounded-circle"
+                                                            alt=""
+                                                            />
+                                                            <div class="ms-3">
+                                                                <p class="fw-bold">Kate Hunington</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forNumbers">
+                                                        <mat-icon class="icon-cc"> phone</mat-icon>
+                                                        <mat-icon class="icon-cc-1"> email</mat-icon>
+                                                    </td>
+                                                    <td>Senior</td>
+                                                    <td >
+                                                        <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                            <mat-icon>more_vert</mat-icon>
+                                                        </button>
+                                                        <mat-menu #menu1="matMenu">
+                                                            <button mat-menu-item>
+                                                                <mat-icon>edit</mat-icon>
+                                                                <span>Edit</span>
+                                                            </button>
+                                                            
+                                                            <button mat-menu-item>
+                                                                <mat-icon>delete</mat-icon>
+                                                                <span>Delete</span>
+                                                            </button>
+                                                        </mat-menu>
+                                                        
+                                                    </td>   
+                                                    
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        id="checkbox3"
+                                                        />
+                                                        <label
+                                                        class="form-check-label"
+                                                        for="checkbox3"
+                                                        class="label-table"
+                                                        ></label>
+                                                    </th>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img
+                                                            src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                                            class="rounded-circle"
+                                                            alt=""
+                                                            />
+                                                            <div class="ms-3">
+                                                                <p class="fw-bold mb-1">Kate Hunington</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forNumbers">
+                                                        <mat-icon class="icon-cc"> phone</mat-icon>
+                                                        <mat-icon class="icon-cc-1"> email</mat-icon>
+                                                    </td>
+                                                    <td>Senior</td>
+                                                    <td >
+                                                        <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                                            <mat-icon>more_vert</mat-icon>
+                                                        </button>
+                                                        <mat-menu #menu1="matMenu">
+                                                            <button mat-menu-item>
+                                                                <mat-icon>edit</mat-icon>
+                                                                <span>Edit</span>
+                                                            </button>
+                                                            
+                                                            <button mat-menu-item>
+                                                                <mat-icon>delete</mat-icon>
+                                                                <span>Delete</span>
+                                                            </button>
+                                                        </mat-menu>
+                                                        
+                                                    </td>   
+                                                    
+                                                    
+                                                </tr>
+                                            </tbody>
+                                            <!--Table body-->
+                                        </table>
+                                        <!--Table-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- table -->
+            
+            
+            
+            
+            
+            
+        </div> 
+        
+    </mat-drawer-content>
+</mat-drawer-container>

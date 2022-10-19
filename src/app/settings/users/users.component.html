@@ -1,0 +1,267 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid">
+        <div class="page box p-3 mt-2">Users List</div>
+        <div class="page content shadow p-3 position-relative">
+          <div class="content">
+            <form id="institution-form" action="/index.php/site/users" method="post">    <div class="row">
+              <div class="col-sm-12">
+                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">Users List</h4>
+                  </div>
+                  <div class="panel-body">
+                    <div class="col-sm-12">
+                      <div class="alert alert-primary no-border">
+                        <button type="button" class="close" data-dismiss="alert"><span>×</span><span class="sr-only">Close</span></button>
+                        <span class="text-semibold">Info!</span> Here you can view and manage all the user accounts created in the ERP. Please select user type to continue.
+                      </div>
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="form-group col-sm-3" id="users">
+                            <label class="req">Select User Type</label>
+                            <select class="form-control" name="Institution[users]" id="Institution_users">
+                              <option value="" selected="selected">Student</option>
+                              
+                            </select>                                                            </div>
+                            
+                            <div class="form-group col-sm-3" id="course" style="display: block;">
+                              <label for="reg_input" class="req">Course</label>
+                              <select class="form-control" name="Institution[courseid]" id="Institution_courseid">
+                                <option value="">Select Option</option>
+                                <option value="1">UKG</option>
+                                <option value="2">LKG</option>
+                                <option value="3">GRADE I</option>
+                                <option value="4">GRADE II</option>
+                                <option value="5">GRADE III</option>
+                                <option value="6">GRADE IV</option>
+                                <option value="7">GRADE V</option>
+                                <option value="8">GRADE VI</option>
+                                <option value="9">GRADE VII</option>
+                                <option value="10">GRADE VIII</option>
+                              </select>                            </div>
+                              <div class="form-group col-sm-3" id="batch" style="display: block;">
+                                <label for="reg_input" class="req">Batch</label>
+                                <select class="form-control" name="Institution[batchid]" id="Institution_batchid">
+                                  <option value="">Select Option</option>
+                                </select>                            </div>
+                               
+                                
+                                  
+                                      
+                                      
+                                    </div><br>
+                                    
+                                    <div class="panel-body">
+                                      <div class="row">
+                                      <div class="form-group col-sm-3" id="users">
+                                        <label class="req">Select User Type</label>
+                                        <select class="form-control" name="Institution[users]" id="Institution_users">
+                                          <option value="" selected="selected">Employee</option>
+                                          
+                                        </select>                                                            </div>
+
+
+
+                                                <div class="form-group col-sm-3" id="department" style="display: block;">
+                                                  <label for="reg_input" class="req">Department</label>
+                                                  <select class="form-control" name="Institution[departmentid]" id="Institution_departmentid">
+                                                    <option value="">Select Option</option>
+                                                    <option value="1">Software1</option>
+                                                    <option value="2">Head teacher1</option>
+                                                    <option value="3">STIC</option>
+                                                    <option value="6">Reception </option>
+                                                    <option value="7">Administration</option>
+                                                    <option value="9">Transport-teacher</option>
+                                                    <option value="10">Class Teacher</option>
+                                                    <option value="12">Computer Science</option>
+                                                    <option value="13">Sen teacher</option>
+                                                    <option value="14">Math</option>
+                                                    <option value="15">science 3</option>
+                                                    <option value="16">Mathematics1</option>
+                                                    <option value="17">Hrpayroll12</option>
+                                                    <option value="19">physical education</option>
+                                                    <option value="20">maths</option>
+                                                    <option value="21">English</option>
+                                                    <option value="22">Math dept</option>
+                                                    <option value="24">Admin</option>
+                                                    <option value="27">TrialDept12</option>
+                                                    <option value="28">History department</option>
+                                                    <option value="30">BCdef</option>
+                                                    <option value="33">science teacher</option>
+                                                    <option value="34">FINANCE</option>
+                                                    <option value="35">Language department</option>
+                                                  </select>                            </div>
+                                                  
+                                                  
+                                                </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="form-group col-sm-3" id="users">
+                          <label class="req">Select User Type</label>
+                          <select class="form-control" name="Institution[users]" id="Institution_users">
+                            <option value="" selected="selected">Guardian</option>
+                            
+                          </select>                                                            </div>
+                          
+                          <div class="form-group col-sm-3" id="course" style="display: block;">
+                            <label for="reg_input" class="req">Course</label>
+                            <select class="form-control" name="Institution[courseid]" id="Institution_courseid">
+                              <option value="">Select Option</option>
+                              <option value="1">UKG</option>
+                              <option value="2">LKG</option>
+                              <option value="3">GRADE I</option>
+                              <option value="4">GRADE II</option>
+                              <option value="5">GRADE III</option>
+                              <option value="6">GRADE IV</option>
+                              <option value="7">GRADE V</option>
+                              <option value="8">GRADE VI</option>
+                              <option value="9">GRADE VII</option>
+                              <option value="10">GRADE VIII</option>
+                            </select>                            </div>
+                            <div class="form-group col-sm-3" id="batch" style="display: block;">
+                              <label for="reg_input" class="req">Batch</label>
+                              <select class="form-control" name="Institution[batchid]" id="Institution_batchid">
+                                <option value="">Select Option</option>
+                              </select>                            </div>
+                             
+                              
+                                
+                                    
+                                    
+                                  </div><br>
+
+
+                                                
+                                                <div class="row">
+                                                  <div class="col-sm-4"></div>
+                                                  <div class=" col-sm-2">
+                                                    <a class="btn btn-info btn-xs" href="#smsalert" data-toggle="modal"><i class="icon-mobile position-left"></i>Send SMS Alert</a>
+                                                  </div>
+                                                  <div class="col-sm-2">
+                                                    <a class="btn btn-info btn-xs" href="#emailalert" data-toggle="modal"><i class=" icon-mention position-left"></i>Send Email Alert</a>
+                                                  </div>
+                                                  <div class="col-sm-2">
+                                                    <a class="btn btn-info btn-xs" href="#newMail" data-toggle="modal"><i class="icon-key position-left"></i>Reset Password</a>
+                                                  </div>
+                                                  <div class="col-sm-2">
+                                                    <a class="btn btn-info btn-xs" href="javascript:accountstatus()"><i class=" icon-user-lock position-left"></i>Enable/Disable Login</a>
+                                                    
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-sm-12" id="gridview" style="display: none;">
+                                        <div class="panel panel-white border-left-xlg  border-left-warning">
+                                          <div class="panel-body">
+                                            <h5 class="panel-title"><span class="icon-bubbles" style="color:orange;padding-right: 4px"></span> Login Tips</h5>
+                                            <p><span style="font-size: 14px; color: #cc0000;padding-right: 4px;">*</span>This table will list all the Users details you have created in the ERP. For the first time login the password will be same as username, the user can change password after the first successful login.</p>
+                                          </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                          
+                                          <table class="table responsive table-bordered table-striped" id="studentlist">
+                                            
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="modal fade" id="emailalert">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">X</button>
+                                            <h4 id="myModalLabel" class="modal-title">Confirmation</h4>
+                                          </div>
+                                          <div id="overlaygif" style="display:none;"></div>
+                                          <div class="modal-body">
+                                            <div class="table-responsive">
+                                              <table>
+                                                <tbody><tr><td align="center">
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="/img/withdrawal.png" width="50" alt="">
+                                                </td>
+                                                <td align="center">
+                                                  <h5 align="center">&nbsp;&nbsp;&nbsp;&nbsp;Are you sure to send email to users?</h5>
+                                                </td></tr>
+                                              </tbody></table>
+                                            </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <p> &nbsp;&nbsp;<a href="javascript:emailalert()" class="btn btn-info" id="result_button">Send Email Alert</a> </p> 
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal fade" id="smsalert">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">X</button>
+                                            <h4 id="myModalLabel" class="modal-title">Confirmation</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div class="table-responsive">
+                                              <table>
+                                                <tbody><tr><td align="center">
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="/img/withdrawal.png" width="50" alt="">
+                                                </td>
+                                                <td align="center">
+                                                  <h5 align="center">&nbsp;&nbsp;&nbsp;&nbsp;Are you sure to send sms to users?</h5>
+                                                </td></tr>
+                                              </tbody></table>
+                                            </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <p> &nbsp;&nbsp;<a href="javascript:smsalert()" class="btn btn-info" id="result_button">Send SMS Alert</a> </p> 
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal fade" id="newMail">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">X</button>
+                                            <h4 id="myModalLabel" class="modal-title">Confirmation</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div class="table-responsive">
+                                              <table>
+                                                <tbody><tr><td align="center">
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="/img/withdrawal.png" width="50" alt="">
+                                                </td>
+                                                <td align="center">
+                                                  <h5 align="center">&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to reset the password?</h5>
+                                                </td></tr>
+                                              </tbody></table>
+                                            </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <p> &nbsp;&nbsp;<a href="javascript:passwordreset()" class="btn btn-info" id="result_button">Reset Password</a> </p> 
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form></div>
+                                  
+                                </div>
+                              </div>
+                            </mat-drawer-content>
+                          </mat-drawer-container>
+                          

@@ -1,0 +1,686 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page box p-3 mt-2">Finance</div>
+      <div class="ico-card">
+        <i class="fas fa-address-book"></i>
+      </div>
+      <div
+        class="page content shadow p-3 position-relative"
+        style="margin-top: -68px"
+      >
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="page-title-box d-sm-flex align-items-center justify-content-between"
+            >
+              <h4 class="mb-sm-0 font-size-18">Fee Allocation</h4>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content">
+            <form id="studentabsent-form">
+              <div class="col-lg-12">
+                <!-- new -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="home-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#home"
+                      type="button"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                    >
+                      FEEALLOCATION
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      APPLICANTFEESETTINGS
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="contact-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                    >
+                      REPORT
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="tbb_e-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tbb_e"
+                      type="button"
+                      role="tab"
+                      aria-controls="tbb_e"
+                      aria-selected="false"
+                    >
+                      FEEALLOCATIONFORNEXTACADEMIC
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="panel panel-default col">
+                          <div class="panel-heading">
+                            <!-- <h4 class="panel-title">Attendance</h4> -->
+                          </div>
+                          <br />
+                          <br />
+                          <div class="row">
+                            <div class="col-4 form-group">
+                              <label for="reg_input" class="req"
+                                >Fee Category</label
+                              >
+                              <select
+                                class="form-control"
+                                name="Studentabsent[courseid]"
+                                id="Studentabsent_courseid"
+                              >
+                                <option value="">-Please Select-</option>
+                                <option value="1">Abacde</option>
+                                <option value="2">Trans-0708</option>
+                                <option value="3">
+                                  School Management Of system
+                                </option>
+                                <option value="6">Trans-bang</option>
+                                <option value="7">Monthly Tution-Fee</option>
+                                <option value="9">Trans-XYZ678</option>
+                                <option value="10">Trans-123</option>
+                                <option value="12">Trans-abc</option>
+                                <option value="13">Trans-</option>
+                                <option value="14">Trans-585328</option>
+                                <option value="15">Trans-BASAVAKALY</option>
+                                <option value="16">Trans-45454</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_courseid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                            <div class="col-4 form-group">
+                              <label for="reg_input" class="req"
+                                >Fee SubCategory</label
+                              >
+                              <select
+                                class="form-control"
+                                name="Studentabsent[batchid]"
+                                id="Studentabsent_batchid"
+                              >
+                                <option value="">SelectBatch</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_batchid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                            <div class="col-4 form-group" id="subject">
+                              <label for="reg_input" class="req">Fee For</label>
+                              <select
+                                class="form-control"
+                                name="Studentabsent[subjectid]"
+                                id="Studentabsent_subjectid"
+                              >
+                                <option value="">-Please Select-</option>
+                                <option value="">All Batches</option>
+                                <option value="">Selected Batch</option>
+                                <option value="">Students in a Batch</option>
+                                <option value="">Category Wise</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Studentabsent_subjectid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="alert alert-warning warning">
+                          <span _ngcontent-jcx-c290="" class="material-icons"
+                            >report_problem</span
+                          >
+                          Fees structure cannot be edited once it is saved. So
+                          we request you to check the structure before saving
+                          the data into the system.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12" id="gridview">
+                        <div
+                          class="panel panel-default"
+                          id="attendancediv"
+                          style="display: none"
+                        >
+                          <div class="panel-heading">
+                            <h4 class="panel-title">Attendance</h4>
+                          </div>
+                          <div class="table-responsive">
+                            <div id="overlaygif"></div>
+                            <table
+                              class="table responsive table-bordered table-striped"
+                              id="studentattendence"
+                            >
+                              <thead>
+                                <tr>
+                                  <th
+                                    data-hide="phone"
+                                    class="footable-last-column"
+                                    width="15%"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      id="checkall"
+                                    />&nbsp;&nbsp;&nbsp;Check all
+                                  </th>
+                                  <th data-hide="phone,tablet" width="10%">
+                                    Roll No.
+                                  </th>
+                                  <th data-hide="phone,tablet" width="15%">
+                                    Student Ad No.
+                                  </th>
+                                  <th data-hide="phone,tablet" width="30%">
+                                    Student Name
+                                  </th>
+                                  <th data-hide="phone,tablet" width="30%">
+                                    Guardian Name/ Mobile No.
+                                  </th>
+                                  <th data-hide="phone,tablet" width="15%">
+                                    Remarks
+                                  </th>
+                                  <th data-hide="phone,tablet" width="30%">
+                                    Late Arrival
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody></tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div id="overlaygif5"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <p>
+                          &nbsp;&nbsp;
+                          <a href="#" class="btn btn-info" align="right"
+                            >Save</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <br />
+                    <div class="tab-pane" id="tbb_c">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                Applicant fee settings
+                              </h4>
+                            </div>
+                            <div class="panel-body">
+                              <div class="row">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-3">
+                                  <b> Current Settings</b>
+                                </div>
+                                <div class="col-sm-4">
+                                  <b> Change Settings</b>
+                                </div>
+                                <hr />
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-3">Application fee :</div>
+
+                                <div class="col-sm-3">Jayanagar</div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <!--<label for="reg_input" class="req">Fee Category</label>-->
+                                    <select
+                                      class="form-control"
+                                      name="Feesallocation[feessubcategoryid2]"
+                                      id="Feesallocation_feessubcategoryid2"
+                                    >
+                                      <option value="">None</option>
+                                      <option value="1">January</option>
+                                      <option value="2">Monthly</option>
+                                      <option value="3">Term Fee</option>
+                                      <option value="4">patna</option>
+                                      <option value="5">street2</option>
+                                      <option value="6">park street</option>
+                                      <option value="7">street2</option>
+                                      <option value="8">
+                                        4 lane station road
+                                      </option>
+                                      <option value="9">klzadlf</option>
+                                      <option value="10">monthly fee</option>
+                                      <option value="11">patna</option>
+                                      <option value="12">tuitionfee</option>
+                                      <option value="13">street2</option>
+                                      <option value="14">park street</option>
+                                      <option value="15">street2</option>
+                                      <option value="16">
+                                        4 lane station road
+                                      </option>
+                                      <option value="17">klzadlf</option>
+                                      <option value="18">monthly fee</option>
+                                      <option value="19">tuitionfee</option>
+                                      <option value="20">YES</option>
+                                      <option value="21">Sipara</option>
+                                      <option value="22">kklnjk</option>
+                                      <option value="23">dsfdsfdfdsf</option>
+                                      <option value="24">Reqular Fees</option>
+                                      <option value="25">Dedinje</option>
+                                      <option value="26">abcd</option>
+                                      <option value="27">harryyyyy</option>
+                                      <option value="28">hjbhdfgysgfr</option>
+                                      <option value="29">ASD</option>
+                                      <option value="30">SCHOOL FEES</option>
+                                      <option value="31">TUTION</option>
+                                      <option value="32">TF1</option>
+                                      <option value="33">Tution fees</option>
+                                      <option value="34">lab</option>
+                                      <option value="35">Lesson Fee</option>
+                                      <option value="36">
+                                        First Term Tuiton Fees
+                                      </option>
+                                      <option value="37">
+                                        Second Term Tuiton Fees
+                                      </option>
+                                      <option value="38">bang mys</option>
+                                      <option value="40">park street</option>
+                                      <option value="41">BVGJHBKJ</option>
+                                      <option value="42">class -1</option>
+                                      <option value="43">FARG123</option>
+                                      <option value="44">xyzzzzz</option>
+                                      <option value="45">demo123</option>
+                                      <option value="46">BANGALORE</option>
+                                      <option value="47">
+                                        basaveshwaranagar to mg road
+                                      </option>
+                                      <option value="48">
+                                        MG ROAD TO MAJESTIC
+                                      </option>
+                                      <option value="49">pendind fee</option>
+                                      <option value="50">science</option>
+                                      <option value="51">Examination</option>
+                                      <option value="52">anantnag</option>
+                                      <option value="53">kklnjk</option>
+                                      <option value="54">tdfa23412</option>
+                                      <option value="55">kkl</option>
+                                      <option value="56">sd</option>
+                                      <option value="57">sdfa</option>
+                                      <option value="58">ghhccf</option>
+                                      <option value="59">djnahdh</option>
+                                      <option value="60">
+                                        park street (Jun - Jun)
+                                      </option>
+                                      <option value="61">tets</option>
+                                      <option value="62">
+                                        Monthly fee sub cat
+                                      </option>
+                                      <option value="63">
+                                        Exam fee sub cat
+                                      </option>
+                                      <option value="64">sdfgsa</option>
+                                      <option value="65">First Term</option>
+                                      <option value="66">
+                                        Rahul Monthly Fee
+                                      </option>
+                                      <option value="67">car</option>
+                                      <option value="68">Tutionfeeeee</option>
+                                      <option value="69">hh</option>
+                                      <option value="70">tution</option>
+                                      <option value="71">Ahmedabad</option>
+                                      <option value="72">tutionn</option>
+                                      <option value="73">std 1 to std 2</option>
+                                      <option value="74">bus</option>
+                                      <option value="75">car1</option>
+                                      <option value="76">dfhjgfkjgkh</option>
+                                      <option value="77">hydrabad</option>
+                                      <option value="78">hygdrgh</option>
+                                      <option value="79">BASAVAKALYAN</option>
+                                      <option value="80">
+                                        BASAVAKALYAN (Feb - Mar)
+                                      </option>
+                                      <option value="81">
+                                        BASAVAKALYAN (Mar - Mar)
+                                      </option>
+                                      <option value="82">Tution Fees</option>
+                                      <option value="83">Exam Fees</option>
+                                      <option value="84">ftftft</option>
+                                      <option value="85">qwertyu</option>
+                                      <option value="86">banaglore</option>
+                                      <option value="87">
+                                        patna (Apr - Apr)
+                                      </option>
+                                      <option value="88">BANGALORE</option>
+                                      <option value="89">coimbatur</option>
+                                      <option value="90">fgjhg</option>
+                                      <option value="91">Term 1</option>
+                                      <option value="92">
+                                        Pearl DR , Lynnhaven
+                                      </option>
+                                      <option value="93">
+                                        Virginia, Lynnhaven
+                                      </option>
+                                      <option value="94">
+                                        Virginia, Lynnhaven (Apr - Mar)
+                                      </option>
+                                      <option value="95">Arts</option>
+                                      <option value="96">Arts1</option>
+                                      <option value="97">TEXAS</option>
+                                      <option value="98">Arts Guru</option>
+                                      <option value="99">asfsa</option>
+                                      <option value="100">tution fee</option>
+                                      <option value="101">
+                                        Transport Fees1
+                                      </option>
+                                      <option value="102">Reaserved</option>
+                                      <option value="103">hyderabad</option>
+                                      <option value="104">
+                                        hyderabad (Sep - Sep)
+                                      </option>
+                                      <option value="105">mysore</option>
+                                      <option value="106">test</option>
+                                      <option value="107">Tuition Fees</option>
+                                      <option value="108">
+                                        Exam Fee1st semester
+                                      </option>
+                                      <option value="109">math</option>
+                                      <option value="110">math1</option>
+                                      <option value="111">class work</option>
+                                      <option value="112">mzmjb</option>
+                                      <option value="113">tutuin fee</option>
+                                      <option value="114">Mandi House</option>
+                                      <option value="115">
+                                        Barakhamba Road
+                                      </option>
+                                      <option value="116">Sadar Bazar</option>
+                                      <option value="117">India Gate</option>
+                                      <option value="118">
+                                        Mandi House (Apr - Mar)
+                                      </option>
+                                      <option value="119">
+                                        India Gate (Jun - Oct)
+                                      </option>
+                                      <option value="120">Palika Bazar</option>
+                                      <option value="121">
+                                        Barakhamba Road (Feb - Mar)
+                                      </option>
+                                      <option value="122">India Gate</option>
+                                      <option value="123">Monthly Fee</option>
+                                      <option value="124">
+                                        MG road - RM Nagar
+                                      </option>
+                                      <option value="125">
+                                        MG road - RM Naga
+                                      </option>
+                                      <option value="126">MDPR-KODPR</option>
+                                      <option value="127">
+                                        park street (Jun - Jun)
+                                      </option>
+                                      <option value="128">dvxbxb</option>
+                                      <option value="129">cvvfvf</option>
+                                      <option value="130">
+                                        examination fee
+                                      </option>
+                                    </select>
+                                    <div
+                                      class="school_val_error"
+                                      id="Feesallocation_feessubcategoryid2_em_"
+                                      style="display: none"
+                                    ></div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-sm-5">
+                                  <p>
+                                    &nbsp;&nbsp;
+                                    <a
+                                      href="#"
+                                      class="btn btn-info"
+                                      align="right"
+                                      >Save</a
+                                    >
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">Report</h4>
+                          </div>
+                          <div class="panel-body">
+                            <div class="row">
+                              <div class="col-4 form-group">
+                                <label for="reg_input" class="req"
+                                  >ReportFor</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="Studentabsent[courseid3]"
+                                  id="Studentabsent_courseid3"
+                                >
+                                  <option value="">Please Select</option>
+                                  <option value="1">SubCategoryWise</option>
+                                  <option value="2">BatchWise</option>
+                                  <option value="3">Student</option>
+                                </select>
+                                <div
+                                  class="school_val_error"
+                                  id="Studentabsent_courseid3_em_"
+                                  style="display: none"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-12" align="right">
+                        <label>&nbsp;</label>
+                        <a href="javascript:showdetails()" class="btn btn-info"
+                          >Go</a
+                        >&nbsp;&nbsp;
+                        <input
+                          type="button"
+                          onclick="printDiv('print')"
+                          value="Print Report"
+                          class="btn btn-danger"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- new end -->
+                  <div
+                    class="tab-pane fade"
+                    id="tbb_e"
+                    role="tabpanel"
+                    aria-labelledby="tbb_e-tab"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              Fee Allocation For Next Academic
+                            </h4>
+                          </div>
+                          <div class="panel-body">
+                            <div class="form-group">
+                              <label for="reg_input" class="req"
+                                >Academic Year</label
+                              >
+                              <select
+                                class="form-control"
+                                name="Feesallocation[academicid]"
+                                id="Feesallocation_academicid"
+                              >
+                                <option value="">Select Academic Year</option>
+                                <option value="1">2021 - 2022</option>
+                                <option value="2">2020 - 2020</option>
+                                <option value="3">2016 - 2027</option>
+                                <option value="4">2020 - 2021</option>
+                                <option value="5">2021 - 2022</option>
+                                <option value="6">2019 - 2024</option>
+                                <option value="7">2012 - 2016</option>
+                                <option value="8">2030 - 2031</option>
+                                <option value="9">2022 - 2023</option>
+                                <option value="10">2031 - 2032</option>
+                              </select>
+                              <div
+                                class="school_val_error"
+                                id="Feesallocation_academicid_em_"
+                                style="display: none"
+                              ></div>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="reg_input" class="req"
+                                >Fee Category</label
+                              >
+                              <div id="cate"></div>
+                            </div>
+                            <div
+                              class="form-group"
+                              id="datap"
+                              style="display: none"
+                            ></div>
+
+                            <div
+                              class="form-group"
+                              id="amount1"
+                              style="display: none"
+                            >
+                              <div class="alert alert-success">
+                                <b> <label id="tick1"></label></b>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="Feesallocation_feesfor"
+                                >Fee For</label
+                              >
+
+                              <input
+                                placeholder="Student Name"
+                                class="form-control"
+                                id="studentnamenext"
+                                type="text"
+                                value=""
+                                name="studentnamenext"
+                              /><input
+                                id="hidden-field"
+                                name="output"
+                                type="hidden"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="alert alert-warning warning">
+                                  <span
+                                    _ngcontent-jcx-c290=""
+                                    class="material-icons"
+                                    >report_problem</span
+                                  >
+                                  Fees structure cannot be edited once it is
+                                  saved. So we request you to check the
+                                  structure before saving the data into the
+                                  system.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="form-group col-sm-3">
+                                <label>&nbsp;</label><br />
+                                <a
+                                  href="javascript:savealloc()"
+                                  class="btn btn-info"
+                                  >Go</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

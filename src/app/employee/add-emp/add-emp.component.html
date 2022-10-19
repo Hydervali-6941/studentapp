@@ -1,0 +1,348 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            <div class="container-fluid">
+                <div class="page box p-3 mt-2">Employee Registration</div>
+                <div class="page content shadow p-3 position-relative">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18"> Employee Registration </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <form >
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="form-group col-sm-4">
+                                                                    <label for="reg_input_name" class="req">Employee Code</label>
+                                                                    <input size="84" maxlength="45" class="form-control"  name="Employeemaster[employee_code]" id="Employeemaster_employee_code" type="text" />
+                                                                    <div class="school_val_error" id="Employeemaster_employee_code_em_"></div>
+                                                                </div>
+                                                                <div class="form-group col-sm-4">
+                                                                    <label for="reg_input_name" class="req">Joining Date</label>
+                                                                    <div data-date-format="dd-mm-yyyy" class="input-group date">
+                                                                        <input placeholder="Joining Date" class="form-control pickadate" name="Employeemaster[employee_joiningdate]" id="Employeemaster_employee_joiningdate" type="text" />
+                                                                        <div class="school_val_error" id="Employeemaster_employee_joiningdate_em_"></div>
+                                                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-sm-4">
+                                                                    <label for="reg_input" class="req">Department</label>
+                                                                    <select class="form-control" name="Employeemaster[departmentid]" id="Employeemaster_departmentid">
+                                                                        <option value="">Please Select</option>
+                                                                        <option value="1">Software1</option>
+                                                                        <option value="2">Head teacher1</option>
+                                                                        <option value="3">STIC</option>
+                                                                        <option value="6">Reception </option>
+                                                                        <option value="7">Administration</option>
+                                                                        <option value="9">Transport-teacher</option>
+                                                                        <option value="10">Class Teacher</option>
+                                                                        <option value="12">Computer Science</option>
+                                                                        <option value="13">Sen teacher</option>
+                                                                        <option value="14">Math</option>
+                                                                        <option value="15">science 3</option>
+                                                                        <option value="16">Mathematics1</option>
+                                                                        <option value="17">Hrpayroll12</option>
+                                                                        <option value="19">physical education</option>
+                                                                        <option value="20">maths</option>
+                                                                        <option value="21">English</option>
+                                                                        <option value="22">Math dept</option>
+                                                                        <option value="24">Admin</option>
+                                                                        <option value="27">TrialDept12</option>
+                                                                        <option value="28">History department</option>
+                                                                        <option value="30">BCdef</option>
+                                                                        <option value="32">CDM2</option>
+                                                                        <option value="33">science teacher</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Employeemaster_departmentid_em_"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label for="reg_input_name" class="req">Designation</label>
+                                                                    <div id="batch_div">
+                                                                        <select class="form-control" name="Employeemaster[designationid]" id="Employeemaster_designationid">
+                                                                            <option value="">Please Select</option>
+                                                                            <option value="1">Senior Developer1</option>
+                                                                            <option value="2">Admin</option>
+                                                                            <option value="4">PGT</option>
+                                                                            <option value="5">TGT</option>
+                                                                            <option value="6">Tally Incharge</option>
+                                                                            <option value="8">ERP Incharge1</option>
+                                                                            <option value="10">EA</option>
+                                                                            <option value="11">Principal</option>
+                                                                            <option value="12">NA</option>
+                                                                            <option value="15">NTT</option>
+                                                                            <option value="17">Teacher</option>
+                                                                            <option value="18">Coordinator Second Floor</option>
+                                                                            <option value="19">IT Incharge</option>
+                                                                            <option value="20">sdaf</option>
+                                                                            <option value="21">sdc </option>
+                                                                            <option value="22">social media </option>
+                                                                            <option value="23">ajit bagali </option>
+                                                                            <option value="24">karthik driver</option>
+                                                                            <option value="25">tenginkai Jatt</option>
+                                                                            <option value="27">guru</option>
+                                                                            <option value="28">New 1</option>
+                                                                            <option value="30">Designer</option>
+                                                                            <option value="31">System admin</option>
+                                                                            <option value="32">XXT</option>
+                                                                            <option value="33">professor</option>
+                                                                            <option value="35">Teacher55</option>
+                                                                            <option value="36">Professor44</option>
+                                                                            <option value="37">supervisor</option>
+                                                                            <option value="38">Profesor</option>
+                                                                            <option value="42">Teacher 1</option>
+                                                                            <option value="43">Teacher 7</option>
+                                                                            <option value="44">Teacher 5</option>
+                                                                            <option value="46">LEADERRRRR</option>
+                                                                            <option value="47">Maths HOD</option>
+                                                                        </select>
+                                                                        <div class="school_val_error" id="Employeemaster_designationid_em_"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-sm-6">
+                                                                    <label for="reg_input_name" class="req">Qualification</label>
+                                                                    <input class="form-control" name="[_qualification]" id="__qualification" type="text" maxlength="256" />
+                                                                    <div class="school_val_error" id="__qualification_em_"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label for="reg_input_name" class="req">Total Experience</label>
+                                                                    <input class="form-control" name="[_experience]" id="__experience" type="text" maxlength="3" />
+                                                                    <div class="school_val_error" id="__experience_em_"></div>
+                                                                </div>
+                                                                <div class="form-group col-sm-6">
+                                                                    <label for="usertype" class="req">User Type</label>
+                                                                    <select class="form-control" data-required="true" name="Employeemaster[usertype]" id="Employeemaster_usertype">
+                                                                        <option value="">Select Option</option>
+                                                                        <option value="1">Student</option>
+                                                                        <option value="2">Employee</option>
+                                                                        <option value="3">Guardian</option>
+                                                                        <option value="4">Admin</option>
+                                                                        <option value="7">Dharam3452</option>
+                                                                        <option value="14">Student9</option>
+                                                                        <option value="17">Admin22323jghghg</option>
+                                                                        <option value="18">Class Teacher</option>
+                                                                        <option value="23">Admin Coordinator</option>
+                                                                        <option value="24">Remedial Teacher</option>
+                                                                        <option value="26">Stdent</option>
+                                                                        <option value="29">Anav gautam</option>
+                                                                        <option value="30">hfgfhfhfjf</option>
+                                                                        <option value="32">Teacher</option>
+                                                                        <option value="33">Admin123</option>
+                                                                        <option value="35">gurusir </option>
+                                                                        <option value="36">Student1</option>
+                                                                        <option value="37">Student127</option>
+                                                                        <option value="38">Dev1</option>
+                                                                        <option value="39">dfgdg</option>
+                                                                        <option value="40">xyz</option>
+                                                                        <option value="41">Magesh</option>
+                                                                        <option value="42">gurdian</option>
+                                                                        <option value="43">Neha1</option>
+                                                                        <option value="44">professor</option>
+                                                                        <option value="45">kamini</option>
+                                                                        <option value="46">kamini11</option>
+                                                                        <option value="47">employee123</option>
+                                                                        <option value="48">Ruchi Priya</option>
+                                                                        <option value="53">Student23</option>
+                                                                        <option value="54">Student077</option>
+                                                                        <option value="55">Student00007</option>
+                                                                        <option value="56">bfghjkhvch</option>
+                                                                        <option value="57">Student7000</option>
+                                                                        <option value="58">Radhika23</option>
+                                                                        <option value="59">Computer</option>
+                                                                        <option value="60">computer2</option>
+                                                                        <option value="61">student05</option>
+                                                                        <option value="62">Student5555</option>
+                                                                        <option value="63">ngfmhv</option>
+                                                                        <option value="64">A23 1234 123 123</option>
+                                                                        <option value="65">student 1</option>
+                                                                        <option value="67">ramesh</option>
+                                                                        <option value="68">student123</option>
+                                                                        <option value="69">abcdefghijklmnopqrstuvwxyz</option>
+                                                                        <option value="70">abcdefghijklmnopqrstuvwxyzqwer</option>
+                                                                        <option value="71">abcdefghijklmnopqrstuvwxyzabcd</option>
+                                                                        <option value="84">OhGDORQ</option>
+                                                                        <option value="85">YUmyYgv</option>
+                                                                        <option value="86">BVFhakj</option>
+                                                                        <option value="87">kLphOfh</option>
+                                                                        <option value="88">hvIVyVF</option>
+                                                                        <option value="89">YgYTODW</option>
+                                                                        <option value="90">QcCmUBi</option>
+                                                                        <option value="91">TEST </option>
+                                                                        <option value="93">NEWDEFECT</option>
+                                                                        <option value="94">BHARTIJEWRANISangtani</option>
+                                                                        <option value="95">Pavan</option>
+                                                                        <option value="97">Student 2</option>
+                                                                        <option value="98">Student 3</option>
+                                                                        <option value="104">STUDENT 20</option>
+                                                                        <option value="107">sTUDENT008</option>
+                                                                        <option value="108">Sweta</option>
+                                                                        <option value="109">Guru</option>
+                                                                        <option value="110">StudentG</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Employeemaster_usertype_em_"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">Personal Details</h4>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name" class="req">First Name </label>
+                                                                    <input size="84" maxlength="45" class="form-control" name="Employeemaster[employee_firstname]" id="Employeemaster_employee_firstname" type="text" />
+                                                                    <div class="school_val_error" id="Employeemaster_employee_firstname_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name" >Middle Name </label>
+                                                                    <input size="84" maxlength="45" class="form-control" name="Employeemaster[employee_middlename]" id="Employeemaster_employee_middlename" type="text" />
+                                                                    <div class="school_val_error" id="Employeemaster_employee_middlename_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name">Last Name</label>
+                                                                    <input size="84" maxlength="45" class="form-control" name="Employeemaster[employee_lastname]" id="Employeemaster_employee_lastname" type="text" />
+                                                                    <div class="school_val_error" id="Employeemaster_employee_lastname_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name" class="req">Date of Birth</label>
+                                                                    <div data-date-format="dd-mm-yyyy" class="input-group date">
+                                                                        <input placeholder="Date of Birth" class="form-control pickadate" name="Employeemaster[employee_dob]" id="Employeemaster_employee_dob" type="text" />
+                                                                        <div class="school_val_error" id="Employeemaster_employee_dob_em_"></div>
+                                                                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="Gender" class="req">Gender</label>
+                                                                    <select class="form-control" data-required="true" name="Employeemaster[employee_gender]" id="Employeemaster_employee_gender">
+                                                                        <option value="" selected="selected">Please Select</option>
+                                                                        <option value="1">Male</option>
+                                                                        <option value="2">Female</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="Employeemaster_employee_gender_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name" class="">Aadhar Number </label>
+                                                                    <input size="12" maxlength="12" class="form-control" name="[_aadhar]" id="__aadhar" type="text" />
+                                                                    <div class="school_val_error" id="__aadhar_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name" class="">PAN Number </label>
+                                                                    <input size="10" maxlength="10" class="form-control" name="[_pan]" id="__pan" type="text" />
+                                                                    <div class="school_val_error" id="__pan_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name" class="">PF Number </label>
+                                                                    <input class="form-control" name="[_pf]" id="__pf" type="text" />
+                                                                    <div class="school_val_error" id="__pf_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name" class="">ESI </label>
+                                                                    <input class="form-control" name="[_esi]" id="__esi" type="text" />
+                                                                    <div class="school_val_error" id="__esi_em_"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">Contact Details</h4>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                <div class="form_sep">
+                                                                    <label for="reg_input_name" class="req">Present Address</label>
+                                                                    <textarea class="form-control" name="[_address1]" id="__address1"></textarea>
+                                                                    <div class="school_val_error" id="__address1_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_name">Permanent Address</label>
+                                                                    <textarea class="form-control" name="[_address2]" id="__address2"></textarea>
+                                                                    <div class="school_val_error" id="__address2_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_currency" class="req">City</label>
+                                                                    <input class="form-control" name="[_city]" id="__city" type="text" maxlength="256" />
+                                                                    <div class="school_val_error" id="__city_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_currency" class="req">Pin</label>
+                                                                    <input class="form-control" name="[_pincode]" id="__pincode" type="text" maxlength="15" />
+                                                                    <div class="school_val_error" id="__pincode_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="Country" class="req">Country</label>
+                                                                    <select class="form-control" name="[_country]" id="__country">
+                                                                        <option value="empty">Please select</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="__country_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="Country" class="req">State</label>
+                                                                    <select class="form-control" name="[_state]" id="__state">
+                                                                        <option value="" selected="selected">Please select</option>
+                                                                    </select>
+                                                                    <div class="school_val_error" id="__state_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_currency">Phone</label>
+                                                                    <input class="form-control" name="[_phone]" id="__phone" type="text" maxlength="30" />
+                                                                    <div class="school_val_error" id="__phone_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_currency" class="req">Mobile</label>
+                                                                    <input class="form-control" name="[_mobile]" id="__mobile" type="text" maxlength="30" />
+                                                                    <div class="school_val_error" id="__mobile_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_currency" class="req">Email</label>
+                                                                    <input class="form-control" name="[_email]" id="__email" type="text" maxlength="256" />
+                                                                    <div class="school_val_error" id="__email_em_"></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="reg_input_logo" >Upload Photo</label>
+                                                                    <input id="yt__photo" type="hidden" value="" name="[_photo]" /><input name="[_photo]" id="__photo" type="file" />
+                                                                    <div class="school_val_error" id="__photo_em_"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <div class="form_sep">
+                                                            <input class="btn btn-info" name="std_reg_submit" id="std_reg_submit" type="submit" value="Save" />                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>

@@ -1,0 +1,177 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+
+    <div class="container-fluid">
+      <div class="page box mt-2">E-Learning</div>
+      <div class="page content p-3 position-relative">
+        <div class="card">
+          <div class="card-body">
+            <h2>Welcome to E-Learning.</h2>
+            <p>
+              Here you can find information, tools and resources to support and
+              enhance education delivery and management
+            </p>
+            <br />
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+            <hr />
+            <nav class="navbar navbar-expand-lg bg-light">
+              <div class="container-fluid">
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-layer-group position-left"></i>All
+                        Categories
+                      </a>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><i class="fas fa-redo"></i>Getting Started</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><i class="icon-accessibility"></i>Registration</a
+                          >
+                        </li>
+
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><i class="icon-reading"></i>General Info</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><i class="icon-gear"></i> Your Settings</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><i class="icon-graduation"></i> Copyrights</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            ><i class="icon-mail-read"></i> Contacting
+                            Authors</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="btn btn-link btn-sm"
+                        ><i class="fas fa-redo pointer-left"></i>&nbsp;Refine
+                        your search</a
+                      >
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <a href="#articlessection" class="btn btn-link btn-sm">
+                      <i class="fab fa-internet-explorer"></i> Browse
+                      articles</a
+                    >
+
+                    <a href="#" class="btn btn-link btn-sm">
+                      <i class="fas fa-bars position-left"></i> Advanced
+                      search</a
+                    >
+                  </form>
+                </div>
+              </div>
+            </nav>
+
+            <!--grid Cards starts-->
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="icon-object border-success text-success">
+                      <i class="fas fa-book-open"></i>
+                    </div>
+                    <h5 class="text-semibold">Knowledge Base</h5>
+                    <p class="mb-15">
+                      Ouch found swore much dear conductively hid submissively
+                      hatchet vexed far inanimately alongside candidly much and
+                      jeez
+                    </p>
+                    <a href="#" class="btn bg-success-400">
+                      <button class="btn btn-primary">Browse Videos</button></a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="icon-object border-warning text-warning">
+                      <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h5 class="text-semibold">Worksheets center</h5>
+                    <p class="mb-15">
+                      Dear spryly growled much far jeepers vigilantly less and
+                      far hideous and some mannishly less jeepers less and and
+                      crud
+                    </p>
+                    <a href="#" class="btn bg-warning-400">
+                      <button class="btn btn-primary">Go to</button></a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="icon-object border-blue text-blue">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <h5 class="text-semibold">Articles and Lessons</h5>
+                    <p class="mb-15">
+                      Diabolically somberly astride crass one endearingly
+                      blatant depending peculiar antelope piquantly popularly
+                      adept much
+                    </p>
+                    <a href="#" class="btn bg-blue">
+                      <button class="btn btn-primary">Browse Lessons</button></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--grid Cards ends-->
+            <h2>Browse Lessons by Subject</h2>
+            <h2>Latest Learning Videos</h2>
+          </div>
+        </div>
+      </div>
+    </div></mat-drawer-content
+  ></mat-drawer-container
+>

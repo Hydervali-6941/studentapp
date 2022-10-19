@@ -1,0 +1,102 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header><div class="content">
+        <div class="container-fluid">
+          <div class="page box p-3 mt-2"> Room Transfer/Vacate</div>
+          <div class="ico-card">
+              <i class="fas fa-address-card"></i>
+          </div>
+          <div class="page content shadow p-3 position-relative">
+            
+            <form id="hosteltransfer-form" action="/index.php/hostel/hosteltransfer/create" method="post">                <div class="row">
+              <div class="col-sm-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">Room Transfer/Vacate</h4>
+                  </div>
+                  <div class="panel-body">
+                    <div class="col-sm-12">
+                      <div class="panel-body">
+                        <div class="row">
+                         
+                        <div class="form-group col-sm-4">
+                          <label class="req">User Type</label>
+                          <select class="form-control" name="Hosteltransfer[usertypeid]" id="Hosteltransfer_usertypeid">
+                            <option value="">Please Select</option>
+                            <option value="1">Student</option>
+                            
+                          </select>                                            <div class="school_val_error" id="Hosteltransfer_usertypeid_em_" style="display:none"></div>                                        </div>
+                          
+                          <div class="form-group col-sm-4" id="studentautocomplete" style="display: block;">
+                            <label>Student Name</label>
+                            <input class="form-control ui-autocomplete-input" id="student" type="text" value="" name="student" autocomplete="off"><input id="hidden-fieldstudent" name="output" type="hidden" value="">                                        </div> 
+                            <div class="form-group col-sm-4" id="employeeautocomplete" style="display: none;">
+                              <label>Employee Name</label>
+                              <input class="form-control ui-autocomplete-input" id="employee" type="text" value="" name="employee" autocomplete="off"><input id="hidden-fieldemployee" name="output" type="hidden" value="">                                        </div>
+                              <div class="form-group col-sm-4">
+                                <label>&nbsp;</label>
+                                <p> &nbsp;&nbsp;<a href="javascript:userroomdetails()" class="btn btn-info">GO</a></p> 
+                              </div>
+                              <div class="form-group col-sm-12" id="roomdetails"><div class="alert alert-success">
+                                <p>Hostel : </p>
+                                <p>Floor - Room No. :  - </p>
+                                <p>Hostel Rent. : </p>
+                              </div></div>
+                              <div class="form-group col-sm-4">
+                                <label class="req">Select</label>
+                                <select class="form-control" name="Hosteltransfer[vacateortransfer]" id="Hosteltransfer_vacateortransfer">
+                                  <option value="">Please Select</option>
+                                  <option value="1">Transfer</option>
+                                  <option value="2">Vacate</option>
+                                </select>                                            <div class="school_val_error" id="Hosteltransfer_vacateortransfer_em_" style="display:none"></div>                                        </div>
+                                <div class="form-group col-sm-4" id="hosteltype" >
+                                  <label for="reg_input" class="req">Hostel Type</label>
+                                  <select class="form-control" name="Hosteltransfer[hosteltypeid]" id="Hosteltransfer_hosteltypeid">
+                                    <option value="">Please Select</option>
+                                   
+                                    <option value="31">mens</option>
+                                   
+                                    <option value="49">Girls</option>
+                                   
+                                  </select>                                            <div class="school_val_error" id="Hosteltransfer_hosteltypeid_em_" style="display:none"></div>                                        </div>
+                                  <div class="form-group col-sm-4" id="hostelname" >
+                                    <label for="reg_input" class="req">Hostel Name</label>
+                                    <select class="form-control" name="Hosteltransfer[hosteldetailsid]" id="Hosteltransfer_hosteldetailsid">
+                                      <option value="">Please Select</option>
+                                     <option value="40">nisha hostel</option>
+                                    </select>                                            <div class="school_val_error" id="Hosteltransfer_hosteldetailsid_em_" style="display:none"></div>                                        </div> 
+                                    <div class="form-group col-sm-4" id="hostelroom" >
+                                      <label for="reg_input_name" class="req">Hostel Room</label>
+                                      <select class="form-control" name="Hosteltransfer[to_hostelroomid]" id="Hosteltransfer_to_hostelroomid"><option value="">Select</option></select>                                            <div class="school_val_error" id="Hosteltransfer_to_hostelroomid_em_" style="display:none"></div>
+                                    </div>
+                                    <div class="form-group col-sm-12" id="availablebeds">
+                                      
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-sm-5">
+                                        <div class="form_sep">
+                                          <input class="btn btn-info" name="std_reg_submit" id="std_reg_submit" onclick=" validateform()" type="submit" value="Create">                                                </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>  
+                        </form>
+                        
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                </mat-drawer-content>
+              </mat-drawer-container>
+              

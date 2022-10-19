@@ -1,0 +1,230 @@
+<mat-drawer-container   >
+    <mat-drawer mode="side" [opened]="sideBarOpen"  >
+        <!-- <mat-drawer mode="side" opened="true"> -->
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+            
+            <div class="mainbox">
+                <div class="page box">
+                    <h5>Dashboard</h5>
+                </div>
+                <div class="flex items-center dashboard">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon"
+                    >home</mat-icon
+                    >
+                    <span>Dashboard</span>
+                    <span class="forDot">
+                        <mat-icon>radio_button_checked</mat-icon>
+                    </span>
+                    <h6>Analytics</h6>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="page content shadow p-3 position-relative">
+                  
+                                    <div class="row align-middle">
+                                        
+                                        <!-- new -->
+                                        <div class="col-lg-4" >
+                                            
+                                            <div class="card l-bg-blue-dark" routerLink="/add-Category" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas  fa-address-card "></i></div>
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0" >
+                                                                Add<br> Category
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>19</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-cherry" routerLink="/Add-Books" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-list "></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Add<br> Books
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>21</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-blue-dark" routerLink="/Issue-Book" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-house-user"></i></div>
+                                                   
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Issue<br> Book
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>12</span>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <!-- new cards -->
+                                        
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-red"  routerLink="/Request-Details" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-address-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Request<br>Details
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>6</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div><br><br>
+                                        
+                                        <div class="col-lg-4">
+                                            <div class=" card l-bg-blue-dark"  onclick="location.href = '/Book-Return';"  style="cursor:pointer;" >
+
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-file"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0" >
+                                                                Book<br>Return
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>10</span>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class=" card l-bg-red" routerLink="/Import-Library" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Library<br> Import
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <div class="card l-bg-blue-dark" routerLink="/Export-Library" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-wallet"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Library<br> Export
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <div class=" card l-bg-cherry" style="cursor:pointer;" >
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                SMS<br>Alert
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4" >
+                                            <div class="card l-bg-blue-dark"  style="cursor:pointer;"  routerLink="/reportslib">
+                                                <div class="card-statistic-3 p-4">
+                                                    <div class="card-icon card-icon-large"><i class="fas fa-book"></i></div>
+                                                    
+                                                    <div class="row align-items-center mb-2 d-flex">
+                                                        <div class="col-8">
+                                                            <h2 class="d-flex align-items-center mb-0">
+                                                                Report<br> Details
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-4 text-right">
+                                                            <span>13</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                       
+
+                                        
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                        </mat-drawer-content>
+                    </mat-drawer-container>

@@ -1,0 +1,464 @@
+
+
+
+.page {
+  color: #fff;
+  padding: 0 1rem;
+  background: #f1f5f9;
+}
+.page.box {
+  min-height: 55px;
+  background: #fff;
+  font-size: 33px;
+  align-items: center;
+  margin: 0rem 0 0rem;
+  /* -ms-flex-wrap: wrap; */
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 0.2rem;
+  position: relative;
+}
+.page.box h5::after {
+  border-left: 6px solid green;
+  height: 500px;
+}
+
+.page.box h5 {
+  color: #000;
+  border-right: 1px solid #e7dede;
+  padding-right: 0.75rem;
+}
+.mainbox {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+}
+.dashboard {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  background: #fff;
+  place-content: center flex-start;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+.dashboard mat-icon {
+  color: #d4d4d4;
+  margin-right: 0.5rem;
+  height: 16px;
+  font-size: 18px;
+}
+.dashboard span {
+  margin-right: 0.5rem;
+}
+span.forDot {
+  height: 16px;
+}
+.dashboard h6 {
+  color: rgb(106 81 204);
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.MainforOrganization {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+}
+
+:root .items-center {
+  align-items: center;
+}
+.page.content {
+  min-height: calc(70vh - 160px);
+  border-radius: 10px;
+  color: black;
+  font-size: 2rem;
+}
+#toggleTop {
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+}
+.page.content.data {
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+}
+.display-flex {
+  display: flex;
+}
+.stretch-card.grid-margin {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.stretch-card {
+  width: 100%;
+  min-width: 100%;
+}
+p.card-text {
+  font-size: 14px;
+}
+table {
+  width: 100%;
+}
+th {
+  font-size: 14px;
+}
+td {
+  font-size: 15px;
+}
+.card img {
+  height: 50px;
+  width: 50px;
+}
+
+/* .card {
+  border: 1px solid #e9ebec;
+  margin-bottom: 20px;
+} */
+
+.forToggleGap {
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.bg-c-blue {
+  background: linear-gradient(to right, #664dc9, #9884ea) !important;
+}
+
+.bg-c-yellow {
+  background: linear-gradient(to right, #fafafa, #fafafa) !important;
+}
+.bg-c-pink {
+  background: #8932ff !important;
+}
+
+/* .card-body.forContent h6 {
+  color: #000;
+  text-transform: uppercase !important;
+}
+.card-body.forContent p {
+  color: #000;
+} */
+
+.forRounding {
+  background: #f1f5f9;
+  text-align: center;
+  border-radius: 50%;
+}
+p {
+  color: #fff;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+button.mat-focus-indicator.mat-button.mat-button-base.mat-primary {
+  background-color: #3f51b5;
+}
+button {
+  margin: 8px 8px 8px 0;
+  box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  font-size: 15px;
+}
+span.mat-button-wrapper {
+  font-size: 15px;
+  color: #fff;
+}
+a.btn.btn-sm.btn-primary {
+  background: #fafafa;
+  color: #126074;
+}
+table.table-bordered th {
+  padding: 10px;
+  color: #0e5e72;
+  text-transform: capitalize;
+  font-size: 0.81rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+table.table.table-bordered tr {
+  padding: 20px;
+  border: unset !important;
+}
+table.table.table-bordered tr td {
+  font-size: 15px;
+  font-weight: 100;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+table.table.table-bordered tr th {
+  border-top-color: rgba(0, 0, 0, 0.125);
+  border-bottom-color: rgba(0, 0, 0, 0.125);
+}
+table.table.table-bordered tr td {
+  border-top-color: rgba(0, 0, 0, 0.125);
+  border-bottom-color: rgba(0, 0, 0, 0.125);
+}
+pagination-controls {
+  font-size: 15px;
+}
+div#toggleTop {
+  width: 100%;
+}
+/* .card-body h6.tableTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2.5rem;
+  position: relative;
+  color: #166377;
+  letter-spacing: 1px;
+  text-transform: uppercase !important;
+}
+.card-body h6 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 2.5rem;
+  position: relative;
+  color: #fff;
+  letter-spacing: 0.7px;
+}
+.card-options {
+  margin-left: auto;
+  display: -ms-flexbox;
+  display: contents;
+  -ms-flex-order: 100;
+  order: 100;
+  margin-right: -0.5rem rem;
+  color: #9aa0ac;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.tableDetails {
+  background: transparent;
+  padding: 0.5rem 1.5rem;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 3.5rem;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e6ebf1;
+  position: relative;
+  display: flex;
+}
+
+.cardgrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.cardgrid mat-icon {
+  color: #9480e7;
+  margin-top: 0.5rem;
+}
+
+.cardgrid.students mat-icon {
+  color: #9480e7;
+  margin-top: 0.5rem;
+}
+.card-body.forContent {
+  height: 150px;
+} */
+
+/* chart
+ */
+
+.pie-chart {
+  background: radial-gradient(
+      circle closest-side,
+      white 0,
+      white 58.74%,
+      transparent 58.74%,
+      transparent 66%,
+      white 0
+    ),
+    conic-gradient(
+      #4e79a7 0,
+      #4e79a7 38%,
+      #f28e2c 0,
+      #f28e2c 61%,
+      #e15759 0,
+      #e15759 77%,
+      #76b7b2 0,
+      #76b7b2 87%,
+      #59a14f 0,
+      #59a14f 93%,
+      #edc949 0,
+      #edc949 100%
+    );
+  position: relative;
+  width: 500px;
+  min-height: 350px;
+  margin: 0;
+}
+.pie-chart h2 {
+  position: absolute;
+  margin: 1rem;
+}
+.pie-chart cite {
+  position: absolute;
+  bottom: 0;
+  font-size: 80%;
+  padding: 1rem;
+  color: gray;
+}
+.pie-chart figcaption {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-size: 15px;
+  text-align: left;
+  font-size: 15px;
+}
+.pie-chart span:after {
+  display: inline-block;
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.4em;
+  height: 0.8em;
+  border-radius: 0.2em;
+  background: currentColor;
+}
+
+.forRounding {
+
+  height: 50px;
+  width: 50px;
+}
+
+
+/* new cards */
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+.gr-1 {
+  background: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+}
+.gr-2 {
+  background: linear-gradient(170deg, #B4EC51 0%, #429321 100%);
+}
+.gr-3 {
+  background: linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+}
+.gr-4 {
+  background: linear-gradient(170deg, #6d9ed7 0%, #c742ac 100%);
+}
+.gr-5 {
+  background: linear-gradient(170deg, #dfc3e3 0%, #3023AE 100%);
+}
+* {
+  transition: 0.5s;
+}
+.h-100 {
+  height: 100vh !important;
+}
+.align-middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.column {
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+.column:hover {
+  padding-left: 0;
+}
+.column:hover .card .txt {
+  margin-left: 1rem;
+}
+.column:hover .card .txt h1 h2, .column:hover .card .txt p {
+  color: white;
+  opacity: 1;
+}
+.column:hover a {
+  color: white;
+}
+.column:hover a:after {
+  width: 10%;
+}
+.card {
+  min-height: 170px;
+  margin: 0;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color: black;
+  letter-spacing: 0.05rem;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+}
+.card .txt {
+  margin-left: -3rem;
+  z-index: 1;
+}
+.card .txt h1 {
+  font-size: inherit;
+  font-weight: 250;
+  text-transform: uppercase;
+}
+.card .txt p {
+  font-size: 0.7rem;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0rem;
+  margin-top: 33px;
+  opacity: 0;
+  color: white;
+}
+.card a {
+  z-index: 3;
+  font-size: 0.7rem;
+  color: black;
+  margin-left: 1rem;
+  position: relative;
+  bottom: -0.5rem;
+  text-transform: uppercase;
+}
+.card a:after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  width: 0;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid white;
+  transition: 0.5s;
+}
+.card .ico-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.card i {
+  position: relative;
+  right: -50%;
+  top: 60%;
+  font-size: 12rem;
+  line-height: 0;
+  opacity: 0.2;
+  color: white;
+  z-index: 0;
+}
+.card .txt h2 {
+  font-size: inherit;
+  font-weight: 200;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.crd{
+  padding-bottom: 47px !important;
+}

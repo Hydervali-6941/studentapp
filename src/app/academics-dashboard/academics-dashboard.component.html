@@ -1,0 +1,510 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+
+    <div class="mainbox">
+      <div class="page box">
+        <h5>Dashboard</h5>
+      </div>
+      <div class="flex items-center dashboard">
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+          >home</mat-icon
+        >
+        <span>Dashboard</span>
+        <span class="forDot">
+          <mat-icon>radio_button_checked</mat-icon>
+        </span>
+        <h6>Analytics</h6>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="page content shadow p-3 position-relative">
+        <!-- <div class="row"> -->
+        <!-- <div class="page content data" id="toggleTop"> -->
+        <!-- <div class="col-sm-12 display-flex"> -->
+        <!-- <div class="container "> -->
+        <div class="row align-middle">
+          <!-- new -->
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-blue-dark">
+              <div class="btn-list left badge">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  routerLink="/Course-batch"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Course & Batch</h3>
+                </div>
+
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Count</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>19</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-cyan"
+                    role="progressbar"
+                    data-width="19%"
+                    aria-valuenow="19"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 19%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-cherry">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Subjects"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Subjects</h3>
+
+                  <!-- <a routerLink="/branch">View</a> -->
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>21</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-cyan"
+                    role="progressbar"
+                    data-width="21%"
+                    aria-valuenow="21"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 21%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-blue-dark">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/E-Learning"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">E-Learning</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>12</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="12%"
+                    aria-valuenow="12"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 12%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- new cards -->
+
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-red">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Lesson-Planning"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-bus"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Lesson Planning</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Count</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>6</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="6%"
+                    aria-valuenow="6"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 6%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-blue-dark">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Timetable"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Timetable</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-cyan"
+                    role="progressbar"
+                    data-width="10%"
+                    aria-valuenow="10"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 10%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-cherry">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Exams"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Exams</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>13</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="13%"
+                    aria-valuenow="13"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 13%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-blue-dark">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Assignments-Notes"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Assignments & Notes</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>13</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="13%"
+                    aria-valuenow="13"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 13%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-cherry">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Certifications"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Certifications</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>13</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="13%"
+                    aria-valuenow="13"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 13%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-blue-dark">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Promotion-Alumni"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Promotion & Alumni</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>13</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="13%"
+                    aria-valuenow="13"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 13%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-cherry">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Occurence"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Occurence</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>13</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="13%"
+                    aria-valuenow="13"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 13%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-8">
+            <div class="card l-bg-blue-dark">
+              <div class="btn-list badge left">
+                <button
+                  class="btn btn-outline-primary btn-rounded modalPopup"
+                  style="background: #5282d2"
+                  routerLink="/Circular"
+                >
+                  <span class="mat-button-wrapper">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="mb-4">
+                  <h3 class="card-title mb-0">Circular</h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                    <h2 class="d-flex align-items-center mb-0">Total Items</h2>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span>13</span>
+                  </div>
+                </div>
+                <div class="progress mt-1" data-height="8" style="height: 8px">
+                  <div
+                    class="progress-bar l-bg-orange"
+                    role="progressbar"
+                    data-width="13%"
+                    aria-valuenow="13"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 13%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- new cards ends -->
+        </div>
+        <!-- </div> -->
+
+        <!-- </div> -->
+
+        <!-- </div> -->
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

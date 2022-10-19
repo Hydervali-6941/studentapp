@@ -1,0 +1,119 @@
+.page{
+    color: #fff;
+    padding: 0 1rem;
+    background: #f1f5f9;
+ 
+}
+.page.box{ 
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+}
+.page.content{
+ min-height: calc(95vh - 160px);
+ border-radius: 10px;
+ margin-top: -2rem;
+ background: white;
+ color: black;
+ font-size: 2rem;
+}
+#toggleTop{
+    margin-top: 6%;
+
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+}
+.page.content.data{
+
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+}
+.display-flex{
+    display: flex;
+}
+.stretch-card.grid-margin{
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+.stretch-card{
+    width: 100%;
+    min-width: 100%;
+}
+p.card-text{
+    font-size: 16px;
+}
+table {
+    width: 100%;
+  }
+  th{
+    font-size: 14px;
+  }
+  td{
+    font-size: 15px;
+  }
+  .card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100px;
+  }
+
+  .card{
+    border: 1px solid #e9ebec;
+    margin-bottom: 20px;
+  }
+
+  .forToggleGap{
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+  .card-body{
+      text-align: center;
+  }
+  .bg-c-blue {
+    background: #3361ff!important;
+}
+.bg-c-green {
+    background: #e72e2e!important;
+}
+.bg-c-yellow {
+    background:#ff6632!important;
+}
+.bg-c-pink {
+    background:#8932ff!important;
+}
+.bg-c-grey{
+    background:#656869!important;
+
+}
+h6{
+    color: #fff;
+}
+p{
+    color: #fff;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+button.mat-focus-indicator.mat-button.mat-button-base.mat-primary{
+    background-color: #3f51b5;
+    
+
+}
+button{
+    margin: 8px 8px 8px 0;
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+    font-size: 15px;
+}
+span.mat-button-wrapper{
+    font-size: 15px;
+    color: #fff;
+}

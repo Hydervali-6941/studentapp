@@ -1,0 +1,76 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+     <!-- <mat-drawer mode="side" opened="true"> -->
+     <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+     <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+     <div class="container-fluid">
+        <div class="page box p-3 mt-2">Login Form Settings</div>
+        <div class="page content shadow p-3 position-relative">
+           <div class="content">
+              <form enctype="multipart/form-data" id="loginformsettings-form" action="/index.php/core/loginformsettings/create" method="post">
+                 <div class="row">
+                    <div class="col-sm-12">
+                       <div class="panel panel-default">
+                          <div class="panel-heading">
+                             <h4 class="panel-title">Login Form Settings</h4>
+                          </div>
+                          <div class="panel-body">
+                             <div class="col-sm-12">
+                                <div class="panel-body">
+                                   <div class="form-group">
+                                      <label style="font-size: 16px"><b>Background Image</b></label><br>
+                                      <input id="ytLoginformsettings_background_image" type="hidden" value="" name="Loginformsettings[background_image]"><input name="Loginformsettings[background_image]" id="Loginformsettings_background_image" type="file">
+                                      <div class="school_val_error" id="Loginformsettings_background_image_em_" style="display:none"></div>
+                                   </div>
+                                   <hr>
+                                   <div style="font-size: 16px"><strong>Header:-</strong></div>
+                                   <div class="form-group">
+                                      <label>Header Color</label>
+                                      <input value="Black" maxlength="100" class="form-control" name="Loginformsettings[header_color]" id="Loginformsettings_header_color" type="text">
+                                      <div class="school_val_error" id="Loginformsettings_header_color_em_" style="display:none"></div>
+                                   </div>
+                                   <div class="form-group">
+                                      <label for="Loginformsettings_logoimage">Logo</label><br><input id="ytLoginformsettings_logoimage" type="hidden" value="" name="Loginformsettings[logoimage]"><input name="Loginformsettings[logoimage]" id="Loginformsettings_logoimage" type="file">
+                                      <div class="school_val_error" id="Loginformsettings_logoimage_em_" style="display:none"></div>
+                                   </div>
+                                   <div class="form-group">
+                                      <label for="Loginformsettings_logoimage_width">Logo Width</label><input value="12px" maxlength="100" class="form-control" name="Loginformsettings[logoimage_width]" id="Loginformsettings_logoimage_width" type="text">
+                                      <div class="school_val_error" id="Loginformsettings_logoimage_width_em_" style="display:none"></div>
+                                   </div>
+                                   <hr>
+                                   <div style="font-size: 16px"><strong>Login Form:-</strong></div>
+                                   <div class="form-group success">
+                                      <label for="Loginformsettings_loginform_transperancy">Login Form Transperancy</label><input value="PLEASE, ENTER ALL CORRECT CREDITIALS DETAILS" maxlength="100" class="form-control" name="Loginformsettings[loginform_transperancy]" id="Loginformsettings_loginform_transperancy" type="text">
+                                      <div class="school_val_error" id="Loginformsettings_loginform_transperancy_em_" style="display:none"></div>
+                                   </div>
+                                   <div class="form-group">
+                                      <label for="Loginformsettings_loginform_logo">Login Form Logo</label><br><input id="ytLoginformsettings_loginform_logo" type="hidden" value="" name="Loginformsettings[loginform_logo]"><input name="Loginformsettings[loginform_logo]" id="Loginformsettings_loginform_logo" type="file">
+                                      <div class="school_val_error" id="Loginformsettings_loginform_logo_em_" style="display:none"></div>
+                                   </div>
+                                   <div class="form-group success">
+                                      <label for="Loginformsettings_loginform_logo_width">Logo Width</label><input value="12px" maxlength="100" class="form-control" name="Loginformsettings[loginform_logo_width]" id="Loginformsettings_loginform_logo_width" type="text">
+                                      <div class="school_val_error" id="Loginformsettings_loginform_logo_width_em_" style="display:none"></div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-sm-5">
+                                   <div class="form_sep">
+                                      <input class="btn btn-info" name="std_reg_submit" id="std_reg_submit" type="submit" value="Save">                            
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                 </div>
+              </form>
+           </div>
+        </div>
+     </div>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,231 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid">
+        <div class="page box p-3 mt-2">Academic Details</div>
+        <div class="page content shadow p-3 position-relative">
+          <div class="row">
+            <div class="col-12">
+              <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-sm-0 font-size-18"> Academic Year Details </h4>
+              </div>
+            </div>
+          </div>
+          <div class="content-wrapper">
+            <div class="content">
+              <br>
+              <div class="content">
+                <form id="studentabsent-form" >
+                  <div class="col-lg-12">
+                    <!-- new -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Academic Details</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Academic Group</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Data Imigration</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row ">
+                          <div class="col-md-12">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">Academic Year Details</h4>
+                              </div>
+                              <div class="panel-body">
+                                <div class="row"> 
+                                  <div class="form-group col-6">
+                                    <label class="req">Start Year</label>
+                                    <select class="form-control" name="Academic[academic_startyear]" id="Academic_academic_startyear">
+                                      
+                                      <option value="2021">2021</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2019">2019</option>
+                                      
+                                    </select><div class="school_val_error" id="Academic_academic_startyear_em_" style="display:none"></div>                                </div>
+                                    <div class="form-group col-6">
+                                      <label for="reg_input_name" class="req">Start Month</label>
+                                      <select class="form-control" name="Academic[academic_startmonth]" id="Academic_academic_startmonth">
+                                        <option value="" selected="selected">Please Select</option>
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                      </select><div class="school_val_error" id="Academic_academic_startmonth_em_" style="display:none"></div>                                </div>
+                                      <div class="form-group col-6">
+                                        <label class="req">End Year</label>
+                                        <select class="form-control" name="Academic[academic_endyear]" id="Academic_academic_endyear">
+                                          
+                                          <option value="2022">2022</option>
+                                          <option value="2021">2021</option>
+                                          <option value="2020">2020</option>
+                                          
+                                        </select><div class="school_val_error" id="Academic_academic_endyear_em_" style="display:none"></div>                                </div>
+                                        <div class="form-group col-6">
+                                          <label for="reg_input_name" class="req">End Month</label>
+                                          <select class="form-control" name="Academic[academic_endmonth]" id="Academic_academic_endmonth">
+                                            <option value="" selected="selected">Please Select</option>
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
+                                            <option value="7">July</option>
+                                            <option value="8">August</option>
+                                            <option value="9">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                          </select><div class="school_val_error" id="Academic_academic_endmonth_em_" style="display:none"></div>                                </div>
+                                          <div class="form-group col-6">
+                                            <label for="reg_input_name" class="req">Active / Deactive</label>
+                                            <select class="form-control" name="Academic[status]" id="Academic_status">
+                                              <option value="">Please Select</option>
+                                              <option value="1">Active</option>
+                                              <option value="2">Deactive</option>
+                                            </select><div class="school_val_error" id="Academic_status_em_" style="display:none"></div>                                </div>
+                                            <div class="row">
+                                              <div class="col-sm-5">
+                                                <div class="form_sep">
+                                                  <input class="btn btn-info" name="std_reg_submit" id="std_reg_submit" type="submit" value="Save">                                        </div>
+                                                </div>
+                                              </div>
+                                              
+                                              
+                                            </div>
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                   
+                                    
+                                  </div>
+                                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="row ">
+                                      <div class="col-md-12">
+                                        <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                            <h4 class="panel-title">Academic Year Details</h4>
+                                          </div>
+                                          <div class="panel-body">
+                                            <div class="row">
+                                              <div class="form-group col-6">
+                                                <label for="reg_input" class="req">Academic Year</label>
+                                                <select class="form-control" name="Academic[academicid]" id="Academic_academicid">
+                                                  <option value="">Select Academic Year</option>
+                                                  <option value="1">2021 - 2022</option>
+                                                  <option value="2">2020 - 2020</option>
+                                                  <option value="3">2016 - 2027</option>
+                                                  <option value="4">2020 - 2021</option>
+                                                  <option value="5">2021 - 2022</option>
+                                                  <option value="6">2019 - 2024</option>
+                                                  <option value="7">2012 - 2016</option>
+                                                  <option value="8">2030 - 2031</option>
+                                                  <option value="9" selected="selected">2022 - 2023</option>
+                                                  <option value="10">2031 - 2032</option>
+                                                </select><div class="school_val_error" id="Academic_academicid_em_" style="display:none">
+                                                </div>                          
+                                              </div>
+                                              <div class="form-group col-6">
+                                                <label class="req" for="Academic_groupname">Groupname</label><input class="form-control" placeholder="Group name" name="Academic[groupname]" id="Academic_groupname" type="text">
+                                                <div class="school_val_error" id="Academic_groupname_em_" style="display:none">
+                                                </div>                                           
+                                              </div>
+                                              
+                                              <div class="form-group col-6">
+                                                <label class="req" for="Academic_groupname">Start Date</label><input class="form-control" placeholder="" name="Academic[groupname]" id="Academic_groupname" type="text">
+                                                <div class="school_val_error" id="Academic_groupname_em_" style="display:none">
+                                                </div>                                           
+                                              </div>
+                                              
+                                              <div class="form-group col-6">
+                                                <label class="req" for="Academic_groupname">End Date</label><input class="form-control" placeholder="" name="Academic[groupname]" id="Academic_groupname" type="text">
+                                                <div class="school_val_error" id="Academic_groupname_em_" style="display:none">
+                                                </div>                                           
+                                              </div>
+                                              
+                                              <div class="row">
+                                                <div class="col-sm-5">
+                                                  <div class="form_sep">
+                                                    <input class="btn btn-info" name="std_reg_submit" id="std_reg_submit" type="submit" value="Save">                                        </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                      
+                                    </div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                      <div class="row">
+                                        <div class="panel-body">
+                                          <div class="panel-heading">
+                                            <h4 class="panel-title">Data Migration</h4>
+                                          </div>
+                                          <div class="panel-body">
+                                            <div class="row">
+                                            <div class="form-group col-sm-3">
+                                              <select class="form-control" name="dataof" id="dataof">
+                                                <option value="">Please Select</option>
+                                                <option value="1">Subject &amp; Class teacher allocation</option>
+                                                <option value="2">GPA</option>
+                                                <option value="3">CCE</option>
+                                                <option value="4">Salary Settings</option>
+                                                <option value="5">Finance</option>
+                                                <option value="6">Transport</option>
+                                                <option value="7">Hostel</option>
+                                              </select>                                    </div>
+                                              <div class="form-group col-sm-3">
+                                                <p>&nbsp;&nbsp;<button class="btn btn-info" align="right">Ok</button></p> 
+                                              </div>
+                                            </div>
+                                          </div>
+                                          </div>
+                                        </div>
+                                       
+                                      </div>
+                                      
+                                    </div>
+                                    
+                                    <!-- new end -->
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </mat-drawer-content>
+                  </mat-drawer-container>
+                  

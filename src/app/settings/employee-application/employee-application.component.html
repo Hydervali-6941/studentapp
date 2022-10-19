@@ -1,0 +1,45 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <div class="container-fluid">
+        <div class="page box p-3 mt-2">Employee Application</div>
+        <div class="page content shadow p-3 position-relative">
+          
+          <div class="content">
+            <div class="row">
+              <form id="onlineemployeedetails-form" >        <div class="col-sm-6"> </div>
+                <div class="col-sm-3" align="right"> 
+                  <!--<input type="text"  id="search" class="form-control" placeholder="Search...">-->
+                </div>
+                <div class="col-sm-12" align="right"> 
+                  <p>&nbsp;<button class="btn btn-info" align="right"><b><i class="icon-file-excel" ></i></b>Excel</button></p>
+                </div>
+              </form>    
+            </div><br>
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <div class="grid-view table-responsive" id="onlineemployeedetails-grid">
+                    <table class="items">
+                      <thead>
+                        <tr>
+                          <th id="onlineemployeedetails-grid_c0">Sl.No.</th><th id="onlineemployeedetails-grid_c1">Reference Number</th><th id="onlineemployeedetails-grid_c2">Subject</th><th id="onlineemployeedetails-grid_c3">Name</th><th id="onlineemployeedetails-grid_c4">Qualification</th><th id="onlineemployeedetails-grid_c5">Email Id</th><th id="onlineemployeedetails-grid_c6">Phone</th><th class="button-column" id="onlineemployeedetails-grid_c7">Manage</th></tr>
+                        </thead>
+                        <tbody>
+                          <tr><td colspan="8" class="empty"><span class="empty">No results found.</span></td></tr>
+                        </tbody>
+                      </table>
+                      <div class="keys" style="display:none" title="/index.php/core/onlineemployeedetails/admin"></div>
+                    </div>        </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </mat-drawer-content>
+        </mat-drawer-container>
+        

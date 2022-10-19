@@ -1,0 +1,400 @@
+<mat-drawer-container   >
+  <mat-drawer mode="side" [opened]="sideBarOpen"  >
+    <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      
+      
+      <div class="container-fluid">
+        <div class="page box p-3 mt-2">Campus Event</div>
+        
+        
+        <ng-template #myDialog>
+          <mat-dialog-content>
+            <!---------icons Start--------->
+            <div class="row">
+              <div class="col-lg-12">
+                <h4 style="float: left;">User Creation </h4>
+                <tr class="left">
+                  <!-- <div class="p3"> -->
+                    <td >
+                      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" >
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>print</mat-icon>
+                          <span>Print</span>
+                        </button>
+                        <button mat-menu-item >
+                          <mat-icon>import_export</mat-icon>
+                          <span>Export</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>delete</mat-icon>
+                          <span>Delete</span>
+                        </button>
+                        
+                        
+                      </mat-menu>
+                      
+                      
+                    </td>
+                    
+                    <!-- </div> -->
+                    
+                    <td > 
+                      <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+                        <mat-icon>close</mat-icon>
+                      </button>
+                    </td>
+                    
+                    
+                  </tr>
+                </div>
+              </div>
+              <!---------icons end--------->
+              <div class="row">
+                <div>
+                  <label>User Type: </label>&nbsp;&nbsp;
+                  <mat-radio-group >
+                    <mat-radio-button value="auto">Event</mat-radio-button>&nbsp;&nbsp;
+                    <mat-radio-button value="always">Update</mat-radio-button>&nbsp;&nbsp;
+                  </mat-radio-group>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <form>
+                          <mat-form-field appearance="fill" class="example-full-width example-form  tt">
+                            <mat-label>Organization</mat-label>
+                            <mat-select>
+                              <mat-option value="one">First option</mat-option>
+                              <mat-option value="two">Second option</mat-option>
+                            </mat-select>            
+                            <mat-icon matPrefix  >verified_user</mat-icon>
+                          </mat-form-field>
+                          <mat-form-field appearance="fill" class="example-full-width example-form  tt">
+                            <mat-label>Branch </mat-label>
+                            <mat-select>
+                              <mat-option value="one">First option</mat-option>
+                              <mat-option value="two">Second option</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          
+                          <mat-form-field appearance="fill" class="example-full-width example-form  tt">
+                            <mat-label>Class </mat-label>
+                            <mat-select>
+                              <mat-option value="one">First option</mat-option>
+                              <mat-option value="two">Second option</mat-option>
+                            </mat-select>
+                            <mat-icon matPrefix  >class</mat-icon>
+                          </mat-form-field>
+                          <mat-form-field class="example-full-width example-form tt " appearance="fill">
+                            <mat-label>Student ID</mat-label>
+                            <input matInput>
+                            <mat-icon matPrefix  >perm_identity</mat-icon>
+                          </mat-form-field>
+                          
+                          <mat-form-field class="example-full-width example-form tt " appearance="fill">
+                            <mat-label>Event Date</mat-label>
+                            <input matInput>
+                            <mat-icon matPrefix  >date_range</mat-icon>
+                          </mat-form-field>
+                          
+                          
+                          
+                          <mat-form-field class="example-full-width example-form tt "  appearance="fill">
+                            <mat-label>Event</mat-label>
+                            <textarea matInput></textarea>
+                            <mat-icon matPrefix  > message</mat-icon>
+                          </mat-form-field>
+                          
+                          
+                          <div class="d-flex flex-wrap gap-2">
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">
+                              Submit
+                            </button>
+                            <button type="reset" class="btn btn-secondary waves-effect">
+                              Cancel
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- end card body -->
+                    </div>
+                    <!-- end card -->
+                  </div>
+                </div>
+              </div>
+            </mat-dialog-content>
+          </ng-template>
+          
+          
+          <!-- Table -->
+          <div class="container">
+            
+            <!-- Table -->
+            <div class="page content shadow position-relative">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card card-cascade narrower">
+                    <div
+                    class="view view-cascade gradient-card-header blue-gradient narrower py-2 d-flex justify-content-between align-items-center"
+                    >
+                    <div class="col-8">
+                      <div class="mainWrapper">
+                        <h2>Customer</h2>
+                        
+                        <form class="form-inline waves-light" mdbWavesEffect>
+                          <div class="md-form mt-0">
+                            <input
+                            class="form-control mr-sm-2 SearchForm"
+                            type="text"
+                            placeholder="Search"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    
+                    <div class="col-4">
+                      <div class="btn-list">
+                        <!-- <div class="downloadicon">
+                          <span
+                          ><i class="fa fa-download" aria-hidden="true"></i
+                            ></span> 
+                          </div>-->
+                          
+                          <button
+                          class="btn btn-outline-primary btn-rounded modalPopup"
+                          (click)="openDialogWithTemplateRef(myDialog)"
+                          >
+                          <span class="mat-button-wrapper">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                          </span>
+                        </button>&nbsp;
+                        
+                        <tr class="left">
+                          <span class="mat-button-wrapper">
+                            <td >
+                              <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="colour" class="btn btn-outline-primary btn-rounded modalPopup" >
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>print</mat-icon>
+                                  <span>Print</span>
+                                </button>
+                                <button mat-menu-item >
+                                  <mat-icon>import_export</mat-icon>
+                                  <span>Export</span>
+                                </button>
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>                      
+                              </mat-menu>                   
+                            </td>   
+                          </span>               
+                        </tr>                
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!---------icons Start--------->
+                  
+                  <!-- <div class="">
+                    <div class="table-wrapper">
+                      
+                      
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" style="width: 4%">
+                              <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="checkbox"
+                              />
+                            </th>
+                            <th scope="col">Branch</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">AcademicYear</th>
+                            <th scope="col">Action</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                              <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="checkbox1"
+                              />
+                            </th>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                alt=""
+                                class="rounded-circle"
+                                />
+                                <div class="ms-3">
+                                  <p class="fw-bold">John Doe</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="forNumbers">
+                              <mat-icon class="icon-cc"> phone</mat-icon>
+                              <mat-icon class="icon-cc-1"> email</mat-icon>
+                            </td>
+                            
+                            <td>Senior</td>
+                            <td >
+                              <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu1="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>edit</mat-icon>
+                                  <span>Edit</span>
+                                </button>
+                                
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>
+                              </mat-menu>
+                              
+                            </td>   
+                          </tr>
+                          
+                          
+                          <tr>
+                            <th scope="row">
+                              <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="checkbox2"
+                              />
+                              <label
+                              class="form-check-label"
+                              for="checkbox2"
+                              class="label-table"
+                              ></label>
+                            </th>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                class="rounded-circle"
+                                alt=""
+                                />
+                                <div class="ms-3">
+                                  <p class="fw-bold">Kate Hunington</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="forNumbers">
+                              <mat-icon class="icon-cc"> phone</mat-icon>
+                              <mat-icon class="icon-cc-1"> email</mat-icon>
+                            </td>
+                            <td>Senior</td>
+                            <td >
+                              <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu1="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>edit</mat-icon>
+                                  <span>Edit</span>
+                                </button>
+                                
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>
+                              </mat-menu>
+                              
+                            </td>   
+                            
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="checkbox3"
+                              />
+                              <label
+                              class="form-check-label"
+                              for="checkbox3"
+                              class="label-table"
+                              ></label>
+                            </th>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                class="rounded-circle"
+                                alt=""
+                                />
+                                <div class="ms-3">
+                                  <p class="fw-bold mb-1">Kate Hunington</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="forNumbers">
+                              <mat-icon class="icon-cc"> phone</mat-icon>
+                              <mat-icon class="icon-cc-1"> email</mat-icon>
+                            </td>
+                            <td>Senior</td>
+                            <td >
+                              <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                              <mat-menu #menu1="matMenu">
+                                <button mat-menu-item>
+                                  <mat-icon>edit</mat-icon>
+                                  <span>Edit</span>
+                                </button>
+                                
+                                <button mat-menu-item>
+                                  <mat-icon>delete</mat-icon>
+                                  <span>Delete</span>
+                                </button>
+                              </mat-menu>
+                              
+                            </td>   
+                            
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div> -->
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- table -->
+      </div>
+      
+      
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+  
+  
+  
+  
+  

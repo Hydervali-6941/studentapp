@@ -1,0 +1,51 @@
+/****back card display*****/
+.page {
+  color: #fff;
+  padding: 0 1rem;
+  background: #f1f5f9;
+}
+.page.box {
+  min-height: 120px;
+  background: #5c77ff;
+  margin: 0 -1rem;
+  /* font-size: 36px; */
+}
+
+.head {
+  font-size: 30px;
+}
+.page.content {
+  min-height: calc(95vh - 160px);
+  border-radius: 10px;
+  margin-top: -3rem;
+  background: white;
+  color: black;
+  padding: 0px;
+  /* font-size: 2rem; */
+}
+.sidebtn {
+  float: right;
+}
+
+/*****Bootstrap Accordions*********/
+[data-toggle="collapse"] i:before {
+  content: "\f068";
+}
+
+[data-toggle="collapse"].collapsed i:before {
+  content: "\f067";
+}
+.scrbox {
+  box-shadow: 0 0 10px rgb(129, 128, 128);
+  height: 200px;
+  overflow-y: scroll;
+}
+.checksms {
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+select#courseid {
+  height: 200px;
+}
